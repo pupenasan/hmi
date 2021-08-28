@@ -1,0 +1,58 @@
+|      | [на основну сторінку курсу](../README.md) |
+| ---- | ----------------------------------------- |
+|      |                                           |
+
+[Людино-машинні інтерфейси](https://pupenasan.github.io/hmi/)  Автор і лектор: Олександр Пупена доц. кафедри [АКСТУ НУХТ](http://www.iasu-nuft.pp.ua/) 
+
+# Лабораторний практикум
+
+Увага. Для календарного проходження курсу читайте [План](../план2021.md). 
+
+## Лабораторні роботи по Citect2018 R2 (2021)
+
+Образи дистрибутивів Citect 2016-2018 можна завантажити [за посиланням](https://schneider-electric.app.box.com/s/lgd27nur1rin1hs4x822g8lr6tlr2y82/folder/45604093833).
+
+У розробці
+
+## Лабораторні роботи по SCADA zenon
+
+Образи дистрибутивів SCADA zenon можна отримати за наступними посиланнями:
+
+- [zenon 7.6 (сумісний з Windows 10)](http://download.copadata.com/fileadmin/user_upload/Downloads/installation_cd/zenon760/SP0B36068/zenon760_FinalBuild36068_COPA-DATA.iso)
+- [zenon 7.20](http://download.copadata.com/fileadmin/user_upload/Downloads/installation_cd/zenon_720/SP0B20544/zenon720SP0_LanguageBuild20544_COPA-DATA.iso)
+
+Завдання та послідовність виконання лабораторних робіт:
+
+- Лаб 1. [Загальні положення і підготовка робочого місця](zenon/lab1.md)
+- Лаб 2. [проект, екрани, функції](zenon/lab2.md)
+- Лаб 3. [Змінні](zenon/lab3.md)
+- Лаб 4. [Створення графічного інтерфейсу](zenon/lab4.md)
+- Лаб 5. [Тривоги та події](zenon/lab5.md)
+- Лаб 6. [Тренди](zenon/lab6.md)
+- Лаб 7. [Адміністрування користувачів та блокування](zenon/lab7.md)
+- Лаб 8. [Меню](zenon/lab8.md)
+- Лаб 9. [Перозпоідлення, математичний, системний та імітаційний драйвер](zenon/lab9.md)
+- Лаб 10. [Мультимовна підтримка](zenon/lab10.md)
+
+## Лабораторні роботи по VijecoCitect7.2 (для старих робочих місць)
+
+Образи дистрибутивів Vijeo Citect 7.5 (2015) можна завантажити [за посиланням](https://schneider-electric.app.box.com/s/lgd27nur1rin1hs4x822g8lr6tlr2y82/folder/5779419165)
+
+Завдання та послідовність виконання лабораторних робіт:
+
+- Лаб 1. [Середовище виконання SCADA/HMI](citectold/lab1.md)
+
+- Лаб 2. [Розробка бази даних реального часу SCADA/HMI](citectold/lab2.md)
+
+- Лаб 3. [Основи розробки людино-машинного інтерфейсу (графічної підсистеми) в SCADA/HMI](citectold/lab3.md)
+
+- Лаб 4. [Розробки тривогової підсистеми в SCADA/HMI](citectold/lab4.md)
+
+- Лаб 5. [Розробка трендової підсистеми в SCADA/HMI](citectold/lab5.md)
+
+- Лаб 6. [Інтеграція SCADA/HMI зі сторонніми засобами та розробка HMI для мобільних гаджетів](citectold/lab6.md) 
+
+- [Завдання на лабораторні роботи](citectold/task.md).
+
+Матеріали для виконання лабораторних робіт доступні за [посиланням](https://drive.google.com/drive/folders/1Hxq-XNS5WW4BWzxzUgkIgO2EuIVaJO6h?usp=sharing).
+
