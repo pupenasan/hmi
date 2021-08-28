@@ -12,7 +12,7 @@
 
 Образи дистрибутивів Citect 2016-2018 можна завантажити [за посиланням](https://schneider-electric.app.box.com/s/lgd27nur1rin1hs4x822g8lr6tlr2y82/folder/45604093833).
 
-У розробці
+Лаб 1. [Середовище виконання SCADA/HMI](citect2021/lab1.md)
 
 ## Лабораторні роботи по SCADA zenon
 
