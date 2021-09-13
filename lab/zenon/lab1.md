@@ -18,6 +18,8 @@
 
 Лабораторний практикум проводиться на базі SCADA  zenon 7.2. Дана версія потребує ОС Windows 7 та вище. Нижче наведені  посилання на усі версії, починаючи з 6.22. 
 
+[zenon 8.2](https://copadatawebsiteassets.azureedge.net/zenon-setups/eb6548de-436a-4c41-b128-1d1da2eed739?sv=2014-02-14&sr=b&sig=0jxgQqbozJg07WeUEuWE%2FNmMp5Bufaq4u5uh0km5JIg%3D&st=2020-10-26T23%3A00%3A00Z&se=2999-12-31T23%3A00%3A00Z&sp=r&rscd=attachment%3Bfilename%3Dzenon820_FinalBuild65486_COPA-DATA.iso) (сумісний з Windows 10) 
+
 zenon 7.6 (сумісний з Windows 10) http://download.copadata.com/fileadmin/user_upload/Downloads/installation_cd/zenon760/SP0B36068/zenon760_FinalBuild36068_COPA-DATA.iso
 
 zenon 7.5 (сумісний з Windows 10) http://download.copadata.com/fileadmin/user_upload/Downloads/installation_cd/zenon_750/SP0B25796/zenon750_FinalBuild25796_COPA-DATA.iso
