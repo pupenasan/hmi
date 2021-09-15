@@ -36,7 +36,7 @@
 Для підготовки імітатора ПЛК з проектом зробіть наступні дії:
 
 - [ ] Завантажте необхідний експортний варіант проекту файл [HMI2021.xef](https://drive.google.com/file/d/1EDYblD3F7ldHYkCWDeIsuJTjxzrs3lYa/view?usp=sharing) якщо Ви ще не робили цього ранкіше. Файл ".xef" зберігає експортний формат проекту, що сумісний з більшістю версій Unity PRO. 
-- [ ] Для відображення картинок на операторських екранах також завнтажте в ту ж папку з HMI2021.xef папку [Pictures](https://drive.google.com/drive/folders/1OcjXnGvHJQKNiB_BN1kYaq5sePTLY4jI?usp=sharing)  
+- [ ] Для відображення картинок на операторських екранах також завнтажте в ту ж папку з HMI2021.xef папку [Pictures](https://drive.google.com/drive/folders/1OcjXnGvHJQKNiB_BN1kYaq5sePTLY4jI?usp=sharing) , тобто в місці розташування HMI2021.xef  повинна бути папка Pictures з файлом  cuve1.bmp.
 - [ ] Запустіть на виконання середовище UNITY PRO. 
 - [ ] Використовуючи меню `File->Open` та вказавши формат `Unity PRO Application Exchange`, відкрийте проект "HMI2021.xef". Якщо Ви раніше робили вже цю процедуру, відкрийте збережений раніше проект.
 - [ ] Перейдіть в режим імітації ПЛК: `PLC -> Simulation Mode`
