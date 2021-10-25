@@ -4,7 +4,7 @@
 
 The OPC method of communication to OPC devices uses the OPC driver. OPC specifications v1.0a and v2.0 are supported. Using this method you can connect to single or multiple OPC devices, as shown in this example configuration:     
 
-![img](mk:@MSITStore:C:\Program%20Files%20(x86)\AVEVA\Citect%20SCADA%202018%20R2\Bin\OPC.chm::/Images/setup.jpg)         
+![image-20211024224236423](media/image-20211024224236423.png)     
 
 The OPC server can also exist on the same computer as the OPC client. Be reminded that the maximum request length (that is, the maximum of data bits that can be read from the I/O device at any one time) for the OPC protocol is 2040. 
 
@@ -19,7 +19,7 @@ Before the OPC client driver can access a particular OPC server, the server’s 
 **Note**         
 
 - Familiarize yourself with the target OPC server(s) before using this driver. This will help you enter the item identifiers for the tag addresses using the correct syntax.       
-- Using remote servers requires configuring DCOM security. Since configuring security can be complex, you should plan your system settings in advance, and establish a protocol so that the Windows accounts to be used by operators have sufficient privilege. If sufficient privileges are not established, communications errors may result. See [Software requirements](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_software_requirements.htm) for more information. 
+- Using remote servers requires configuring DCOM security. Since configuring security can be complex, you should plan your system settings in advance, and establish a protocol so that the Windows accounts to be used by operators have sufficient privilege. If sufficient privileges are not established, communications errors may result. 
 
 ### Software requirements     
 
@@ -41,25 +41,19 @@ The following tables show the recommended settings for communication with an OPC
 
 The Boards dialog box lists all boards used in the       Citect SCADA  project. Each board record defines a separate board within the project.     
 
-
-
 | Text box            | Value                                                        |
 | ------------------- | ------------------------------------------------------------ |
 | **Board Name**      | A unique name (up to 16 alphanumeric character) per server for the computer board being used to connect with the device. This is used by Citect SCADA  in the Ports dialog box. |
 | **Board Type**      | The type of board. Enter **OPC**.                            |
-| **Address**         | Citect SCADA  doesn’t need an address for the OPC client. Instead you use the **Address** box to set the device scan rate on the OPC Server in milliseconds. The value read from the OPC server is typically taken from the OPC server cache. The scan rate value is often used to indicate how often the OPC server polls the device and updates its cache.             Enter **0** (zero) to use the default of 250ms. Enter any other value to use that value. Valid values range from eight character decimal 0 to 99999999. Up to six character hex values can be used; however, these must be preceded with 0x.             **Note:** As Citect SCADA  supports unsolicited OPC requests, if you set the OPC server to notify Citect SCADA  of changes to the value or quality of an OPC device item, make sure the OPC server scan rate is short enough to provide Citect SCADA  within an adequate timeframe. |
+| **Address**         | Citect SCADA  doesn’t need an address for the OPC client. Instead you use the **Address** box to set the device scan rate on the OPC Server in milliseconds. The value read from the OPC server is typically taken from the OPC server cache. The scan rate value is often used to indicate how often the OPC server polls the device and updates its cache.             Enter **0** (zero) to use the default of 250ms. Enter any other value to use that value. Valid values range from eight character decimal 0 to 99999999. Up to six character hex values can be used; however, these must be preceded with 0x.             <br />**Note:** As Citect SCADA  supports unsolicited OPC requests, if you set the OPC server to notify Citect SCADA  of changes to the value or quality of an OPC device item, make sure the OPC server scan rate is short enough to provide Citect SCADA  within an adequate timeframe. |
 | **I/O Port**        | Leave this field blank.                                      |
 | **Interrupt**       | Leave this field blank.                                      |
-| **Special Options** | OPC server machine name. (Do not enter this name using the traditional dash delimited style. Enter the machine name, for example **Cit_Primary**.             **Note:** The name entered here is the Windows machine name. For Windows NT and Windows 95 or 98 based OPC servers, you can obtain this from the **Identification** tab of the OPC server machine's network properties. For other OPC server configurations, refer to the server's documentation.             If this field is left blank, the server name is sought in the following manner: a) The in-process (DLL) server on the IO Server machine; b) The local (EXE) server on the I/O server machine; c) The remote server as entered in the I/O server machine's DCOM settings. |
+| **Special Options** | OPC server machine name. (Do not enter this name using the traditional dash delimited style. Enter the machine name, for example **Cit_Primary**.            <br />**Note:** The name entered here is the Windows machine name. For Windows NT and Windows 95 or 98 based OPC servers, you can obtain this from the **Identification** tab of the OPC server machine's network properties. For other OPC server configurations, refer to the server's documentation. <br />If this field is left blank, the server name is sought in the following manner: a) The in-process (DLL) server on the IO Server machine; b) The local (EXE) server on the I/O server machine; c) The remote server as entered in the I/O server machine's DCOM settings. |
 | **Comment**         | Any useful comment. This is viewed in the Boards records database in Citect Project Editor. |
-
-
 
 **Ports dialog box**          
 
 The Ports dialog box lists all ports used in the Citect SCADA  project. Each port record defines a separate port within the project.     
-
-
 
 | Text box            | Value                                                        |
 | ------------------- | ------------------------------------------------------------ |
@@ -73,18 +67,14 @@ The Ports dialog box lists all ports used in the Citect SCADA  project. Each por
 | **Special Options** | Leave this field blank.                                      |
 | **Comment**         | Any useful comment. This is viewed in the Boards records database in Citect Project Editor. |
 
-
-
 **Devices dialog box**         
-
-
 
 | Text box      | Value                                                        |
 | ------------- | ------------------------------------------------------------ |
 | **Name**      | A unique name (up to 16 alphanumeric characters) for the I/O device being identified. Each I/O device must have a unique name in the Citect SCADA  system. |
 | **Number**    | A unique number for the I/O device (0–16383). Each I/O device must have a unique number in the Citect SCADA  system (unless I/O device redundancy is being used). |
 | **Address**   | ProgID for the desired server. These usually take the form Vendor.Application (for example, Citect.OPC) and should be found in the documents accompanying the OPC Server. |
-| **Protocol**  | Enter “OPC” or “OPC1”. See [Arrays support](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_arrays_support.htm). |
+| **Protocol**  | Enter “OPC” or “OPC1”.                                       |
 | **Port Name** | This field must contain one of the names previously defined in the **Port Names** box of the Ports dialog box. There must be only one I/O device per port. |
 | **Comment**   | Any useful comment. This is viewed in the Devices records database in Citect SCADA  Project Editor. |
 
@@ -95,8 +85,6 @@ OPC servers can provide data in different data formats. An OPC client can reques
 When specifying a data type, consider whether the server will be able to convert data to the requested type.     
 
 Use the table below to help you specify a type for a variable tag. It shows mappings from the types used by OPC (VARTYPE) to Citect SCADA  data types. If followed, these data types coerce the OPC data Citect SCADA  data types.     
-
-
 
 | OPC Type (VARTYPE) | Description             | Citect SCADA  Data Type |
 | ------------------ | ----------------------- | ----------------------- |
@@ -126,18 +114,12 @@ Variable tags defined in a project compiled on a Citect SCADA  client needs to m
 
 The following masks are general bitmasks:     
 
-
-
 | OPC_QUALITY_MASK | 0xC0 |
 | ---------------- | ---- |
 | OPC_STATUS_MASK  | 0xFC |
 | OPC_LIMIT_MASK   | 0x03 |
 
-
-
 These are specific quality values:     
-
-
 
 | OPC_QUALITY_BAD            | 0x00 |
 | -------------------------- | ---- |
@@ -156,11 +138,7 @@ These are specific quality values:
 | OPC_QUALITY_SUB_NORMAL     | 0x58 |
 | OPC_QUALITY_LOCAL_OVERRIDE | 0xD8 |
 
-
-
 These can modify any of the above:     
-
-
 
 | OPC_LIMIT_OK    | 0x00 |
 | --------------- | ---- |
@@ -172,7 +150,9 @@ These can modify any of the above:
 
 To associate a Citect SCADA  variable tag with an OPC array, follow the OPC array address string with a delimiter like “!”, the capital letter “A” (which when combined like this instructs the Citect SCADA  OPC driver that the address is for an array), and follow both with the array size as an integer enclosed within square brackets, like this:     
 
+```
 <OPCArrayName>!A[<OPCArrayLength>]     
+```
 
 **Note:** Replace the placeholders <OPCArrayName> and       <OPCArrayLength> in the **Address** box with the actual valid values of the OPC Array **Name** and       **Length** you want to use, as defined in the OPC server.     
 
@@ -199,27 +179,19 @@ The OPC1 protocol is used to support Cicode functions TagRead() and       TagWri
 
 However, if there is no left square bracket “[“in the OPC address string, you can use the array length specifier at the end of the address string, and so you should declare OPC as the I/O device protocol used in the I/O device setup procedure. 
 
-| ![img](mk:@MSITStore:C:\Program%20Files%20(x86)\AVEVA\Citect%20SCADA%202018%20R2\Bin\OPC.chm::/Images/warning2.gif) |
-| ------------------------------------------------------------ |
-| **UNINTENDED EQUIPMENT OPERATION**                     Ensure that the OPC address format used is compliant for the OPC Server with which you are communicating.**Failure to follow these instructions can result in death, serious injury, or equipment damage.** |
-
 **Example:**         
 
-Utilizing the ABCLX array address format <OPCArrayName>/<OPCArray Start Index>!A<OPCArray Length> with the Factory Talk OPC server will produce unexpected results.    
+Utilizing the ABCLX array address format `<OPCArrayName>/<OPCArray Start Index>!A<OPCArray Length>` with the Factory Talk OPC server will produce unexpected results.    
 
 When Citect SCADA  writes to an OPC array, the whole array is read from the driver cache, modified, then written back to the OPC server. However, the driver cache is not updated with the newer data until the server performs its housekeeping tasks and notifies the driver that the array value has been changed. During this time, it is possible for another write request to have been issued with a now out-of-date copy of the original array data from the not-yet-updated driver cache. If subsequently written back to the server, any changes made in the first request of this scenario might be lost inadvertently if they are overwritten by the original duplicated data in the second write back.
 
 To try and minimize this, the OPC driver in Citect SCADA  is forced to do a synchronized read before data is modified. However it still has the possibility of losing data if that data is changed by other OPC clients between the time the data is read out and written back. For this reason, it is not recommended that OPC arrays be used in Citect SCADA  while other OPC clients might be accessing the same data. 
 
-| ![img](mk:@MSITStore:C:\Program%20Files%20(x86)\AVEVA\Citect%20SCADA%202018%20R2\Bin\OPC.chm::/Images/warning2.gif) |
-| ------------------------------------------------------------ |
-| **UNINTENDED EQUIPMENT OPERATION**                     Do not use OPC arrays in Citect SCADA while other OPC clients have access to the same data.                   **Failure to follow these instructions can result in death, serious injury, or equipment damage.** |
-
 ### Timestamp and quality support     
 
 The Citect SCADA  OPC driver can use additional variable tags for quality and timestamp values. Quality or timestamp tags are duplicates of a variable tag, with an appended “!Q” or “!T” or “!M” in the address field to define their purpose. Quality tags need to be configured as either INT or DIGITAL data types, whereas Timestamp tags need to be configured as LONG data types. 
 
-If you just need to know if an OPC item is good or bad quality (i.e. not uncertain), you should consider using DIGITAL data types for quality tags in combination with [[OPC\]DigitalQualityUncertainIsBad](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm), rather than using Cicode to compare the value of an INT quality tag against 0xC0   
+If you just need to know if an OPC item is good or bad quality (i.e. not uncertain), you should consider using DIGITAL data types for quality tags in combination with [OPC\]DigitalQualityUncertainIsBad, rather than using Cicode to compare the value of an INT quality tag against 0xC0   
 
 **Note:** The quickest way to create a quality or timestamp tag in Citect SCADA  is to locate the relevant variable tag using the Variable Tags dialog box, edit it as required to create a quality or timestamp tag, and save it. This creates a copy of the original variable tag with the required changes saved.     
 
@@ -254,20 +226,14 @@ Examples
 
 In the following examples, an OPC device tag defined on a BACnet OPC server is associated with the base Citect SCADA  variable tag named Present_Value:     
 
-
-
 | **Variable Tag Name**      | Present_Value                                                |
 | -------------------------- | ------------------------------------------------------------ |
 | **Address**                | device(7196).analog-output(1).present-value                  |
 | Citect SCADA **Data Type** | Data type required by project (for a list of data types, see               [Data types](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_data_types.htm)). |
 
-
-
 **Example 1**         
 
 Use the following settings to associate a Citect SCADA  variable tag with the quality stamp of the OPC register value:     
-
-
 
 | **Variable Tag Name**      | Present_Value_Quality                         |
 | -------------------------- | --------------------------------------------- |
@@ -275,13 +241,9 @@ Use the following settings to associate a Citect SCADA  variable tag with the qu
 | **OPC Type**               | VT_QUALITY                                    |
 | Citect SCADA **Data Type** | INT or DIGITAL                                |
 
-
-
 **Example 2**         
 
 The following tag definition will read the Timestamp value measured in seconds from 1/Jan/1970:     
-
-
 
 | **Variable Tag Name**      | Present_Value_Timestamp                       |
 | -------------------------- | --------------------------------------------- |
@@ -289,21 +251,15 @@ The following tag definition will read the Timestamp value measured in seconds f
 | **OPC Type**               | VT_TIMESTAMP                                  |
 | Citect SCADA **Data Type** | LONG                                          |
 
-
-
 **Example 3**         
 
 The tag definition below will read the Millisecond Timestamp value measured in UTC FileTime from beginning (midnight) of the current day:     
-
-
 
 | **Variable Tag Name**      | Present_Value_Millisecond                     |
 | -------------------------- | --------------------------------------------- |
 | **Address**                | device(7196).analog-output(1).present-value!M |
 | **OPC Type**               | VT_MILLISECOND                                |
 | Citect SCADA **Data Type** | LONG                                          |
-
-
 
 The base Citect SCADA  tag needs to be defined in Citect SCADA  before the timestamp and quality values of the associated OPC Server tag value can be read. 
 
@@ -317,16 +273,14 @@ By default, no status tags are created for the OPC driver. They need to be defin
 
 A status tag can be defined in the [OPCStatusTags] section of the Citect.INI file to determine the online status of OPC devices. You can also create status tag set for each individual I/O device using the following format:
 
-```
- 
+```ini
 [OPCStatusTags]
 <IOServerName>.<IODeviceName>.<parameter>=<value>
 ```
 
 For example:
 
-```
- 
+```ini
 [OPCStatusTags]
 io1.iodev1.tag=ARB3183800_S_2.REQNUM
 io1.iodev1.condition= <=10
@@ -334,7 +288,7 @@ io1.iodev1.condition= <=10
 
 where:
 
-```
+```ini
 "ARB3183800_S_2.REQNUM" 
 ```
 
@@ -345,10 +299,6 @@ If you are not regularly reading from a particular device, it is recommended tha
 ### Customizing a project using Citect.ini parameters     
 
 You use Citect.ini parameters to finetune the performance of the Citect SCADA  OPC driver and to perform runtime maintenance diagnostics.     
-
-| ![img](mk:@MSITStore:C:\Program%20Files%20(x86)\AVEVA\Citect%20SCADA%202018%20R2\Bin\OPC.chm::/Images/warning2.gif) |
-| ------------------------------------------------------------ |
-| **UNINTENDED EQUIPMENT OPERATION**                     Do not under any circumstances change or remove any of the undocumented citect.ini parameters.Before deleting sections of the citect.ini file, confirm that no undocumented parameters will be deleted.**Failure to follow these instructions can result in death, serious injury, or equipment damage.** |
 
 **Note:** Always seek the advice of Technical Support personnel for this product regarding undocumented features.
 
@@ -362,22 +312,9 @@ When Citect SCADA  starts at runtime, it reads configuration values from the Cit
 
 The default values for these parameters have been determined by driver development and testing to be optimal for the Citect SCADA  OPC driver. Parameters default to a value tested to work in common configurations. Don’t adjust these default values except on the direct advice of Citect Customer Support.     
 
-This section describes the following types of OPC parameters:     
-
-- [Common Citect.ini driver parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_common_citectini_driver_parameters.htm)             
-- [Driver-specific Citect.INI parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm)             
-- [OPC device-specific parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm)             
-- [OPC access path parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_access_path_parameters.htm)             
-- [OPC status tag parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_status_tag_parameters.htm)             
-- [OPC array parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_array_parameters.htm)             
-
-For more details, see [Driver-specific Citect.INI parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm)
-
 #### Common Citect.ini driver parameters     
 
 The following table describes the common citect.ini driver parameters.     
-
-
 
 | [OPC] Parameter | Allowable Values   | Default Value | Description                                                  |
 | --------------- | ------------------ | ------------- | ------------------------------------------------------------ |
@@ -387,7 +324,7 @@ The following table describes the common citect.ini driver parameters.
 | Polltime        | 0 to 300           | 1000          | Polling service time (in milliseconds) at which cached data is updated. Recommended to be at least twice that of the value used in the Citect.INI [ALARM] ScanTime parameter. |
 | Retry           | 0 to 8             | 0             | Number of times to retry a command after a timeout.          |
 | Timeout         | 0 to 32000         | 3000          | Milliseconds to wait for a response before considering a write or polling request to be invalid and displaying an error message in Citect SCADA . |
-| Watchtime       | 0 to 128 (seconds) | 15            | Frequency that the Citect SCADA  OPC driver uses to check the communications link to the OPC system and attempts to bring offline units back online. Also determines the frequency of STATUS_UNIT commands to the driver. See [Configuring redundancy](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_configuring_redundancy.htm). |
+| Watchtime       | 0 to 128 (seconds) | 15            | Frequency that the Citect SCADA  OPC driver uses to check the communications link to the OPC system and attempts to bring offline units back online. Also determines the frequency of STATUS_UNIT commands to the driver. See Configuring redundancy |
 
 #### Driver-specific Citect.INI parameters     
 
@@ -397,20 +334,20 @@ The following table describes the driver-specific Citect.ini parameters.
 | ---------------------------- | ------------------------------------------------------------ | ----------------- | ------------------------------------------------------------ |
 | AddItemAsVtEmpty             | 0 - Specify data types             1 - Use native data type  | 1                 | Determines whether the OPC driver specifies a data type when adding an item, or whether it uses the native data type when adding items.             This parameter is used to select whether the OPC client will specify a type to force the OPC Server to coerce the data, or for the OPC server to provide the type as configured on the server. |
 | ArrayRecordBase              | Greater than total number of tags and less than (65000 – number of arrays) | 30000             | Specifies the base of the array record numbers. Citect SCADA  communicates with the OPC client driver by the record number of the tag in variable.dbf, so this parameter needs to be greater than the total number of tags in the project. |
-| CacheRead                    | 0 – Value is refreshed and the latest value returned.             1 – Last known value returned. | 1                 | Determines the value returned when an inactive item is read. See [Overriding [OPC\]CacheRead](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/overriding_opccacheread.htm) for information on how to override the value of this parameter for a particular tag. |
-| DebugLevel                   | WARN             ERROR             TRACE             ALL     | -                 | Trace level used for log file             See [Logging](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/logging_opc.htm) for examples. |
-| DebugCategory                | TAG             PROT             CACHE             DCB             THRD             MISC             BEND                         FEND             ALL | -                 | TAG: Tag configuration trace.             PROT: Operations related to the OPC protocol interface.             CACHE: Operations related to the driver cache.             DCB: Front end driver trace.             THRD: Thread trace.             MISC: Miscellaneous operations.              BEND Operations related to the back-end thread of the driver.             FEND: Operations related to the front-end thread of the driver.             See [Logging](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/logging_opc.htm) for examples. |
+| CacheRead                    | 0 – Value is refreshed and the latest value returned.             1 – Last known value returned. | 1                 | Determines the value returned when an inactive item is read. See Overriding [OPC\]CacheRead for information on how to override the value of this parameter for a particular tag. |
+| DebugLevel                   | WARN             ERROR             TRACE             ALL     | -                 | Trace level used for log file                                |
+| DebugCategory                | TAG             PROT             CACHE             DCB             THRD             MISC             BEND                         FEND             ALL | -                 | TAG: Tag configuration trace.             PROT: Operations related to the OPC protocol interface.             CACHE: Operations related to the driver cache.             DCB: Front end driver trace.             THRD: Thread trace.             MISC: Miscellaneous operations.              BEND Operations related to the back-end thread of the driver.             FEND: Operations related to the front-end thread of the driver. |
 | DebugUnits                   | ALL, (GLOBAL) [include the round brackets] or any combination of I/O device names and (GLOBAL) separated by '\|' characters. | All               | Controls which units logging is performed for. Multiple units can be specified. Debug messages that are unrelated to a specific unit are logged against the (GLOBAL) unit. |
 | DigitalQualityUncertainIsBad | **0** - An uncertain quality will be   treated as GOOD when a digital quality reading is taken (normal INT version is unaffected)             **1** - an uncertain quality will be treated as BAD when a digital quality reading is taken (normal INT version is unaffected) | 1                 | Determines how an uncertain quality result is treated when a Digital quality reading is taken. |
 | FailOnBadData                |                                                              |                   | The parameter has been deprecated since Citect SCADA v7.30   |
 | FailOnUncertain              |                                                              |                   | The parameter has been deprecated since Citect SCADA v7.30   |
 | FillCacheOnStartup           | **0** - Subscriptions are created in the inactive state and are only activated as read request are received.             **1** - Subscriptions are created in the active state. | 1                 | Determines whether subscriptions are created in the active or inactive state initially. |
-| GoOfflineForBadTag           | **0** – disabled. Do not go offline.             **1** - enabled. Go offline. | 0                 | Sets all tags on an OPC device to                 an OPC_QUALITY status of GOOD before Citect SCADA  declares the I/O device online.             This parameter would only be set on the I/O server where the device is defined as primary, so it can only take over from a standby device definition when all tags and the status tag are valid. This minimizes the chances that  com-breaks occur during switchover from standby to primary. It is strongly recommended not to set it on a standby, as it might only be one tag that is invalid. |
+| GoOfflineForBadTag           | **0** – disabled. Do not go offline.             **1** - enabled. Go offline. | 0                 | Sets all tags on an OPC device to                 an OPC_QUALITY status of GOOD before Citect SCADA  declares the I/O device online.             <br />This parameter would only be set on the I/O server where the device is defined as primary, so it can only take over from a standby device definition when all tags and the status tag are valid. This minimizes the chances that  com-breaks occur during switchover from standby to primary. It is strongly recommended not to set it on a standby, as it might only be one tag that is invalid. |
 | InhibitActivationOnStandby   | **0** – A standby server will follow the same rules for subscription activation            as the primary server. **1** – A standby server will only active a subscription if it believes the          primary server is not active. | 1                 | This parameter allows a standby server to deliberately leave subscriptions in an inactive state when the primary server is online. This is usually used when the primary and standby server are talking to independent OPC servers to reduce the load the standby OPC server would place on field devices.             On startup of a standby server, if this parameter is set to 1, items will not be activated immediately. They will only be activated when the unit itself            becomes the active unit. |
-| ItemLifeTime                 | Time (seconds)                                               | 5                 | Determines the time in before a tag is deemed inactive.             The global LeaveTagsActive parameter overrides the ItemLifeTime parameter to force OPC tags to remain active even though Citect SCADA  is no longer requesting them from the driver.             The ItemLifeTime parameter can be individually overridden for any OPC device by the [Active](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm) parameter. |
-| LeaveTagsActive              | **0** - Do not leave tags active.             **1** - Leave tags active. | 1                 | Determines whether OPC tags remain active even though Citect SCADA  is no longer requesting them from the driver. Normally tags are made inactive 5 seconds after the last time they are requested.             Some OPC servers take a long time to return a call to activate/inactivate tags, or doing so slows them down, therefore leaving tags active  can sometimes improve performance.             The global LeaveTagsActive parameter can be individually overridden by an [Active](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm) parameter.             See **ItemLifeTime** parameter (above).             Note: This parameter minimizes the likelihood of deactivation of tags on the currently active unit only. Tags on units that have become inactive (standby) will still deactivate |
+| ItemLifeTime                 | Time (seconds)                                               | 5                 | Determines the time in before a tag is deemed inactive.             The global LeaveTagsActive parameter overrides the ItemLifeTime parameter to force OPC tags to remain active even though Citect SCADA  is no longer requesting them from the driver.             The ItemLifeTime parameter can be individually overridden for any OPC device by the Active |
+|                              | **0** - Do not leave tags active.             **1** - Leave tags active. | 1                 | Determines whether OPC tags remain active even though Citect SCADA  is no longer requesting them from the driver. Normally tags are made inactive 5 seconds after the last time they are requested.             Some OPC servers take a long time to return a call to activate/inactivate tags, or doing so slows them down, therefore leaving tags active  can sometimes improve performance.             The global LeaveTagsActive parameter can be individually overridden by an Active parameter.             See **ItemLifeTime** parameter (above).             Note: This parameter minimizes the likelihood of deactivation of tags on the currently active unit only. Tags on units that have become inactive (standby) will still deactivate |
 | NumConcurrentServerInits     | **-1** – Unlimited**32767**                                  | -1                | Represents the maximum number of concurrent initialization and shutdown operations that are performed on each configured OPC Server. Higher values, or -1 (unlimited), will incur greater load on the server, while 0 and 1 determine that initialization is serialized into effectively a single thread. |
-| OPCGroupName                 | Any string (maximum 32 characters)                           | CitectGroup_<*n*> | By default, each OPC server is allocated a sequential group name by the OPC driver, i.e. CitectGroup_1, CitectGroup_2, etc. This parameter allows you to replace the default group name with a customized name. You can set this parameter at a device level using [ OPC device-specific parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm). |
+| OPCGroupName                 | Any string (maximum 32 characters)                           | CitectGroup_<*n*> | By default, each OPC server is allocated a sequential group name by the OPC driver, i.e. CitectGroup_1, CitectGroup_2, etc. This parameter allows you to replace the default group name with a customized name. You can set this parameter at a device level using OPC device-specific parametersspecific_parameters.htm). |
 | ReadAfterWrite               | **0** - No read, rely on the normal polling/OnDataChange mechanism.**1** - Force sync read of item written from OPC server cache after write.**2** - Force sync read of item written from device after write. | 0                 | Determines if a force read should be made, and if it should be from the OPC server cache or from the device.**Note:** RefreshAfterWrite causes a refresh of all active items, whereas ReadAfterWrite reads back only the item being written to. You should use one or the other. Where both RefreshAfterWrite and ReadAfterWrite are set to 1, RefreshAfterWrite will take precedence, and ReadAfterWrite will be set to 0. |
 | RefreshAfterAdd              | 0 - No REFRESH.             1 - Request a REFRESH from the OPC server cache. 2 - Request a REFRESH from the device. | 1                 | Determines whether an OPC REFRESH is requested from the OPC server after activating the group.             This parameter can be disabled if slow start up times are experienced.             The server could be automatically sending a REFRESH, in which case another request may be unnecessary. |
 | RefreshAfterWrite            | 0 – Disable forced REFRESH.1 - Enable forced REFRESH from OPC server cache.2 - Enable forced REFRESH from device. | 0                 | Determines whether to force an OPC REFRESH from the OPC Server of ALL active items after Citect SCADA  writes to an item. |
@@ -419,19 +356,19 @@ The following table describes the driver-specific Citect.ini parameters.
 | ShutdownWait                 | Time (milliseconds).                                         | 30000             | Determines the time the OPC driver waits before shutting down. On shutdown, the driver attempts to close the connection to the OPC server. If this takes longer than the time specified by this parameter, the driver shuts down anyway (sometimes with unexpected results). This parameter might be needed if the OPC server does not respond within the default wait time. |
 | StatusWaitPeriod             | Time (milliseconds)                                          | 5000              | Determines the time the OPC driver waits before requesting tag status for an OPC I/O device. On startup, the OPC driver waits for a Unit status from the OPC server before adding tags to the server. If the value of this parameter is exceeded, the tags are added anyway.             The OPC server should respond within a few seconds. The default wait time of 5 seconds should usually be adequate. |
 | SuppressDataNotYetValidError | **0** – Displays “Data Not Yet Valid” errors in the Kernel window and logs them to the Syslog.dat file.             **1** - Suppresses “Data Not Yet Valid” errors, which are not displayed in the Kernel window or logged. In the Citect kernel, under View -> I/O Devices, Citect SCADA  will display “Error Suppressed” in the Error Message field for the particular device. | 0                 | Determines whether “Data Not Yet Valid” error messages are suppressed, or whether they are displayed in the Kernel window and written to the Syslog.dat file. For Citect SCADA  to display the message “Error Suppressed”, you need V5.50 or above. |
-| UseArrays                    | **0** – OPC array support disabled.             **1** – OPC array support enabled. | 1                 | Determines whether array support parameters in the [OPCArrays] section are active.             See [OPC array parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_array_parameters.htm). |
+| UseArrays                    | **0** – OPC array support disabled.             **1** – OPC array support enabled. | 1                 | Determines whether array support parameters in the [OPCArrays] section are active. |
 | UseAsyncWrites               | **0** - use synchronous writes. **1** - use asynchronous writes. | 0                 | Determines whether writes are synchronous or asynchronous.**Note:** UseAsyncWrites=1 is only valid when [OPC]UseOPC2=1, since OPC1 does not support asynchronous writes. |
-| UseOPC2                      | **0** – OPC2 support disabled (Use OPC 1.0a interface).             **1** – OPC2 support enabled (Use OPC DA2 interface). | 0                 | Globally determines whether to use OPC 1.0a or OPC 2.0 interface. Individual overrides can be set using the [UseOPC2](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm) parameter to force the use of a particular version OPC interface with a particular I/O device. |
-| UseStatusTags                | **0** – disabled.             **1** – enabled.               | 0                 | Determines whether parameters in the [OPCStatusTags] section are active. Individual overrides can be set using the[ OPC device-specific parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm) to force the use of a particular status tag parameter with a particular I/O device. |
+| UseOPC2                      | **0** – OPC2 support disabled (Use OPC 1.0a interface).             **1** – OPC2 support enabled (Use OPC DA2 interface). | 0                 | Globally determines whether to use OPC 1.0a or OPC 2.0 interface. Individual overrides can be set using the UseOPC2 parameter to force the use of a particular version OPC interface with a particular I/O device. |
+| UseStatusTags                | **0** – disabled.             **1** – enabled.               | 0                 | Determines whether parameters in the [OPCStatusTags] section are active. Individual overrides can be set using the OPC device-specific parameters to force the use of a particular status tag parameter with a particular I/O device. |
 | ValidDataWaitPeriod          | Time (milliseconds)                                          | 10 seconds        | Determines the maximum time that the OPC driver will wait for OPC_QUALITY to be GOOD for all tags before declaring that Device online. This minimizes the likelihood of a client swapping from a standby to a primary prematurely and suppresses alarm flooding at startup.  Set this parameter to 0 to allow units to come online regardless of whether all items for the unit have been verified as good quality.             Note: FillCacheOnStartup=1 needs to be set when ValidDataWaitPeriod>0 |
 | WriteTrueAs1                 | **0** - write true as VARIANT_TRUE(-1).             **1** - write true as 1. | 0                 | Determines whether a digital value of TRUE is written as “VARIANT_TRUE(-1)”  or “1”. This parameter should only be required for incorrectly designed OPC servers. When the Citect SCADA  data type is digital, VARIANT_TRUE (-1) is used with VT_BOOL variant type to write a value of true. This happens even if [OPC]AddItemAsVtEmpty is set, as OPC servers should be designed to convert the value when they receive it. |
 
 Log file size and archiving are now controlled by the general [DEBUG] parameters: 
 
-- [[Debug\]ArchiveFiles](ms-its:parameters.chm::/DebugArchiveFiles.html)             
-- [[Debug\]FlushPeriod](ms-its:parameters.chm::/DebugFlushPeriod.html)             
-- [[Debug\]MaximumFileSize](ms-its:parameters.chm::/DebugMaximumFileSize.html)             
-- [[Debug\]SysLogSize](ms-its:parameters.chm::/DebugSysLogSize.html) 
+- [Debug\]ArchiveFiles         
+- [Debug\]FlushPeriod          
+- [Debug\]MaximumFileSize          
+- [Debug\]SysLogSize
 
 #### Overriding [OPC]CacheRead     
 
@@ -440,14 +377,14 @@ You can override the value in [OPC]CacheRead for a particular tag by suffixing t
 - The delimeter “!”       
 - The letter C or D, as follows:       
 
-<Tag Name>!C - The tag value returned will be the cache value at the time of the read.     
+`<Tag Name>!C` - The tag value returned will be the cache value at the time of the read.     
 
-<Tag Name>!D - A refresh of the tag value is forced before it is returned.     
+`<Tag Name>!D` - A refresh of the tag value is forced before it is returned.     
 
 **Examples:**         
 
-- Tag1!**D** - Forces a refresh of Tag1 before the value is returned.       
-- Tag!**C** - The last known cache value of Tag2 is returned.       
+- `Tag1!D` - Forces a refresh of Tag1 before the value is returned.       
+- `Tag!C` - The last known cache value of Tag2 is returned.       
 
 When the tag qualifiers C and D are used with other OPC qualifiers (see       [Timestamp and quality support](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_timestamp_and_quality_support.htm)), they must appear last.     
 
@@ -474,10 +411,10 @@ The following device-specific parameters are supported.
 
 | [OPC] Parameter | Allowable Values                                             | Default Value                                                | Description                                                  |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Active          | **0** - deactivate tag.             **1** - leave tag active. | Value of [LeaveTagsActive](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm) parameter. | Allows user to individually override the global default LeaveTagsActive parameter to specify whether tags should be left active or inactive for a particular OPC I/O device.             Replace the placeholders <IOServerName> and <IODeviceName> in the parameter with the names of the OPC 'I/O Server' and 'I/O Device' you want to override and have remain active.             Determines whether individual OPC tags are left active even though Citect SCADA  is no longer requesting them from the driver. Normally tags are made inactive 5 seconds from the last time they are requested. See the [ItemLifeTime](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm) parameter. |
-| Update          | 0 to 32000 (milliseconds)                                    | Scan rate specified in the **Address** box of the Boards form. | Allows the user to individually override the.Default.Update parameter to specify the tag update rate for a particular I/O device. The update rate is the frequency with which the OPC server polls the device for values and updates its own cache.             Replace the placeholders <IOServerName> and <IODeviceName> in the parameter with the actual names of the OPC I/O server and I/O device you want to override with a specific update rate.             This parameter controls polling performed by the OPC server, not by               Citect SCADA. The scope of the parameter is communication between the OPC server and a device, not between the OPC server and Citect SCADA. |
+| Active          | **0** - deactivate tag.             **1** - leave tag active. | Value of LeaveTagsActive parameter.                          | Allows user to individually override the global default LeaveTagsActive parameter to specify whether tags should be left active or inactive for a particular OPC I/O device.             Replace the placeholders <IOServerName> and <IODeviceName> in the parameter with the names of the OPC 'I/O Server' and 'I/O Device' you want to override and have remain active.             Determines whether individual OPC tags are left active even though Citect SCADA  is no longer requesting them from the driver. Normally tags are made inactive 5 seconds from the last time they are requested. See the ItemLifeTimeparameter. |
+| Update          | 0 to 32000 (milliseconds)                                    | Scan rate specified in the **Address** box of the Boards form. | Allows the user to individually override the.Default.Update parameter to specify the tag update rate for a particular I/O device. The update rate is the frequency with which the OPC server polls the device for values and updates its own cache.             Replace the placeholders `<IOServerName>` and `<IODeviceName>` in the parameter with the actual names of the OPC I/O server and I/O device you want to override with a specific update rate.             <br />This parameter controls polling performed by the OPC server, not by               Citect SCADA. The scope of the parameter is communication between the OPC server and a device, not between the OPC server and Citect SCADA. |
 | UseAsyncWrites  | 0 - use synchronous writes. 1 - use asynchronous writes.     | 0                                                            | Determines whether writes are synchronous or asynchronous.**Note:** UseAsyncWrites=1 is only valid when [OPC]UseOPC2=1, since OPC1 does not support asynchronous writes. |
-| UseOPC2         | 0 – Individual OPC2 support disabled (Use OPC 1.0a interface).             1 – Individual OPC2 support enabled (Use OPC DA2 interface). | Value of global UseOPC2 parameter                            | Allows user to individually override the global default [UseOPC2](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm) parameter and to specify whether to use OPC 1.0a or OPC 2.0 for a particular I/O device.             Replace the placeholders <IOServerName> and <IODeviceName> in the parameter with the actual names of the OPC I/O server and I/O device you want to override and have with a particular version OPC interface. |
+| UseOPC2         | 0 – Individual OPC2 support disabled (Use OPC 1.0a interface).             1 – Individual OPC2 support enabled (Use OPC DA2 interface). | Value of global UseOPC2 parameter                            | Allows user to individually override the global default UseOPC2 parameter and to specify whether to use OPC 1.0a or OPC 2.0 for a particular I/O device.             Replace the placeholders <IOServerName> and <IODeviceName> in the parameter with the actual names of the OPC I/O server and I/O device you want to override and have with a particular version OPC interface. |
 
 #### OPC access path parameters     
 
@@ -487,13 +424,13 @@ An access path is optional, provided in addition to the Item ID (the tag address
 
 **Note:** The availability, format, and use of access paths is server-specific. Refer to your OPC server documentation for details relevant to your server.     
 
-[OPCAccessPaths]<IOServerName>.<IODeviceName>=<OPCAccessPath>    
+`[OPCAccessPaths]<IOServerName>.<IODeviceName>=<OPCAccessPath>  `  
 
 where:     
 
-- <IOServerName> = Name of I/O server configured in Citect SCADA .       
-- <IODeviceName> = Name of I/O device configured for OPC communications.       
-- <OPCAccessPath> = Access path to set up communications to the OPC server.       
+- `<IOServerName>` = Name of I/O server configured in Citect SCADA .       
+- `<IODeviceName>` = Name of I/O device configured for OPC communications.       
+- `<OPCAccessPath>` = Access path to set up communications to the OPC server.       
 
 This parameter is not normally required with most OPC servers.     
 
@@ -501,6 +438,7 @@ The Citect SCADA  OPC client driver supports specification of a single access pa
 
 To specify the access path for a particular device, add an entry to the ini file in the format <**IOServerName**>.<**IODeviceName**>. For example, to specify that the access path COM1: should be used for the I/O device OPC1 on I/O server IOServer1, add the following entry to the Citect.ini file:     
 
+```ini
 [OPCAccessPaths]
 IOServer1.OPC1=COM1:         
 
@@ -509,23 +447,24 @@ Multiple entries are also acceptable:
 [OPCAccessPaths]
 IOServer1.PLC1=PLC4
 IOServer1.PLC2=TestPLC 
+```
 
 #### OPC status tag parameters     
 
-The OPC status tag parameters determine the online or offline state of an OPC I/O device using the condition of a specified OPC item in the device. For more information, see [OPC status tags](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_status_tags.htm).
+The OPC status tag parameters determine the online or offline state of an OPC I/O device using the condition of a specified OPC item in the device. For more information, see OPC status tags.
 
 When configuring these parameters, be careful not to confuse the OPC item required for status monitoring with a normal Citect SCADA tag. 
 
 You should also use a full path to identify an OPC item, as a configured access path in your Citect.ini file  will not be known to a device. 
 
-**Note:** Use the [UseStatusTags](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm) parameter to enable or disable support for OPC status tags.     
+**Note:** Use the UseStatusTags parameter to enable or disable support for OPC status tags.     
 
 | [OPCStatusTags] Parameter | Allowable Values                          | Default Value                                                | Description                                                  |
 | ------------------------- | ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | StartWait                 | time in milliseconds - or - –1 (infinite) | 30000 (milliseonds)                                          | On driver startup, this parameter determines the time the OPC driver will wait before requesting status tag data for an OPC I/O device. The OPC server should respond within a few seconds. The default wait time of 30 seconds is usually adequate. |
-| Default.Tag               | An OPC item name                          | STATUS                                                       | This parameter  specifies the default OPC item to be monitored at runtime to determine the operational status of an associated device.**Note:** This parameter implements a global setting for all OPC I/O devices, unless it is specifically overridden using the equivalent [device-specific parameter](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm). |
-| Default.Update            | 0 -32000 (milliseconds)                   | The scan rate from Address field in the Citect SCADABoards form | This parameter specifies the default update rate for OPC status tags at runtime. This is the frequency with which the OPC server polls the device for status tag values and then updates its own cache.This parameter controls polling performed by the OPC server, not by Citect SCADA. The scope of the parameter is communication between the OPC server and a device, not between the OPC server and Citect SCADA.**Note:** This parameter implements a global setting for all OPC I/O devices, unless it is specifically overridden using the equivalent [device-specific parameter](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm). |
-| Default.Condition         | <condition>(see table below)              | ISGOOD                                                       | This parameter is used to determine if the OPC device is online at runtime, by comparing the <Condition> with the value of the default OPC item named in the .Default.Tag parameter. If the specified condition is determined to be true, the device will be considered online. This parameter represents the default condition for all OPC status tags, unless it is individually overridden using the [OPC device-specific parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm). |
+| Default.Tag               | An OPC item name                          | STATUS                                                       | This parameter  specifies the default OPC item to be monitored at runtime to determine the operational status of an associated device.**Note:** This parameter implements a global setting for all OPC I/O devices, unless it is specifically overridden using the equivalent device-specific parameter |
+| Default.Update            | 0 -32000 (milliseconds)                   | The scan rate from Address field in the Citect SCADABoards form | This parameter specifies the default update rate for OPC status tags at runtime. This is the frequency with which the OPC server polls the device for status tag values and then updates its own cache.This parameter controls polling performed by the OPC server, not by Citect SCADA. The scope of the parameter is communication between the OPC server and a device, not between the OPC server and Citect SCADA.**Note:** This parameter implements a global setting for all OPC I/O devices, unless it is specifically overridden using the equivalent device-specific parameter |
+| Default.Condition         | <condition>(see table below)              | ISGOOD                                                       | This parameter is used to determine if the OPC device is online at runtime, by comparing the <Condition> with the value of the default OPC item named in the .Default.Tag parameter. If the specified condition is determined to be true, the device will be considered online. This parameter represents the default condition for all OPC status tags, unless it is individually overridden using the OPC device-specific parameters. |
 
 | Allowable values for <condition>                             | Description                         |
 | ------------------------------------------------------------ | ----------------------------------- |
@@ -543,7 +482,7 @@ You should also use a full path to identify an OPC item, as a configured access 
 
 #### OPC array parameters     
 
-The support for arrays in the OPC client driver have been deprecated in Version 7. In order to carry out similar functionality you should use the procedures described in [Arrays Support](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_arrays_support.htm). 
+The support for arrays in the OPC client driver have been deprecated in Version 7. In order to carry out similar functionality you should use the procedures described in Arrays Support. 
 
 ### Configuring redundancy     
 
@@ -555,7 +494,7 @@ The status tag is polled at the same rate configured for the groups of the corre
 
 Both the primary and standby devices will be offline if both have the same status condition and the condition is an error condition. All points in the system for that unit would therefore be #COM.     
 
-Status tags can be defined on a per-device or global basis.  For more information, see "[OPC status tag parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_status_tag_parameters.htm)" and "[OPC device-specific parameters](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/opc_device-specific_parameters.htm)". 
+Status tags can be defined on a per-device or global basis.  For more information, see "OPC status tag parameters" and "OPC device-specific parameters". 
 
 ### Scan rates     
 
@@ -567,22 +506,31 @@ Examples
 
 Set the project scan rate to 1 second (1000 milliseconds):     
 
+```ini
 [OPC]
 ScanRate=1000     
+```
 
 Set the project scan rate to 1 second (1000 milliseconds), and the inactive server scan adjust rate to a factor of 5:     
 
+```ini
 [OPC]
 ScanRate=1000
+```
+
 Set a faster (half second) scan rate for a specific port named “Port1” on the I/O server named “CLServer”:     
 
+```ini
 [CLServer.Port1]
-ScanRate=500     
+ScanRate=500    
+```
 
 Set a slower (5 second) scan rate for a specific port named “Port123” on the I/O port named “CLServer”:     
 
+```ini
 [CLServer.Port123]
 ScanRate=5000 
+```
 
 ### Tag-based driver considerations     
 
@@ -622,14 +570,11 @@ A number of large projects will suffer 'bugs' in the run-time system. However, m
 
 The following topics provide information about the Citect SCADA  tools provided to help resolve problems with communication and configuration.     
 
-- [Driver errors](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver_errors.htm)             
-- [Logging](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/logging_opc.htm) 
-
 ### Driver errors     
 
 Citect SCADA  OPC driver errors can occur when an OPC device does not respond, is disconnected or offline, or returns an error itself.     
 
-The OPC driver can log combinations of trace levels across different categories. For more information, see [Logging](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/logging_opc.htm). 
+The OPC driver can log combinations of trace levels across different categories. For more information, see Logging. 
 
 #### Common protocol errors     
 
@@ -644,8 +589,6 @@ If you need more information to resolve an error, refer to the documentation tha
 #### OPC protocol errors     
 
 The following errors, listed in (hexadecimal) order, are specific to the Citect SCADA  OPC protocol:     
-
-
 
 | Error Value (Hex) | Error Definition            | Error Description                                            |
 | ----------------- | --------------------------- | ------------------------------------------------------------ |
@@ -681,8 +624,6 @@ The following errors, listed in (hexadecimal) order, are specific to the Citect 
 
 You can use the following driver statistics to help you debug the OPC driver operation.     
 
-
-
 | Statistic         | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
 | Cached Reads      | Number of reads that have been serviced directly from the internal cache of current values. |
@@ -710,11 +651,11 @@ OPC driver events are logged in the syslog.dat file. This file can be rolled ove
 
 The OPC driver also can log combinations of trace levels across different categories. This is achieved by setting the following ini parameters:     
 
-- [DebugLevel](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm)             
+- DebugLevel          
 
 - Allows you to define the trace level. The options include alerts, errors traces, or all of the above.
 
-- [DebugCategory](mk:@MSITStore:C:\Program Files (x86)\AVEVA\Citect SCADA 2018 R2\Bin\OPC.chm::/OPC_driver-specific_citectini_parameters.htm)             
+- DebugCategory    
 
 - Allows you to enable logging for a particular category of trace. The options include:
 

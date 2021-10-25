@@ -32,7 +32,7 @@ To set (or change) the parameters in a project database, go to the **Setup** act
 
 The Citect.ini file is a text file that stores  values for a comprehensive set of operating parameter that are used to  configure the operational settings for each computer in a Citect SCADA system. These values are read by Citect SCADA on startup to determine how the application should operate. 
 
-To view the complete list of built-in operating parameters that you can use in a Citect.ini file, see [Parameter Categories](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Parameter_Categories.html). 
+To view the complete list of built-in operating parameters that you can use in a Citect.ini file, see [Parameter Categories]---/Subsystems/ParametersCitectHTML/Content/Parameter_Categories.html). 
 
 During installation, a default Citect.ini file is copied to the Citect SCADA Config folder in the Program Data directory. This configuration file contains a series of undocumented parameters used by Citect SCADA as well as a series of default settings.
 
@@ -56,7 +56,7 @@ The header of the Citect.ini  file contains comments the user wants to document 
 
 Comments are located at the top of the file before the first definition of a section. Each line of the  header starts with the "hash" or "pound" character (#). 
 
-For more information, see [Add Comments to the Citect.ini File](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html).
+For more information, see [Add Comments to the Citect.ini File]---/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html).
 
 ### Sections
 
@@ -119,7 +119,7 @@ For example:
 [Alarm]
 ```
 
-For more information, see [Add Comments to the Citect.ini File](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html).
+For more information, see [Add Comments to the Citect.ini File]---/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html).
 
 Comments for a **parameter** commence with a hash or pound  character (#) and occur on the line just above the declaration of the relevant parameter.
 
@@ -131,7 +131,7 @@ For example:
 Primary = 1
 ```
 
-For more information, see [Add Comments to the Citect.ini File](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html).
+For more information, see [Add Comments to the Citect.ini File]---/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html).
 
 ### Example
 
@@ -233,7 +233,7 @@ The values applied at each server for [Alarm]SavePeriod would be as follows:
 | Cluster2     | Server3       | 500              |
 | Cluster2     | Server4       | 500              |
 
-**Note:** Hierarchical  parameters may be set in the parameters database. In this case normal  rules of precedence will apply. For more information see [Parameter Precedence](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Parameter_Precedence.html).
+**Note:** Hierarchical  parameters may be set in the parameters database. In this case normal  rules of precedence will apply. For more information see [Parameter Precedence]---/Subsystems/ParametersCitectHTML/Content/Parameter_Precedence.html).
 
 ## Computer Setup Editor
 
@@ -279,9 +279,9 @@ To collapse the tree:
 
 You can use the Parameter Details pane to view and modify settings and comments for parameters and sections. For details see: 
 
-- [Edit Parameter Sections](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Edit_Parameter_Sections.html)  
-- [Edit Parameters](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Edit_Parameters.html)  
-- [Add Comments to the Citect.ini File](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Add_Comments_to_the_Citect.ini_File.html). 
+- Edit Parameter Sections
+- Edit Parameters
+- Add Comments to the Citect.ini File
 
 When a parameter or section  entry is highlighted in the tree pane the corresponding values populate  the Parameter Details pane and the corresponding Help files appear in  the help pane. 
 
@@ -334,7 +334,7 @@ If there is a help topic the status pane will state whether:
 
 **Note:** Section and parameter names are active links that cause the corresponding help topics to be displayed in the help pane.
 
-**Note:** The Computer Setup Editor cannot  be used to maintain or set server parameters when being configured at  the component or server level using [Hierarchical Parameters](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/Content/Hierarchical_Parameters.html).
+**Note:** The Computer Setup Editor cannot  be used to maintain or set server parameters when being configured at  the component or server level using [Hierarchical Parameters]---/Subsystems/ParametersCitectHTML/Content/Hierarchical_Parameters.html).
 
 ## Cicode functions
 
@@ -378,7 +378,7 @@ Syntax
 
 Return Value
 
-0 (zero) if successful, otherwise an [error](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/CicodeReferenceCitectHTML/Content/Cicode_Errors.html) is returned.
+0 (zero) if successful, otherwise an error
 
 
 
@@ -390,15 +390,15 @@ Return Value
 
 ​           
 
-The Project Setup page will vary depending on whether you are configuring a project from Citect Studio, or from a [runtime only environment](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Runtime_only_Environment.html).
+The Project Setup page will vary depending on whether you are configuring a project from Citect Studio, or from a runtime only environment
 
 Select the project source to run on this Citect SCADA computer. You will have the following options:
 
 | Option                  | Description                                                  |
 | ----------------------- | ------------------------------------------------------------ |
-| **Deployed**            | This option should only be selected if [deployed projects](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Deployment.html) exist. If no deployed project(s) exist and you select this option, the following alert message is displayed: <br />“Cannot use Deployed as the project source, as no projects have been deployed”. <br />Projects that have been  deployed will be listed in the “Select the project to run” field.   Select a project and the version of the project to run. You can use this option to roll back to previous versions of the project. |
+| **Deployed**            | This option should only be selected if [deployed projects]---/Content/Deployment.html) exist. If no deployed project(s) exist and you select this option, the following alert message is displayed: <br />“Cannot use Deployed as the project source, as no projects have been deployed”. <br />Projects that have been  deployed will be listed in the “Select the project to run” field.   Select a project and the version of the project to run. You can use this option to roll back to previous versions of the project. |
 | **Local Citect Studio** | Compiled projects available in the Local Citect Studio will be listed. If there is only one  compiled project present, it will be selected automatically. If there  are no compiled projects present, an alert message is displayed and the  wizard will terminate. If this occurs, return to the Project and confirm that the necessary project is saved locally and has compiled without  errors. |
-| **Run/Copy**            | No additional options are available. Refer to [runtime only environment](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Runtime_only_Environment.html) for more information. |
+| **Run/Copy**            | No additional options are available. Refer to [runtime only environment]---/Content/Runtime_only_Environment.html) for more information. |
 
 **Note:** If you change this setting from **Deployed** to **Local Citect Studio**, the project that runs on the computer will no longer be synchronized  with deployment updates. You need to consider the implications of  changing the runtime project on the local computer.
 
@@ -406,7 +406,7 @@ Select the project source to run on this Citect SCADA computer. You will have th
 
 ![image-20211024192626363](media/image-20211024192626363.png)
 
-Before configuring the runtime only  environment, and running the Setup Wizard, it is assumed you have  transferred a project from the configuration environment, including  compiled projects to your local machine. If not refer to [Backing up a project](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Back_Up_a_Project.html) for more information.
+Before configuring the runtime only  environment, and running the Setup Wizard, it is assumed you have  transferred a project from the configuration environment, including  compiled projects to your local machine. If not refer to Backing up a project for more information.
 
 Using the .CTZ files from your backup included  projects and target project, you can restore the project. It is  recommended you restore the included project before the target project.  The restore project tool is available from the start menu shortcut **Runtime Configuration | Project restore**
 
@@ -423,7 +423,7 @@ You are now ready to run the Setup Wizard available from the start menu shortcut
 
 In the RUN path edit box enter, or use the  select button to browse for,  the path to the local project that you  wish to the client to run.If you enter the run path set the run folder  under the ‘User’ Folder.        
 
-If you wish to maintain a synchronized local  version of an external project select the Enable RUN/COPY deployment  check box. Then in the COPY path edit box enter, or use the select  button to browse for,  the path to the external project that you wish  maintain synchronization. This feature uses the  [[CtEdit\]Run](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/content/CtEditRun.html) and [[CtEdit\]Copy](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/content/CtEditCopy.html) commands to maintain synchronization between the two projects.
+If you wish to maintain a synchronized local  version of an external project select the Enable RUN/COPY deployment  check box. Then in the COPY path edit box enter, or use the select  button to browse for,  the path to the external project that you wish  maintain synchronization. This feature uses the  [CtEdit\]Run [CtEdit\]Copy commands to maintain synchronization between the two projects.
 
 **Note**: The Run/Copy  mechanism does not transfer custom files such as meta-data, icons,  images or runtime DBF files. Therefore, it is recommended deploying a  project before Run/Copy to help ensure that those files at least exist.  You will still need to re-deploy a project, when you want to update the  custom files.
 
@@ -439,7 +439,7 @@ To load the Cictect.ini file at Runtime leave the option **Configure Local Setti
 
 From the drop-down list provided select one of  the profiles configured in your project. At Runtime the selected profile will be loaded.
 
-**Note**: Use the [Profile Setup Wizard](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Running_the_Profile_Setup_Wizarda.html) to create a <profile>.ini file. Once created use the Computer  Setup Editor to configure parameters specific to that Profile.
+**Note**: Use the Profile Setup Wizard to create a <profile>.ini file. Once created use the Computer  Setup Editor to configure parameters specific to that Profile.
 
 ### Computer Role Configuration
 
@@ -451,9 +451,9 @@ Use the Computer Role Setup page to specify the role of the computer running Cit
 
 | Option                    | Description                                                  |
 | ------------------------- | ------------------------------------------------------------ |
-| Server and Control Client | This computer will be a standalone or networked [I/O Server](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Add_an_IO_Server_Process.html) and [Control Client](javascript:void(0);). This option is disabled if this computer has no Server components assigned to it to run. Selecting this option enables the **Multi-Process** check box. <br />Select the **Multi-Process** check box to separate your client and server components into individual processes. This option can be used for distributing the components  across multiple CPUs. If you leave the **Multi-Process** check box unselected, Citect SCADA will run the client and server components in one process. <br />If the **Multi-Process** check box is selected the [General]MultiProcess parameter in the  Citect.ini file is saved with the value 1. If not selected, the  parameter is saved with the value 0. |
+| Server and Control Client | This computer will be a standalone or networked I/O Server and Control Client. This option is disabled if this computer has no Server components assigned to it to run. Selecting this option enables the **Multi-Process** check box. <br />Select the **Multi-Process** check box to separate your client and server components into individual processes. This option can be used for distributing the components  across multiple CPUs. If you leave the **Multi-Process** check box unselected, Citect SCADA will run the client and server components in one process. <br />If the **Multi-Process** check box is selected the [General]MultiProcess parameter in the  Citect.ini file is saved with the value 1. If not selected, the  parameter is saved with the value 0. |
 | Control Client            | This computer will  only be a Control Client. This option is disabled if this computer has  been assigned a Server component to run. Selecting this option enables  the **full server license** check box.<br />Select the full server license check box if you want this Control Client to use a full  (server) license, as opposed to a client license. This sets the  [Client]FullLicense parameter in the Citect.ini file to 1 (the default  value is 0). Generally, you would not allocate a full server license to a client as there is no difference in functionality between the two  licenses. Allocate a full server license if you have insufficient client licenses available, or for some other specific need. |
-| View-only Client          | This computer will only be a [View-only Client](javascript:void(0);). This read only option is disabled if this computer has been assigned a Server component to run. |
+| View-only Client          | This computer will only be a View-only Client. This read only option is disabled if this computer has been assigned a Server component to run. |
 
 Some of these options may be disabled  depending on what servers have been configured to run on this computer.  The  Setup Wizard cross-references your computer's network  identification with the network addresses configured for each server in  your project configuration.
 
@@ -470,7 +470,7 @@ Select the network model to be applied to this Citect SCADA computer. Options in
 
  From Version 7.0 Citect SCADA uses TCP/IP to facilitate communications across a network.
 
-**Note:** TCP/IP address information for servers is configured within the Citect SCADA project itself. See [Add a Network Address](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Add_a_Network_Address.html) for more information.
+**Note:** TCP/IP address information for servers is configured within the Citect SCADA project itself. See Add a Network Address for more information.
 
 When you complete the Profile Setup Wizard, the chosen network model is written to the `[LAN]` section in the `ini` file; for example:
 
@@ -519,7 +519,7 @@ Citect SCADA has one option available for trend processing:
 
 The CPU Setup page is used to assign client and server components to specific processors in a multi-processor machine.
 
-This page lists each component's full name,  including the cluster to which it belongs, the priority and the CPU  assignment. If the multi-process option was not selected on the [Computer Role Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Computer_Role_Configuration.html) page there will only be one entry listed, either Client or Client and  Servers. If the Multi-process option was selected, you have the option  of selecting specific CPUs for the Client, I/O Server, Alarm Server,  Trends Server and Reports Server.
+This page lists each component's full name,  including the cluster to which it belongs, the priority and the CPU  assignment. If the multi-process option was not selected on the Computer Role Configuration page there will only be one entry listed, either Client or Client and  Servers. If the Multi-process option was selected, you have the option  of selecting specific CPUs for the Client, I/O Server, Alarm Server,  Trends Server and Reports Server.
 
 To assign a CPU to a component:
 
@@ -581,7 +581,7 @@ Events=CSV_TrendXClient,CSV_TrendXServer
 
 The Startup Functions Setup page is used to define the Startup Cicode that is executed by each Citect SCADA process.
 
-The Startup Functions Setup page lists each  component's full name, including the cluster to which it belongs, the  priorities of the components and the startup function assigned to each  component. If the **Multi-process** option was not selected on the [Computer Role Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Computer_Role_Configuration.html) page there will only be one entry listed, either Client or Client and  Servers. If the Multi-process option was selected, you have the option  of assigning startup functions for each component on this computer.
+The Startup Functions Setup page lists each  component's full name, including the cluster to which it belongs, the  priorities of the components and the startup function assigned to each  component. If the **Multi-process** option was not selected on the Computer Role Configuratio page there will only be one entry listed, either Client or Client and  Servers. If the Multi-process option was selected, you have the option  of assigning startup functions for each component on this computer.
 
 If the StartupCode parameter value for a process is invalid, the Citect SCADA Runtime Manager will simply ignore it on start up.
 
@@ -643,7 +643,7 @@ Clusters=Sydney,Tokyo
 
 ![image-20211024201902405](media/image-20211024201902405.png)
 
-If networking is enabled use this page to  configure the machine password. The machine password is used by  computers to authenticate each other and create a trusted network  between servers. Configuring the password automatically sets the [[Client\]PartofTrustedNetwork](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/ParametersCitectHTML/content/ClientPartOfTrustedNetwork.html)  INI parameter.
+If networking is enabled use this page to  configure the machine password. The machine password is used by  computers to authenticate each other and create a trusted network  between servers. Configuring the password automatically sets the [Client\]PartofTrustedNetwork]  INI parameter.
 
 **Note**: You will not be able to configure the server password if you are not a member of the local Windows group Citect.Engineers. 
 
@@ -714,7 +714,7 @@ Use the General Options Setup page to specify general options.
 | --------------------- | ------------------------------------------------------------ |
 | Data Directory        | The directory where the Citect SCADA data files are located. The data files are the files that are generated at run time: trend files, disk PLC etc. |
 | Backup project path   | The backup directory that is  used if a runtime database cannot be located (due to inoperative  hardware or a file that has been moved, corrupted, or deleted). |
-| Startup page          | The Page Name of the [graphics page](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Pages.html) to display when Citect SCADA starts up. |
+| Startup page          | The Page Name of the [graphics page]---/Content/Pages.html) to display when Citect SCADA starts up. |
 | Page scan time        | The delay (in milliseconds)  between updating a graphics page and starting the next communications  cycle. The Page Scan Time sets the default for how often your graphics  pages are updated. When a page is updated, relevant data (variable tags  etc. represented on the graphics page) is scanned to determine if field  conditions have changed. This setting is overridden by the Scan Time  value specified in Page Properties (if applied).  <br />A value of 250 (the default value) indicates that Citect SCADA will try to update the page every 250 ms. However, if Citect SCADA cannot read the entire data from the I/O Device within 250 ms, the page is processed at a slower rate. For example, if it takes 800 ms to read  the data from the relevant I/O Device, Citect SCADA processes the page every 800 ms.  <br />Under some conditions, you  might want to slow the update of your pages to reduce the load on the  I/O Servers. By reducing the page scan time, you allow more  communication bandwidth to other Citect SCADA tasks or Clients. For example, you might want fast response on your  main operator computers, while slowing the response time on manager  computers. You can enter any value from 0 to 60000 (milliseconds). |
 | OPC Alarms and Events | Click the **Register** button to register alarm servers defined in a project to be accessed via a third party OPC client. <br />**Note**: This registration requires administrative privileges. If already logged on  as an administrator you will be asked to allow the program to run with  elevated privileges. Click OK to proceed. If  logged on as a  non-administrator, you will need  to provide an admin password before  being asked to allow program to run with elevated privileges. |
 
@@ -727,24 +727,24 @@ Use the General Options Setup page to specify general options.
 
 A profile stores runtime parameter settings that are specific to a particular type of computer within a Citect SCADA system (for example, a client or server). These settings are stored in a "<profile_name>.ini" file that can be distributed to any computer where a project is deployed. 
 
-Profiles are created in the Topology activity using the [Profile Wizard](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Setup_Wizard.html). 
+Profiles are created in the Topology activity using the [Profile Wizard]---/Content/Profile_Setup_Wizard.html). 
 
-The Citect SCADA Example Project includes three profiles that you  can select from the [Profile Setup Page](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Setup_CSW.html) in the Setup Wizard. Once you have selected the profile you would like, you can compile and run the Example project.
+The Citect SCADA Example Project includes three profiles that you  can select from the [Profile Setup Page]---/Content/Profile_Setup_CSW.html) in the Setup Wizard. Once you have selected the profile you would like, you can compile and run the Example project.
 
-You can use the **Deployment** activity to distribute Profile.ini files to the computers in a Citect SCADA system (see [Deployment Computers](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Deployment_Computers.html)). 
+You can use the **Deployment** activity to distribute Profile.ini files to the computers in a Citect SCADA system (see [Deployment Computers]---/Content/Deployment_Computers.html)). 
 
 **Note:** To use an INI file  you create with the Profile Wizard, either select it locally on a  computer using the Computer Setup Wizard, or use the deployment feature.
 
 #### Add a Profile
 
-To add a [profile](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profiles.html):
+To add a profile:
 
 1. In the **Topology** activity, select **Profiles**
-2. On the Command Bar, click the **Add/Edit Profile** button. This launches the [Profile Wizard](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Setup_Wizard.html). 
+2. On the Command Bar, click the **Add/Edit Profile** button. This launches the Profile Wizard. 
 
 ### Profile Wizard
 
-The Profile Wizard is similar to the [Setup Wizard](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/The_Computer_Setup_Wizard.html) in that it allows you to configure parameters for a specific computer.  Configuration information is stored  in an INI file which can be  deployed to the for the specific computer for which it was configured. 
+The Profile Wizard is similar to the Setup Wizard in that it allows you to configure parameters for a specific computer.  Configuration information is stored  in an INI file which can be  deployed to the for the specific computer for which it was configured. 
 
 The Profile Wizard contains a series of pages allowing configuration of  computer-specific settings including:
 
@@ -758,7 +758,7 @@ The Profile Wizard contains a series of pages allowing configuration of  compute
 
 Parameter values collected from the user through the Wizard interface are written to the <ProfileName> ini file.
 
-**Note**: To use a profile, either select it locally on a computer using the Computer Setup Wizard, or use the deployment feature (see [Deployment Computers](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Deployment_Computers.html)). The values  in the profile.ini will take precedence over the values set in the local Citect.ini. However,  values that are set for the  parameters [CtEdit]Run, [CtEdit]Bin, [CtEdit]Data, [CtEdit]Logs,  [CtEdit]Config will  be taken from the local citect.ini and not from the profile.ini.
+**Note**: To use a profile, either select it locally on a computer using the Computer Setup Wizard, or use the deployment feature (see Deployment Computers). The values  in the profile.ini will take precedence over the values set in the local Citect.ini. However,  values that are set for the  parameters [CtEdit]Run, [CtEdit]Bin, [CtEdit]Data, [CtEdit]Logs,  [CtEdit]Config will  be taken from the local citect.ini and not from the profile.ini.
 
 ### Run the Profile Wizard
 
@@ -771,29 +771,29 @@ To run the  Profile Wizard:
 
 The pages that are displayed depend on the configuration of the machine and include:
 
-- [Profile Setup](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Setup.html)            
-- [Select a Profile](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Select_A_Profile.html)            
-- [Create a New Profile](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Add_A_New_Profile.html)            
-- [Select a Node](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Select_Machine_Type.html)            
-- [Select a Screen Profile](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Screen_Setup.htm)            
-- [Computer Role Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Computer_Role_Configuration.html)            
-- [Network Model](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Network_Model.html)            
-- [Reports Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Reports_Configuration.html)            
-- [Trends Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Trends_Configuration.html)            
-- [Alarms Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Alarms_Configuration.htm)            
-- [CPU Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/CPU_Configuration.html)            
-- [Events Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_Events_Configuration.html)            
-- [Startup Functions Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Startup_Functions_Configuration.html)            
-- [Cluster Connections Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Cluster_Connections_Configuration.html) *
-- [Configure Server Password](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Server_Password_Configuration.html)            
-- [Configure Server User](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Server_User_Configuration.html)            
-- [Control Menu Security Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Control_Menu_Security_Configuration.html)            
-- [Keyboard Security Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Keyboard_Security_Configuration.html) *
-- [Miscellaneous Security Configuration](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Miscellaneous_Security_Configuration.html) *
-- [EcoStruxure Web Services Client Setup](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_EWS_Client_Setup.htm) *
-- [EcoStruxure Web Services Server Setup](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_EWS_Services_Setup.htm) *
-- [EcoStruxure Web Services Server User Setup](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/Profile_EWS_Services_User_Setup.htm) *
-- [General Options Setup](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Content/General_Options_Setup.html) *
+- [Profile Setup]---/Content/Profile_Setup.html)            
+- [Select a Profile]---/Content/Select_A_Profile.html)            
+- [Create a New Profile]---/Content/Add_A_New_Profile.html)            
+- [Select a Node]---/Content/Select_Machine_Type.html)            
+- [Select a Screen Profile]---/Content/Profile_Screen_Setup.htm)            
+- [Computer Role Configuration]---/Content/Computer_Role_Configuration.html)            
+- [Network Model]---/Content/Network_Model.html)            
+- [Reports Configuration]---/Content/Reports_Configuration.html)            
+- [Trends Configuration]---/Content/Trends_Configuration.html)            
+- [Alarms Configuration]---/Content/Profile_Alarms_Configuration.htm)            
+- [CPU Configuration]---/Content/CPU_Configuration.html)            
+- [Events Configuration]---/Content/Profile_Events_Configuration.html)            
+- [Startup Functions Configuration]---/Content/Startup_Functions_Configuration.html)            
+- [Cluster Connections Configuration]---/Content/Cluster_Connections_Configuration.html) *
+- [Configure Server Password]---/Content/Server_Password_Configuration.html)            
+- [Configure Server User]---/Content/Server_User_Configuration.html)            
+- [Control Menu Security Configuration]---/Content/Control_Menu_Security_Configuration.html)            
+- [Keyboard Security Configuration]---/Content/Keyboard_Security_Configuration.html) *
+- [Miscellaneous Security Configuration]---/Content/Miscellaneous_Security_Configuration.html) *
+- [EcoStruxure Web Services Client Setup]---/Content/Profile_EWS_Client_Setup.htm) *
+- [EcoStruxure Web Services Server Setup]---/Content/Profile_EWS_Services_Setup.htm) *
+- [EcoStruxure Web Services Server User Setup]---/Content/Profile_EWS_Services_User_Setup.htm) *
+- [General Options Setup]---/Content/General_Options_Setup.html) *
 
 \* Only available in Custom Setup mode.
 
