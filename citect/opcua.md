@@ -77,11 +77,9 @@
 
 ## OPCUA Driver 
 
-The OPCUA driver enables Citect SCADA to communicate with a system that implements the OPC UA server standard for data access. It supports binary OPC.TCP protocol. 
+The OPCUA driver enables Citect SCADA to communicate with a system that implements the OPC UA server standard for data access. It supports binary OPC.TCP protocol.  The driver uses the Unified Automation OPC UA Client SDK v1.6.3. The OPCUA driver enables Citect SCADA to communicate with a system that implements the OPC UA server standard for data acess. 
 
-The driver uses the Unified Automation OPC UA Client SDK v1.6.3.
-
-The OPCUA driver enables Citect SCADA to communicate with a system that implements the OPC UA server standard for data acess. The server endpoint needs to support OPC.TCP binary protocol.
+The server endpoint needs to support OPC.TCP binary protocol.
 
 ### Setting up Device Communications
 
@@ -97,7 +95,7 @@ If you use the Express Communications Wizard to connect to a device, these forms
 
 ##### Boards Form 
 
-The Boards dialog box lists boards used in the       Citect SCADA  project. Each board record defines a separate board within the project. 
+The Boards dialog box lists boards used in the Citect SCADA project. Each board record defines a separate board within the project. 
 
 | Field           | Value                                       |
 | --------------- | ------------------------------------------- |
@@ -215,7 +213,7 @@ This section provides instructions for advanced configuration and maintenance ta
 
 #### Configuring Redundancy
 
-The Citect SCADA driver supports multiple I/O server / device redundancy.
+The Citect SCADA driver supports multiple I/O server/device redundancy.
 
 The driver represents each OPC UA server as a separate I/O device. In a normal operating state, the driver will communicate to the server via the primary I/O device. If the connection to the server via the primary I/O device is lost, the server will be communicated via a standby I/O device which is connected to the server and has the next highest priority if multiple redundant I/O devices are configured. 
 
@@ -239,7 +237,7 @@ If the Citect subscription update rate changes, the driver will re-evaluate the 
 
 | **NOTICE**                                                   |
 | ------------------------------------------------------------ |
-| When establishing secure connection either via user authentication or message encryption with client and server certificates, the anonymous connection and non-secure endpoint should be disabled to make sure that unauthorized user cannot connect and perform actions on the OPC UA server.Also, make sure that the [OPCUA]SecuritySettingsName ini parameter is set to the correct value. The driver log messages will specify the security mode/policy and the authentication mode which the driver will use for a specific I/O Device. The driver logs can be found in syslog.IOServer.<Cluster name>.<IO Server name>.dat file. |
+| When establishing secure connection either via user authentication or message encryption with client and server certificates, the anonymous connection and non-secure endpoint should be disabled to make sure that unauthorized user cannot connect and perform actions on the OPC UA server.Also, make sure that the [OPCUA]SecuritySettingsName ini parameter is set to the correct value. The driver log messages will specify the security mode/policy and the authentication mode which the driver will use for a specific I/O Device. The driver logs can be found in `syslog.IOServer.<Cluster name>.<IO Server name>.dat` file. |
 
 The OPCUA driver provides the ability to use user credentials when connecting to the device and also to establish secure connection between the driver and the OPC UA server using the client and server X509 certificates. In order to establish a secure connection, the driver needs access to the server certificate and the server needs access to the driver client certificate. 
 
@@ -297,7 +295,7 @@ This plugin allows you to:
 
 19. If there are no client certificates available, there are two options to add a new one:
 
-20. - ​                  Create a new Citect client certificate. 
+20. - Create a new Citect client certificate. 
     - When this option is selected and you click the “Create” button, the Configurator creates a new Citect OPC UA Client self-signed certificate and adds it to the Windows certificate store.
 
     -  The newly created client certificate is automatically selected in the list of available certificates.
@@ -321,7 +319,7 @@ This plugin allows you to:
 
 24. There are two options to import the server certificate:
 
-25. - Import a server certificate from a file.			When this option is selected, the Configurator will import the server certificate to the Windows Certificate Store.
+25. - Import a server certificate from a file. When this option is selected, the Configurator will import the server certificate to the Windows Certificate Store.
     - Import a server certificate directly from the OPC UA server.			This option allows to select one of the available server certificates and add it to the Windows Certificate store. You will need to specify the OPC UA server URL and then click the Browse button. After that the Configurator will connect to the server and get certificates for all endpoints exposed by the server. If the operation was successful, the server certificates will be added to the dropdown list of available certificates.
 
 26. **Note**: Importing a server certificate directly from OPC UA server only works for self-signed server certificates.
@@ -383,13 +381,13 @@ Any parameters placed under the [OPCUA] section of the Citect.ini file will appl
 
 To do this, use one of the following section names within the Citect.ini file. 		 
 
-- [<Protocol>.<PortName>] 
-- where:			<Protocol> is OPCUA and 				<PortName> is the 'Port Name' defined for a specified port on the Ports form.		 
+- `[<Protocol>.<PortName>] `
+- where: `<Protocol>` is OPCUA and `<PortName>` is the 'Port Name' defined for a specified port on the Ports form.		 
 
 - For example, any parameters set within the section [OPCUA.PrimaryPort1] will impact every device connected to the port defined as "PrimaryPort1" on the Ports Form. 
 
-- ​	[<Protocol>.<PortName>.<DeviceName>] 
-- where:			<Protocol> is OPCUA,				<PortName> is the 'Port Name' defined for a specified port on the Ports form and <DeviceName>.		 
+- `[<Protocol>.<PortName>.<DeviceName>]` 
+- where: `<Protocol> ` is OPCUA, `<PortName>` is the 'Port Name' defined for a specified port on the Ports form and `<DeviceName>`.		 
 
 - For example, any parameters set within the section [OPCUA.PrimaryPort1.PrimaryIODev128] will only impact the device named "PrimaryIODev128". 
 
