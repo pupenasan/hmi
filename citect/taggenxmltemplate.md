@@ -345,7 +345,7 @@ This function splits the source string parts separated by the delimiter, and the
 
 ```xml
 <array name="taginfo">
-{ToProperty('VJA=Alarm;VJT=Trend', '=', ';')}
+	{ToProperty('VJA=Alarm;VJT=Trend', '=', ';')}
 </array>
 ```
 
@@ -368,7 +368,8 @@ For each Unity Database variable tag with the text "VJT" in the custom field imp
 <template desc="Default SpeedLink Unity Pro TagGen template">
     
     <param name="parameter">
-        <string name="IODevice" desc="SpeedLink necessary parameter, it will be set to the given I/O Device name by the system."></string>
+        <string name="IODevice" desc="SpeedLink necessary parameter, it will be set to the given I/O Device name by the system.">
+        </string>
     </param>
     
     <input name="variable" file="variable.dbf" desc="Load variable tags for the specified I/O Device">
@@ -376,20 +377,28 @@ For each Unity Database variable tag with the text "VJT" in the custom field imp
         <field name="type"></field>
         <field name="unit" load="true">{parameter.IODevice}</field>
         <field name="custom"></field>
-        <array name="taginfo">{ToProperty('{custom}', '=', ';')}</array><string name="alarminfo">{variable.taginfo[VJA]}</string>
+        <array name="taginfo">
+            <!-- custom = "VJA=VJA;VJT=VJT" -->
+            {ToProperty('{custom}', '=', ';')}
+        </array>
+        <string name="alarminfo">{variable.taginfo[VJA]}</string>
         <string name="trendinfo">{variable.taginfo[VJT]}</string>
     </input>
     
-    <output name="digalm" file="digalm.dbf" filter="'{variable.alarminfo}=VJA' AND 
-'{variable.type}=DIGITAL'" desc="Generate digital alarm tags from input digital variable tags">
+    <output name="digalm" file="digalm.dbf" 
+            filter="'{variable.alarminfo}=VJA' AND 
+'{variable.type}=DIGITAL'" 
+            desc="Generate digital alarm tags from input digital variable tags">
         <field name="tag">{variable.name}_ALARM</field>
         <field name="name">{variable.name}_ALARM</field>
         <field name="var_a" key="true">{variable.name}</field>
         <field name="taggenlink" load="true">{parameter.IODevice}</field>
     </output>
     
-    <output name="anaalm" file="anaalm.dbf" filter="'{variable.alarminfo}=VJA' AND 
-'{variable.type}=NOT DIGITAL' AND '{variable.type}=NOT STRING'" desc="Generate analog 
+    <output name="anaalm" file="anaalm.dbf" 
+            filter="'{variable.alarminfo}=VJA' AND
+'{variable.type}=NOT DIGITAL' AND '{variable.type}=NOT STRING'" 
+            desc="Generate analog 
 alarms from input analog variable tags">
         <field name="tag">{variable.name}_ALARM</field>
         <field name="name">{variable.name}_ALARM</field>
@@ -397,7 +406,9 @@ alarms from input analog variable tags">
         <field name="taggenlink" load="true">{parameter.IODevice}</field>
     </output>
     
-    <output name="trend" file="trend.dbf" filter="'{variable.trendinfo}=VJT'" desc="Generate trend tags from input variable tags">
+    <output name="trend" file="trend.dbf" 
+            filter="'{variable.trendinfo}=VJT'" 
+            desc="Generate trend tags from input variable tags">
     <field name="name">{variable.name}_TREND</field>
     <field name="expr" key="true">{variable.name}</field>
     <field name="taggenlink" load="true">{parameter.IODevice}</field>
@@ -445,8 +456,12 @@ In this example, only analog alarms for integer variables will have the limit se
         <field name="eng_full"></string>
         <field name="custom"></field>
         <!-- customstring field may contain "VJA;VJT;VJC" -->
-        <array name="taginfo">{ToProperty('{custom}', '=', ';')}</array>
-        <string name="alarminfo">{variable.taginfo[VJA]}</string>
+        <array name="taginfo">
+            {ToProperty('{custom}', '=', ';')}
+        </array>
+        <string name="alarminfo">
+            {variable.taginfo[VJA]}
+        </string>
     </input>
     
     <!-- output section -->
