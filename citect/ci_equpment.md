@@ -162,3 +162,5 @@ The value of the specified parameter as a string. If the parameter is a tag refe
 
 An empty string may or may not be an indication that an error has been detected. The last error should be checked in  this instance to determine if an error has actually occurred.
 
+## Приклади
+

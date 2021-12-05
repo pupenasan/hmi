@@ -138,10 +138,11 @@ END
 
 
 
-### Alarm Browse
+## Alarm Browse
 
-| AlmBrowseAck        | Acknowledges the alarm tag at the current cursor position in an active data browse session. |
+|                     |                                                              |
 | ------------------- | ------------------------------------------------------------ |
+| AlmBrowseAck        | Acknowledges the alarm tag at the current cursor position in an active data browse session. |
 | AlmBrowseClear      | This function is now obsolete.                               |
 | AlmBrowseClose      | Closes an alarm tags browse session.                         |
 | AlmBrowseDisable    | Disables the alarm tag at the current cursor position in an active data browse session. |

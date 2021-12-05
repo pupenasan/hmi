@@ -181,3 +181,29 @@ Return Value
 
 The actual number of samples read. 0(zero) is  returned if an error occurs. You can call the IsError() function to get  the actual [error](file:///C:/Program Files (x86)/AVEVA/Citect SCADA 2018 R2/Bin/Help/Citect SCADA/Subsystems/CicodeReferenceCitectHTML/Content/Cicode_Errors.html) code.
 
+## TrnBrowse*
+
+Отримання переліку тренд-тегів за фільтром назви обладнання Equipment
+
+```c
+FUNCTION GetTrnedTagsFromEquip (STRING sEquipName)
+	ErrSet(1);
+	tagstr =""; 
+	STRING sFilter = "EQUIPMENT=" + sEquipName + "*";
+    STRING sField = "NAME";
+    STRING sTag = "";
+    INT iStatus = -1;
+    INT hTagBrowse =  TrnBrowseOpen (sFilter,sField);
+    IF (hTagBrowse <> -1) THEN
+        iStatus = TrnBrowseFirst(hTagBrowse);
+        WHILE iStatus = 0 DO
+             sTag = TrnBrowseGetField(hTagBrowse,sField);
+             tagstr = tagstr + sTag + ";" 
+             iStatus = TrnBrowseNext(hTagBrowse);
+             nError=IsError();
+        END
+        TrnBrowseClose(hTagBrowse);
+    END  
+END
+```
+

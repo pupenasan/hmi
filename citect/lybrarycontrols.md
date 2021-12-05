@@ -128,35 +128,115 @@ At runtime the table will look like the following:
 
 ![img](media/TableExample_Alarm.png)  
 
+### Приклад
+
+![image-20211205105022448](media/image-20211205105022448.png)
+
+
+
+```c
+FUNCTION AlarmTabInit (STRING sTable)
+	STRING sEquipment = AssInfo("equipname", 0);
+	STRING sStartDate = AssInfo("timestart", 0);
+	STRING sEndDate = AssInfo("timeend", 0);	
+	
+	// Set up columns
+	LibTable_AddColumn(sTable, "ДатаЧас", 150, "LocalTimeDate");
+	LibTable_AddColumn(sTable, "Tag", 150);
+	LibTable_AddColumn(sTable, "Message", 150);
+	LibTable_AddColumn(sTable, "State", 150);
+
+	STRING sStartDate1 = StrMid (sStartDate,0,10);   
+	STRING sStartTime1 =  StrMid (sStartDate,11,8);
+	STRING sEndDate1 = StrMid (sEndDate,0,10);
+	STRING sEndTime1 = StrMid (sEndDate,11,8);	
+	STRING startDate = IntToStr (StrToDate(sStartDate1) + StrToTime(sStartTime1)); 
+	STRING endDate = IntToStr (StrToDate(sEndDate1) + StrToTime(sEndTime1));
+	STRING sFilter = "Equipment=" + sEquipment + "* AND LocalTimeDate>=" + startDate + " AND LocalTimeDate<" +  endDate + ";";
+	
+	// Set up filter
+	INT nAN = LibAlmTable_GetAN(sTable);
+	INT hEdit = AlarmFilterEditOpen(nAN);
+	AlarmFilterEditSet(hEdit, sFilter);
+	AlarmFilterEditCommit(hEdit);
+	AlarmFilterEditClose(hEdit);
+END
+```
+
+![image-20211205110042919](media/image-20211205110042919.png)
+
 ## Calendar Library Control
 
 The following parameters are available for the Calendar library control:
 
-|Parameter               |Description                                                  |
-|----------------------- |------------------------------------------------------------ |
-|Calendar Name           |A unique name used to identify the Genie within a page.      |
-|Width                   |The pixel width of the control at runtime.  **Note**: Please do not re-size the Genie at design time, as its width will be automatically calculated at runtime. |
-|Height                  |The pixel height of the control at runtime. 						  **Note:** Please do not re-size the Genie at design time, as its height will be automatically calculated at runtime. |
-|Header Height           |Pixel height of header row (that shows the week day initials) in calendar display. |
-|Label Height            |Pixel height of the label row (that shows the month).        |
-|Header Padding          |The pixel padding between the bottom of the header text and the bottom of the header row. |
-|Label Padding           |The pixel padding between the bottom of the label text and the bottom of the label row. |
-|Top Padding             |The pixel padding on top of the calendar display.            |
-|Left Padding            |The pixel padding on left of the calendar display.           |
-|Side Padding            |The pixel padding on both sides of the calendar display.     |
-|Header Font             |The pre-configured font for header text.                     |
-|Date                    |The date selected as a timestamp value. Users may wish to convert the result using TimestampToStr to the desired format and locale. |
-|Date Font               |The pre-configured font for the month text.                  |
-|Day Font                |The pre-configured font for the day displays.                |
-|Next Month Font         |The pre-configured font for the next month text.             |
-|Selection Font          |The pre-configured font for the selected day.                |
-|Single selection        |Whether allow single day or multiple days to be selected.    |
-|Refresh Rate            |The minimum (quickest possible) rate that the control will be drawn. The control is only redrawn as required upon changes to the layout or other user initiated events. |
-|Initialize (Optional)   |Callback function that is  called when the control initializes The callback function should return  either TRUE (1) for success or FALSE (0) if unsuccessful. By default, if the user specified function does not initialize, the control Genie will retry the function a few time before giving up. This callback only  supports the #Name keyword which represents the name assigned to the  control Genie.  **Note**: The initialization callback function may be called multiple times whenever the table is re-initialized. |
-|Left Mouse (Optional)   |Callback function that is  called when the user clicks the left mouse button No particular return  value is expected from this function, and it supports the following  keywords in its argument list: #Name = name assigned to the Genie  						 #Date = the date selected as a timestamp value. Users may  wish to convert the result using TimestampToStr to the desired format  and locale. |
-|Right Mouse (Optional)  |Callback function that is  called when the user clicks the right mouse button It uses the same  specification as that of the Left mouse callback . |
-|Double Click (Optional) |Callback function that is  called when the user double-click the left mouse button It uses the same specification as that of the Left mouse callback. |
-|Table Reload (Optional) |Callback function that is  called when the control is redrawn No particular return value is  expected from this function, and it supports the following keywords in  its argument list:  #Name = name assigned to the Genie. |
+| Parameter               | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| Calendar Name           | A unique name used to identify the Genie within a page.      |
+| Width                   | The pixel width of the control at runtime.  <br />**Note**: Please do not re-size the Genie at design time, as its width will be automatically calculated at runtime. |
+| Height                  | The pixel height of the control at runtime. 						 <br /> **Note:** Please do not re-size the Genie at design time, as its height will be automatically calculated at runtime. |
+| Header Height           | Pixel height of header row (that shows the week day initials) in calendar display. |
+| Label Height            | Pixel height of the label row (that shows the month).        |
+| Header Padding          | The pixel padding between the bottom of the header text and the bottom of the header row. |
+| Label Padding           | The pixel padding between the bottom of the label text and the bottom of the label row. |
+| Top Padding             | The pixel padding on top of the calendar display.            |
+| Left Padding            | The pixel padding on left of the calendar display.           |
+| Side Padding            | The pixel padding on both sides of the calendar display.     |
+| Header Font             | The pre-configured font for header text.                     |
+| Date                    | The date selected as a timestamp value. Users may wish to convert the result using TimestampToStr to the desired format and locale. |
+| Date Font               | The pre-configured font for the month text.                  |
+| Day Font                | The pre-configured font for the day displays.                |
+| Next Month Font         | The pre-configured font for the next month text.             |
+| Selection Font          | The pre-configured font for the selected day.                |
+| Single selection        | Whether allow single day or multiple days to be selected.    |
+| Refresh Rate            | The minimum (quickest possible) rate that the control will be drawn. The control is only redrawn as required upon changes to the layout or other user initiated events. |
+| Initialize (Optional)   | Callback function that is  called when the control initializes The callback function should return  either TRUE (1) for success or FALSE (0) if unsuccessful. By default, if the user specified function does not initialize, the control Genie will retry the function a few time before giving up. This callback only  supports the #Name keyword which represents the name assigned to the  control Genie.  **Note**: The initialization callback function may be called multiple times whenever the table is re-initialized. |
+| Left Mouse (Optional)   | Callback function that is  called when the user clicks the left mouse button No particular return  value is expected from this function, and it supports the following  keywords in its argument list: #Name = name assigned to the Genie  						 <br />#Date = the date selected as a timestamp value. Users may  wish to convert the result using TimestampToStr to the desired format  and locale. |
+| Right Mouse (Optional)  | Callback function that is  called when the user clicks the right mouse button It uses the same  specification as that of the Left mouse callback . |
+| Double Click (Optional) | Callback function that is  called when the user double-click the left mouse button It uses the same specification as that of the Left mouse callback. |
+| Table Reload (Optional) | Callback function that is  called when the control is redrawn No particular return value is  expected from this function, and it supports the following keywords in  its argument list:  #Name = name assigned to the Genie. |
+
+
+
+![image-20211121165352587](media/image-20211121165352587.png)
+
+```c
+FUNCTION DaySel (STRING sName, TIMESTAMP sDate)
+	SEL_DATE1 =  TimestampToStr(sDate,5);
+END
+```
+
+Приклад роботи сумісно з Process Analyst
+
+```c
+FUNCTION DaySel (STRING sName, TIMESTAMP sDate)
+	ErrSet(1);
+	
+	OBJECT hPens, hPen, hPane;
+	STRING NamePA = "AN621";
+		
+	REAL startDate = TimeToOLEDate(TimestampToTimeInt(sDate,1),0);
+	REAL endDate = TimeToOLEDate(TimestampToTimeInt(sDate,1)+24*3600,0);		              
+	OBJECT hAnalyst	= ObjectByName(NamePA);
+	OBJECT hPanes	= _ObjectGetProperty(hAnalyst, "Panes");
+	INT nPanes = _ObjectGetProperty(hPanes, "Count");
+		
+	INT i, j, nPens;
+	FOR i = 1 TO nPanes DO
+		hPane = _ObjectCallMethod(hPanes, "get_Item", i);
+		hPens = _ObjectGetProperty(hPane, "Pens");
+		nPens = _ObjectGetProperty(hPens, "Count");
+		FOR j = 1 TO nPens DO
+			hPen = _ObjectCallMethod(hPens, "get_Item", j);
+			_ObjectcallMethod(hPen, "PutHorizontalAxisTimeSpan", startDate, 0, endDate, 0);
+			_ObjectCallMethod(hPen, "RefreshData");	
+		END
+	END	
+	ErrSet(0);	
+
+END
+```
+
+
 
 ## Browse Table Library Control
 
@@ -385,16 +465,14 @@ Tabs genie has the following parameters:
 
 ### Use the Tabs Genie
 
-There are two ways to populate data to the tabs:
+Існує два способи заповнення даних на вкладках:
 
-1. Set cell value directly to the table. 
-2. Binding a Cicode function to return the value for the individual tabs.
+1. Установіть значення комірки безпосередньо в таблиці.
+2. Прив'язка функції Cicode для повернення значення для окремих вкладок.
 
 #### Example 1: Set create tabs statically on initialization
 
 1. The  Cicode sample below will be used in the following example. Open the  Cicode Editor and create a new Cicode file, for example: _MyTab_Ex1.ci
-
-   
 
 2. ```c
    //Callback function to respond to the initialization event of the tab genie
@@ -430,9 +508,9 @@ At runtime the tab layout should look like the following:
 
 ![img](media/Tab_ex1.jpg)    
 
-Example 2: Binding a Cicode function to return the value for the individual tabs
+#### Example 2: Binding a Cicode function to return the value for the individual tabs
 
-This is similar to setting a  formula in Excel. With binding, cell values are not stored in the tabs  control. the control will call the provided Cicode function when it  needs the data.
+Це схоже на встановлення формули в Excel. При зв’язуванні значення клітинок не зберігаються в елементі керування вкладками. елемент керування викличе надану функцію Cicode, коли йому знадобляться дані.
 
 1. Using the Cicode sample below, open the Cicode Editor and create a new Cicode file. For example: 'MyTabs_Ex2.ci'
 
@@ -779,6 +857,8 @@ FUNCTION LibTable_Reload(STRING sTable, INT nLevel = 1)
 ```
 
 **Level**: The reload level (inclusive of lower levels). 0 for text only, 1 layout, 2+ user defined.
+
+У цьому прикаді спочатку треба створити змінну-масив Artag ромзірністю 3x10. Функцію вказати в Tab1. Для оновлення даних в таблиці зі змінних на сторінку помістити LibTable_Reload.    
 
 ```c
 INT FUNCTION Tab1_Init(STRING sTable)
@@ -1201,9 +1281,9 @@ Tree Genie has the following parameters:
 
 ### Use the Tree Genie
 
-Use the [Tree Genie---Content/Tree_Library_Control.html) on a page when you want to be able to view hierarchical data such as a menu.
+Use the Tree Genie on a page when you want to be able to view hierarchical data such as a menu.
 
-**Note**: Configure the [Equipment Tree Genie---Content/EquipTree_Library_Control.html) to view equipment in your system.
+**Note**: Configure the Equipment Tree Genie to view equipment in your system.
 
 The example below illustrates how the Genie can be used to view menu items within your system for a particular page. A  basic example, the implementation of the tree  Genie can also be used to display dynamic generated menu items using Cicode.
 
