@@ -107,6 +107,8 @@
 - [ ] Перейдіть в розділ "Проекты->Включенные проекты". Подивіться які проекти включенні за замовченням
 - [ ] У провіднику Windows відкрийте директорію, в якій знаходиться Ваш проект. Для цього можна перейти в розділ провідника Citect "Проекты"->"Главная" і натиснути  "Открыть в проводнике". Перегляньте в якій директорії знаходяться файли і які розширення мають.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NULVmvsWO7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 4. Компілювання та запуск проекту 
 
 - [ ] Скомпілюйте активний проект.
@@ -133,6 +135,8 @@
 
 - [ ] Перегляньте структуру меню, та відкрийте кілька сторінок для перевірки роботи меню.
 - [ ] Завершіть роботу середовища виконання.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yAg_-MUCWlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 5. Конфігурування пристрою вводу/виводу 
 
@@ -182,7 +186,9 @@
 
 - [ ] Зверніть увагу, де налаштовуються параметри комунікацій IP та TCP порт, які були задані в майстрі. Це може здатися не логічним з точки зору ієрархії, тому для налаштування кожного окремого типу драйверу варто спочатку читати документацію.   
 
-## 5. Створення перших тегів
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8e0S1MM_O3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 6. Створення перших тегів
 
 У нових програмах Citect (починаючи з версії 2016), є табличні редактори, які можна налаштувати під свої потреби.
 
@@ -207,7 +213,9 @@
 
 - [ ] Скомпілюйте проект. Перевірте наявність помилок та попереджень, якщо таких не виявлено – перейдіть до наступного пункту, інакше – виправте помилки. 
 
-## 6. Виведення перших тегів на мнемосхему
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6zX22KzJma0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 7. Виведення перших тегів на мнемосхему
 
 - [ ] Відкрийте сторінку Startup (рис.2.14)
 
@@ -250,7 +258,9 @@
 
 З деталями налаштування основних графічних можливостей Citect Ви ознайометесь у наступних лабораторних роботах. 
 
-## 7. Створення користувача
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zNuUCUaY8Ic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 8. Створення користувача
 
 - [ ] У провіднику створіть користувача "admin" з правами адміністратора (рис.2.19). Задайте нескладний пароль, щоб Ви запам'ятали. 
 - [ ] Збережіть зміни ("Сохранить")
@@ -259,7 +269,9 @@
 
  Рис.2.19 Створення користувача
 
-## 8. Запуск і перевірка роботи
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h5t3sZIzzCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 9. Запуск і перевірка роботи
 
 - [ ] Скомпілюйте проект. Перевірте наявність помилок та попереджень, якщо таких не виявлено – перейдіть до наступного пункту, інакше – виправте помилки.
 - [ ] Завантажте в імітатор ПЛК і запустіть на виконання проект Unity PRO, відповідно до того, як це описано в пункті 2 [завдання](task.md). 
@@ -279,7 +291,9 @@
 - [ ] У режимі форсування перевірте змініть значення в середовищі Citect для цих змінних. Перевірте чи відповідає це таким саме значенням в Unity PRO. Зверніть увагу на масштабування `T1_LT1`. Якщо усі зміни відбуваються коректно – переходьте до наступного пункту.
 - [ ] Закрийте средовище виконання.
 
-## 9. Створення резервної копії
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Th9MwYDOnhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 10. Створення резервної копії
 
 - [ ] Зробіть резервну копію проекту як це показано на рис.2.21. Розміщення файлу резервної копії зручно робити на робочому столі.
 - [ ] Після процедури створення знайдіть файл резервної копії з розширенням ctz. 
@@ -302,7 +316,9 @@
 
 **Увага! Кожного разу по завершенню заняття створюйте резервні копії та забирайте їх з собою, для збереження проекту!**
 
-## 10. Добавлення тегів скалярних типів
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OGUXa6D092c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 11. Добавлення тегів скалярних типів
 
 Табличний редактор Citect дозволяє вставляти дані в табличному вигляді скопійовані з інших редакторів, наприклад Excel. Це зручно при підготовці даних і значно прискорює процес розроблення. 
 
@@ -317,7 +333,9 @@
 
 - [ ] Збережіть та скомпілюйте проект. Якщо компіляція пройшла успішно – перейдіть до наступного пункту. 
 
-## 11. Робота в середовищі виконання зі спеціальним вікном тегів
+<iframe width="560" height="315" src="https://www.youtube.com/embed/00DkdcqXVZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 12. Робота в середовищі виконання зі спеціальним вікном тегів
 
 При створенні проекту автоматично створюються сторінки для перевірки та модифікації тегів. 
 
@@ -348,7 +366,9 @@
 
 Рис.2.26 Зміна значення тегу
 
-## 12. Теги типу масив
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xfoGXh98nFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 13. Теги типу масив
 
 - [ ] Уважно прочитайте [додаток 2](lab2a2.md). 
 - [ ] Добавте змінну-масив HEA_TT1_SP відповідно до налаштувань таблиці 1 файлу [Завдання](task.md). Для створення такої змінної в полі адреси після означення початкової адреси в квадратних дужках пишеться кількість елементів. У завданні масив означений в проекті Unity PRO з діапазоном від 0 до 5, отже кількість елементів задається рівною 6. Загальний вигляд налаштувань масиву показаний на рис.2.27.   
@@ -366,7 +386,9 @@
 
 Рис.2.28. Налаштування дискретних змінних масиву
 
-## 13. Налаштування кодової сторінки  за замовченням
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BUX0CEjilL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 14. Налаштування кодової сторінки  за замовченням
 
 Цей пункт треба виконувати, якщо за замовченням в середовищі виконання не відображаються кириличні шрифти. 
 
@@ -393,7 +415,9 @@
 
 - [ ] Запустіть або перезапустіть проект на виконання. Перевірте, що кириличний текст відображається вірно без реєстрації користувача.
 
-## 14. Функція TagDebug
+<iframe width="560" height="315" src="https://www.youtube.com/embed/slydTi7lKwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 15. Функція TagDebug
 
 Для перевірки працездатності змінних тегів можна скористуватися спеціалізованою функцією Citect "TagDebug", яка викликає вікно перегляду та зміни значення вибраних змінних. 
 
@@ -418,7 +442,9 @@
 - [ ] За допомогою вікна TagDebug перевірте відповідність значення аналогових змінних в Citect до змінних в ПЛК з урахуванням масштабу. 
 - [ ] Також вибірково перевірте 3 дискретних змінних. За необхідності, модифікуйте проект, щоб всі змінні були налаштовані згідно завдання.
 
-## 15. Добавлення та перевірка роботи структурних змінних
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WoUSnp4qTS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 16. Добавлення та перевірка роботи структурних змінних
 
 У проект необхідно добавити структурні змінні що вказані в таблиці 3 з файлу [Завдання](task.md). Враховуючи, що назва змінних не може містити крапку ".", у якості розділового знаку варто використовувати символ нижнього підкреслення "_". Надалі назва тегів буде мати вирішальне значення для автоматизації розробки людино-машинного інтерфейсу, тому ми рекомендуємо Вам використовувати імена з таблиці 2.1  
 
@@ -482,6 +508,8 @@
 - [ ] За необхідності модифікуйте проект так, щоб всі змінні були налаштовані згідно завдання.
 
 - [ ] **Зробіть резервну копію проекту, скопіюйте її на змінний носій. У випадку роботи в лабораторії – покажіть викладачу, і з його відома видаліть свій проект з провідника проектів.**      
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jmCniCyEVD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Питання до захисту 
 
