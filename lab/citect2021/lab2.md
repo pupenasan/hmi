@@ -71,6 +71,8 @@
 
 Рис.2.3 Вибір активного проекту для редагування 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cfmWUYAG2rw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 3. Навігація по проекту 
 
 Завдяки виставленій опції створення проекту на базі початкового автоматично будуть створені: кластер, сервери, пристрої вводу/виводу, основні сторінки, меню, роль Адміністратора, файл Cicode. 
