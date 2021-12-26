@@ -23,6 +23,9 @@
 - Програмне забезпечення: UNITY PRO V>=7.0 або Control Expert,  Citect 2016 (або новіше). **Увага! Графічна система, починаючи з Citect 2020 повністю змінена. Тому даний лабораторний практикум не призначений для версій Citect, новіших за Citect 2018R2.** 
 
 
+
+**Примітки щодо відео: представлені в роботі відеоматеріали є студентською інтерпретацією лабораторної роботи, носять ознайомчий характер і можуть містити помилки!** 
+
 ## Порядок виконання роботи
 
 ## 1.Ознайомлення з додатками 
@@ -75,6 +78,8 @@
 | Tanks          | Установка приготування продукту | мнемосхема налаштування установки приготування продукту |
 | Heat           | Установка підігріву             | мнемосхема налаштування установки підігріву             |
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zeNWMUU2ALQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 5. Підготовка растрових файлів імпорту
 
 - [ ] Відкрийте папку розміщення свого проекту: "Отркыть в проводнике" 
@@ -84,6 +89,8 @@
 рис.3.2. Відкриття папки проекту з редактору проекту
 
 - [ ] Скопіюйте у папку проекту файли "Tanks.bmp" та "Hea.bmp", які ви раніше завантажували за [цим посиланням](https://drive.google.com/drive/folders/1Hxq-XNS5WW4BWzxzUgkIgO2EuIVaJO6h?usp=sharing). 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zuXm96BpOSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 6. Імпорт рисунку на сторінку `Tanks`
 
@@ -98,12 +105,16 @@
 - [ ] Користучючись інструментами заміни кольорів замініть білий фон на прозорий (позначається хрестиком). Рекомендуємо скористатися піпеткою. 
 - [ ] Збережіть сторінку.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vFlDeweZTRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 7. Імпорт рисунку на сторінку `Heat`
 
 - [ ] Аналогічно попередньому пункту імпортуйте на сторінку "Heat" рисунок "Hea.bmp".
 - [ ] За необхідності налаштуйте зображення під розміри сторінки. 
 - [ ] Замініть задній фон на прозорий. 
 - [ ] Збережіть сторінку.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mmbktnbvpSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 8. Запуск проекту на виконання
 
@@ -117,6 +128,8 @@
 
 - [ ]  Відкрийте сторінки `Tanks` та `Heat`, перевірте чи відображаються на них імпортовані рисунки
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3BwVN_ro3d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 9. Фіксація рисунків як фону
 
 - [ ] Прочитайте пункт "Д3.1.3. Графічні елементи" [додатку 3.1](lab3a1.md)
@@ -125,11 +138,15 @@
 
 Тепер дані рисунки є підкладкою, яка може використовуватися як канва для рисування поверху. Згодом цю підкладку можна буде видалити.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s89g1JYQTJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 10. Вставлення символів для резервуарів
 
 - [ ] Прочитайте пункт "Д3.1.15 Робота з символами" [додатку 3.1](lab3a1.md) 
 - [ ] На сторінці "Tanks" вставте символ `Tank_tall_large` з бібліотеки `Tanks_cyl_conb_30` для танків Т1 та Т2. 
 - [ ] Налаштуйте їх розміри за необхідністю.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j2NtN7_Prks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 11. Вставлення символів для дозаторів
 
@@ -141,6 +158,8 @@
 рис.3.5. Вигляд сторінки "Tanks" після вставлення символів для ємностей  
 
 **Зауважте! Використання об'ємних рисунків без потреби не рекомендується, так як це створює додаткове непотрібне навантаження на зовнішній вигляд, відволікає увагу і може погіршити ситуаційне сприйняття. У даній роботі показаний приклад використання готових бібліотечних символів.**     
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/geJXYJuw8OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 12. Рисування теплової камери для танку
 
@@ -156,6 +175,8 @@
 
 рис.3.7. Вигляд теплових сорочок
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kynIKLX6hdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 13. Рисування трубопроводів
 
 - [ ] Прочитайте про особливості рисування трубопроводів у пункті "Д3.1.3. Графічні елементи" [додатку 3.1](lab3a1.md) 
@@ -163,6 +184,8 @@
 - [ ] Намагайтесь не використовувати яскраві кольори.
 
 **Зауважте! Використання об'ємних рисунків у тому числі трубопроводів та різноманіття кольорів не рекомендується, так як це створює додаткове непотрібне навантаження на зовнішній вигляд, відволікає увагу і може погіршити ситуаційне сприйняття. У даній роботі показаний приклад використання готових бібліотечних символів.**     
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5k2IwqH87og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 14. Видалення підкладки та написи
 
@@ -180,6 +203,8 @@
 
 Рис.3.8 Фрагмент сторінки "Tanks" після створення векторного рисунку та видалення підкладки 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G425h3KTmlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 15. Кнопки "Пуск" та "Ініціалізація кроків"
 
 - [ ] Прочитайте пункт "Д3.1.5 Обробка подій кліку лівої кнопки миші" [додатку 3.1](lab3a1.md) 
@@ -193,6 +218,8 @@
 ![](media3/tsb1.png)
 
 Рис.3.9 Приклад налаштування дії натискання кнопки "Пуск"
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DQigsgyNBD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 16. Відображення стану установки кольором
 
@@ -209,6 +236,8 @@
 ![](media3/animwrk.png)
 
 Рис.3.10. Налаштування анімації кольору по змінній 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2NsIeFeH338" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 17. Відображення стану установки текстом
 
@@ -231,6 +260,8 @@
 
 Рис.3.11. Налаштування анімації тексту по змінній 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Pql6xMJOVZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 18. Відображення рівнів
 
 - [ ] Прочитайте пункт "Д3.1.10 Анімація заповнення" [додатку 3.1](lab3a1.md) 
@@ -247,6 +278,8 @@
 
 - [ ] Збережіть сторінку, скомпілюйте проект. Перевірте роботу елементів, при включеній кнопці "Пуск" 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NVKtJ11h2S8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 19. Відображення числового значення параметрів
 
 - [ ] Прочитайте налаштування числового поля в пункті "Д3.1.8 Налаштування текстового відображення" [додатку 3.1](lab3a1.md) 
@@ -255,6 +288,8 @@
 ![](media3/number.png)
 
 Рис.3.13. Налаштування анімації числового відображення
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BnVlBHhrJkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 20. Відображення стану сигналізаторів рівнів дозаторів
 
@@ -269,6 +304,8 @@
 
 Рис.3.14. Відображення стану індикаторів в режимі виконання
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_A1PF95cs9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 21. Відображення стану клапанів подачі теплоагентів
 
 - [ ] Використовуючи символи з бібліотеки "valve_solenoid" (бажано сірого кольору) вставте зображення на місце клапанів подачі теплоагенту в танки. 
@@ -278,6 +315,8 @@
 ![](media3/vlvhea.png)
 
 Рис.3.15. Відображення стану клапанів пари в режимі виконання
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DqvIcGv3pmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 22. Відображення стану дискретних ВМ через анімацію символів  
 
@@ -294,6 +333,8 @@
 Рис.3.16. Відображення стану клапанів пари в режимі виконання
 
 **Зауважте! Використання зеленого кольору, як стану "ВКЛ" не рекомендується сучасними стандартами! У даній роботі показаний приклад використання готових бібліотечних символів.**     
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S0kxhkZ38-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 23. Створення панелі зміни рецепту для танку 1
 
@@ -319,9 +360,13 @@
 
 Рис.3.18. Відображення налаштування рецептів в режимі виконання в Citect (ліворуч) та Unity PRO (праворуч). 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c12xLMfCfqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 24. Створення панелі зміни рецепту для танку 2
 
 - [ ] Повторіть аналогічні дії до попереднього пункту для рецепту танку 2.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m_hd6qqlXsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 25. Створення перемикача для дозатору
 
@@ -347,6 +392,8 @@
 
 Рис.3.20. Вигляд мнемосхеми з перемикачами в режимі виконання
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vxT7K68ctwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 26. Використання анімації руху
 
 - [ ] Прочитайте пункт "Д3.1.12. Анімація руху" [додатку 3.1](lab3a1.md) 
@@ -365,7 +412,9 @@
 
 Рис.3.22. Вигляд мнемосхеми з анімацією руху
 
-## 28. Реалізація основного змісту мнемосхеми для установки підігріву
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRx4FVTQCvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 27. Реалізація основного змісту мнемосхеми для установки підігріву
 
 - [ ] Використовуючи вже відомі вам елементи та анімацію, реалізуйте мнемосхему для процесу     нагрівання ("Heat"). Якщо якісь теги, що використовуються в анімаціях, не створені в проекті, для їх визначення скористайтеся документом [Завдання](task.md). Також для визначення того, які теги використовуються в анімаціях можна скористатися операторським екраном Unity PRO (подивитися прив’язку елементів), так як імена тегів Citect співпадають з назвою змінних в проекті ПЛК. Зверніть увагу, що час роботи програмного задатчика не передбачено виводити на дисплеї, але Ви можете за бажанням реалізувати це самостійно (потрібна зміна програми і в ПЛК). Можлива наступна послідовність дій:
 
@@ -387,7 +436,7 @@
 
 - [ ] Збережіть сторінку, скомпілюйте проект і перевірте роботу мнемосхеми порівнюючи з тією, що в Operator Screens Unity PRO.  
 
-## 29. Використання віртуальної клавіатури введення значення 
+## 28. Використання віртуальної клавіатури введення значення 
 
 - [ ] Прочитайте пункт "Д3.2.5. Функція виклику віртуальної клавіатури" [додатку 3.2](lab3a2.md) 
 - [ ] У елементі відображення заданого значення (знаходиться праворуч від `HS1sp`) реалізуйте анімацію введення з віртуальної клавіатури (тег HEA_TC1_SP)
@@ -396,7 +445,9 @@
 
  Рис.3.24. Варіант виконання з віртуальною клавіатурою
 
-## 30. Створення повзункового регулятору
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t7HT5ZoN-eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 29. Створення повзункового регулятору
 
 - [ ] Прочитайте пункт "Д3.1.13. Повзунок" [додатку 3.1](lab3a1.md) 
 
@@ -414,7 +465,9 @@
 
 - [ ] Перевірте роботу повзунка.
 
-## 31. Створення системних калвіш та клавіатурних команд
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v5clddZbcPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 30. Створення системних калвіш та клавіатурних команд
 
 - [ ] Прочитайте пункт "Д3.1.14. Робота з клавіатурними командами" [додатку 3.1](lab3a1.md) 
 
@@ -445,7 +498,9 @@
 
 Рис.3.28. Вигляд інформаційної форми в режимі виконання
 
-## 32. Створення резервної копії проекту
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5RST6haVCBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 31. Створення резервної копії проекту
 
 - [ ] Зробіть резервну копію проекту, скопіюйте її на змінний носій або на хмарному сховищі. У випадку роботи в лабораторії – покажіть викладачу, і з його відома видаліть свій проект. 
 
