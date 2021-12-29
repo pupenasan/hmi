@@ -69,6 +69,8 @@
 
 - [ ] Збережіть зміни та скомпілюйте проект.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzYkBEmms18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 5. Запуск проекту на виконання
 
 - [ ] Використовуючи "Мастер усатновки" налаштуйте щоб архівні дані зберігалися в директорії C:\CDATA\xxx, де XXX – назва вашого проекту (рис.5.1).  
@@ -89,6 +91,8 @@
 
  Рис.5.2. Добавлення тегу. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IVjVV3k7Ce0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 6. Створення та перевірка інших трендових тегів
 
 - [ ] Створіть усі інші трендові теги, відповідно до таблиць 10 та 11 файлу [Завдання](task.md). 
@@ -104,6 +108,8 @@
 ![img](media5/clip_image004.jpg)
 
 Рис.5.3 Зовнішній вигляд Аналітика процесів
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kbvi6s4BvTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 7. Розміщення Process Analyst на сторінці  "Heat"
 
@@ -131,6 +137,8 @@
 - [ ] Виведіть на сторінку Heat значення збурення "smHEA_Z1", щоб його можна було змінювати. Можете скористатись для цього джином "Parameter_2" з бібліотеки KeyEntry. 
 - [ ] Скомпілюйте проект і запустіть його на виконання. Введіть значення збурення рівним 5.0, подивіться чи дійсно змінюється значення температури. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vKv63d9VCAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 8. Створення події для зміни значення.
 
 - [ ] Прочитайте уважно [додаток 5.3](lab5a_3.md). 
@@ -154,6 +162,8 @@ smHea_Z1 = Rand (1000)/100.0 - 5.0
 
 Рис.5.6 Налаштування виконання події на різних частинах системи VijeoCitect 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OG0bcxJ_Do4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 9. Розміщення елементу Тренд
 
 - [ ] Розмістіть об’єкт "Тренд" на сторінці "Tanks" лівіше від танку 1. 
@@ -161,6 +171,8 @@ smHea_Z1 = Rand (1000)/100.0 - 5.0
 - [ ] У властивостях об’єкту прив’яжіть до першого пера тег тренду "T1_TT1" а до другого - "T1_TV1". 
 - [ ] Навколо об’єкта тренду нарисуйте незаповнений прямокутник у якості рамки тренду. 
 - [ ] Збережіть сторінку, запустіть проект на виконання та перевірте його роботу.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ujNaYjGN7_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 10. Використання CiCode функцій для роботи з Трендом
 
@@ -179,6 +191,8 @@ TrendSetSpan (729, "00:10:00")
 
 - [ ] Пункти 9 та 10 зробіть аналогічним чином і для другого танку. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Om8xIElm4i8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 11. Створення ролей користувачів
 
 - [ ] Уважно прочитайте [додаток 5.2](lab5a_2.md). 
@@ -195,6 +209,8 @@ TrendSetSpan (729, "00:10:00")
 | KVPiA          | 1..7 - глобальні                                             | служба КВПіА, наладчик                    |                              |
 | Dispatch       | 1 в зоны 10 (зона Dispatch), 1 - глобальні  тільки для перегляду | оператори-диспетчери виробництва          |                              |
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sIP2T2ix8d0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 12. Створення користувачів 
 
 - [ ] Cтворіть користувачів з наступними ролями:
@@ -208,6 +224,8 @@ TrendSetSpan (729, "00:10:00")
 | HUser1                | HeaUsers       | HeaUsers  | 1-й користувач установки приготування продукту |
 | KVPUser1              | KVPiA          | KVPiA     | 1-й наладчик                                   |
 | DspUser1              | Dispatch       | Dispatch  | 1-й диспетчер                                  |
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sNhqTLzrMxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 13. Налаштування доступу до сторінок та перевірка 
 
@@ -227,8 +245,6 @@ TrendSetSpan (729, "00:10:00")
 - [ ] Зареєструйтеся в Runtime системі Citect під користувачем "PUser1" та перевірте до яких сторінок та елементів він має доступ. 
 - [ ] Після цього послідовно зареєструйтеся під різними користувачами, вказаними в таблиці 5.4, та перевірте їх можливості.
 
-## 13. Налаштування доступу до тривог та перевірка
-
 - [ ] Для усіх алармів вкажіть зону, до якої вони належать: 
   - для змінних приготування продукту – 1, 
   - для змінних установки підігріву - 2. 
@@ -239,10 +255,14 @@ TrendSetSpan (729, "00:10:00")
 - [ ] Зайдіть в систему під користувачем "Admin" і подивіться на список активних тривог, але не підтверджуйте їх. 
 - [ ] Потім почергово зайдіть в систему під користувачами "PUser1" та "HUser1", підтверджуючи видимі для них тривоги.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5v7Tok-yMOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 14. Налаштування блокувань
 
 - [ ] У середовищі розробки налаштуйте виконання блокування повзунку на сторінці "Heat" у випадку, коли регулятор знаходиться не в ручному (в автоматичному) режимі. Для цього використайте властивість "Заблокировать при" з закладки "Доступ"->"Запрещен". 
 - [ ] Скомпілюйте і перевірте роботу блокування. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ox1yZYitFJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 15. Створення користувачів в середовищі виконання
 
@@ -281,7 +301,8 @@ TrendSetSpan (729, "00:10:00")
 - [ ] Після створення, подивіться чи з’явилися ці користувачі в середовищі розробки. 
 - [ ] У середовищі виконання увійдіть в систему під іменем будь якого з новоствореного користувача та перевірте його можливості.  
 
-  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mTNJbGqdVkw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Питання до захисту
 

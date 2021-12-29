@@ -388,7 +388,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 
 - [ ] Збережіть джин, потім сторінку, де він використовувався (для оновлення), скомпілюйте проект та перевірте роботу джина.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ao2Ykz9uRvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D8Q6ski17QY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 19. Зміна джину для виконання підтвердження
 
@@ -407,7 +407,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 - [ ] Аналогічним чином налаштуйте дію для підтвердження тривог рівня "аварія" для іншого контуру. 
 - [ ] Збережіть джин, потім сторінку, де він використовувався (для оновлення), скомпілюйте проект та перевірте роботу джина.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ae8A9YAvqxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l8D3_zVeuA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 20. Зміна джину для клапанів для відображення стану тривог
 
@@ -427,9 +427,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 - [ ] Збережіть джин, відкрийте та збережіть сторінку "Tanks". Запустіть Runtime. 
 - [ ] Змініть значення `DIFRC[10]=1` на сторінці Startup або в операторському екрані UnityPRO. Змінюючи змінну `D1_LVS1_ALCLS` та команди квітування перевірте роботу анімації.  
 
-Увага, у відео контури зроблені заповненими, рекомендується контури робити незаповненими!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7J6h8j07awQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xznj1tm-hIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 21. Зміна спливаючих сторінок для клапанів для відображення стану тривог
 
@@ -450,7 +448,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 
 - [ ] Збережіть джин. Збережіть сторінку "Tank". Скомпілюйте проект та перевірте функціональність змінених джинів.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZtVx4zBeqgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/czbYZCAwsVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 22. Створення журналу дій оператору
 
@@ -479,7 +477,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 - [ ] Відкрийте папку з даними. Розміщення "Папка данных" вказується при налаштуванні середовища виконання - див рис.Д1.3. [додатку до Л.Р.1](lab1a1.md)  
 - [ ] Знайдіть файл `MsgLog.txt` , відкрийте його в текстовому редакторі. Там повинен знаходитися запис про зміну значення.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fBFCTwVrgy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BACYkxwRrUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 23. Створення сторінки відображення журналу оператора. 
 
@@ -495,7 +493,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 - [ ] Збережіть сторінку під іменем "LogView". Скомпілюйте проект, запустіть на виконання. 
 - [ ] Відкрийте сторінку  "LogView", на ній повинен відображатися зміст файлу.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2Baee8B2U1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D5X0C-h0tTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 24. Створення фіксування подій через тривоги 
 
@@ -535,7 +533,7 @@ AssPopUp ("!ValveCtrl", "%VALVE%", "%VALVE%_CLS")
 
 Зверніть увагу, що подія має два записи, оскільки тривога реєструється в системі при спрацюванні (on) та при відключенні (off). Це одна з причин, чому для журналювання подій краще скористаися іншим механізмом -  через спеціальну Cicode функцію.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3neYBX5Lb-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D9YQGj6hZvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 25. Створення фіксування подій через Cicode функцію
 
@@ -558,7 +556,7 @@ SOEEventAdd(TimestampCurrent(), "Відкрита сторінка устано�
 - [ ] Збережіть сторінку, скомпілюйте проект та запустіть середовище виконання. 
 - [ ] Відкрийте сторінку `Heat`. Після цього відкрийте сторінку SOE (Historical Events) знайдіть там відповідний запис. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kZRJMf3Gx74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5dfiHy9uKHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 26. Створення резервної копії проекту
 
