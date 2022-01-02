@@ -143,3 +143,137 @@ END
 
 ## Офлайн звіти
 
+### Для відображення даних з трендів
+
+Формат звіту html
+
+```html
+{CICODE}
+	REAL Ar[100];
+	INT Ar1[100];	
+	INT i;
+	INT iDateTime[100]; 
+{END}
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
+	<tbody>
+	{CICODE}
+		TrnGetTable("LOOP_1_PV", 0, 300, 10, Ar[0], 0, 0);
+		FOR i=0 TO 9 DO 
+			PrintLn("<tr><td>" + GetTime1(i*30) + "</td>" + "<td>" + RealToStr(Ar[i],5,1) + "</td></tr>")
+		END
+	{END}
+	</tbody>
+</table>
+
+```
+
+Додаткова функція GetTime1 що повертає значення плинного часу зі зміщенням в секундах
+
+```c
+STRING FUNCTION GetTime1 (INT iBias)
+	INT iNow = TimeCurrent() - iBias;
+	STRING sRet = TimeToStr(iNow,9) + " " + TimeToStr(iNow,1); 
+	RETURN sRet; 
+END
+```
+
+
+
+### Для відображення даних з SQL
+
+Формат звіту html
+
+```html
+{CICODE}
+	REAL ArPV[100];
+	REAL ArSP[100];	
+	INT Ar1[100];	
+	INT i, j;
+	INT iDateTime[100];
+    STRING csv;	
+{END}
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="dygraph.js"></script>
+	<link rel="stylesheet" src="dygraph.css" />
+</head>
+<body>
+
+<h2>Звіт по дійсному значенню за останню годину</h2>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
+	<tbody>
+	{CICODE}
+		TrnGetTable("LOOP_1_PV", 0, 30, 20, ArPV[0], 0, 0);
+		TrnGetTable("LOOP_1_SP", 0, 30, 20, ArSP[0], 0, 0);
+		FOR i=0 TO 19 DO 
+			PrintLn("<tr><td>" + GetTime1(i*30) + "</td><td>" 
+			+ RealToStr(ArPV[i],5,1,".") + "</td><td>" 
+			+ RealToStr(ArSP[i],5,1,".") + "</td></tr>");
+		END
+	{END}
+	</tbody>
+</table>
+
+<h2>Тренди по дійсному і заданому значенню за останню годину</h2>
+<div id="graphdiv3" style="width:500px; height:300px;"></div>
+<script type="text/javascript">
+  g3 = new Dygraph(document.getElementById("graphdiv3"),
+	'Date, PV, SP\n'
+	{CICODE}
+		FOR j=0 TO 19 DO 
+			i = 19-j;
+			csv = " + '" +  IntToStr(i*30) + "," + RealToStr(ArPV[i],5,1,".") + "," + RealToStr(ArSP[i],5,1,".") + "\n'"
+			PrintLn (csv)
+		END
+	{END}    
+	);
+</script>
+
+
+<h2>Звіт по тривогам за останню годину</h2>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
+	<tbody>
+	{CICODE} 
+		PrintLn(ALMSQLtoReport())
+	{END}
+	</tbody>
+</table>
+</body>
+</html>
+```
+
+Функція яка повертає таблицю html за певний час для вказаної змінної. 
+
+```c
+STRING
+FUNCTION ALMSQLtoReport ()
+	STRING tstart = GetTime1(7200); 
+	STRING tend = GetTime1(0);
+	INT hSQL, INT i, INT hRec, INT nRows, STRING res, STRING sSQL;
+	hSQL = SQLConnect("Driver=SQL Server;Server=DESKTOP-EJN0HKQ\SQLEXPRESS;Database=DB1;UID=G1;PWD=1");
+    IF hSQL <> -1 THEN
+    	sSQL = "SELECT Date, Time, State from DB1.dbo.alarm2 where DT > CONVERT(datetime, '" + 
+    		tstart + "',104) AND DT < CONVERT(datetime, '" + 
+    		tend  + "',104) AND Tag = 'LOOP_1_SP'"; 
+		hRec = SQLGetRecordset(hSQL, sSQL );
+		IF hRec<>-1 THEN  
+		    nRows = SQLRowCount(hRec);
+	        FOR i=0 TO nRows - 1 DO
+	          res = res + "<tr><td>" + SQLGetField(hRec, "Date", i) + "</td>";
+	          res = res + "<td>" + SQLGetField(hRec, "Time", i)+ "</td>";
+	          res = res + "<td>" + SQLGetField(hRec, "State", i)+ "</td>";
+		    END
+		    res = res + "</tr>"		
+		ELSE 
+		  res = "No data";	
+		END	 
+    ELSE
+        res = "Error access to DB" +  SQLErrMsg();
+    END
+    SQLDisconnect(hSQL);
+	RETURN res;
+END
+```
+
+Для відображення в Citect тре використати шаблонну сторінку `file_html`. Але для коректної роботи скриптів треба скористатися налаштуванням [Browser Emulation](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330730(v=vs.85)#browser-emulation) . Опис роботи з ним є [тут](https://github.com/pupenasan/ProgIngContrSystems/blob/master/%D0%94%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8/activex/WebBrowser.md)

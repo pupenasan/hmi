@@ -65,6 +65,8 @@
 - [ ] Відкрийте конфігуратор OFS. Створіть та налаштуйте пристрій (псевдонім) на зв'язок з локальним емулятором ПЛК. У якості `symbol table file` вкажіть експортований до цього файл `*.XVM`.
 - [ ] Збережіть налаштування.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/61kQNIKUxvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 6. Перевірка роботи OFS Server за допомогою OFS Client 
 
 - [ ] Запустіть OFS Client.
@@ -77,12 +79,16 @@
 
 рис.6.1. Перевірка роботи OFS Server.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O5c3tbsd0v8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 7. Встановлення та конфігурування VIPA OPC
 
 - [ ] Завантажте та встановіть VIPA OPC Server. Деталі завантаження та встановлення описані в [додатку 6.1. Налаштування та перевірка роботи серверів OPC DA](lab6a_1.md)
 - [ ] Відкрийте конфігуратор VIPA OPC (Від імені адміністратора). 
 - [ ] Видаліть усі мережі крім MPI та змініть назву пристрою на PLC1. Змініть налаштування, щоб він імітувався.
 - [ ] Збережіть налаштування та переконфігуруйте службу як це вказано в додатку.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fLzb37ImSzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 8. Перевірка роботи OPC VIPA за допомогою OFS Client 
 
@@ -96,11 +102,15 @@
 
 Після цього індикатори зміняться на зелені кружечки, що свідчить про їх хорошу якість.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_oNSY62wRWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 9. Створення пристрою I/O в Citect для з'єднання з OFS  
 
 - [ ] Уважно прочитайте [Додаток 6.2. Налаштування Citect для роботи в якості OPC DA Client](lab6a_2.md)
 - [ ] Використовуючи майстер створення пристроїв створіть I/O Device OFSM340, що буде зв'язуватися через драйвер OFSOPC. Зробіть зв'язок тегів Citect зі змінними OFS. При налаштуванні зв'язування вкажіть конфігурований в OFS псевдонім ПЛК.
 - [ ] Після завершення майстра, передивіться теги, які були створені. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OidfF8TrhwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 10. Перевірка роботи тегів з OFS
 
@@ -108,21 +118,29 @@
 - [ ] Виведіть 4-ри теги для відображення, які  перевірялися в OFS Client (див. рис.6.1).
 - [ ] Зробіть компілювання проекту та запустіть його на виконання. Перевірте чи співпадають значення з тими що показуються в OFS Client  
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4rBGePjgJFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 11. Створення та перевірка пристрою I/O в Citect для з'єднання з VIPA OPC  
 
 - [ ] Використовуючи майстер створення пристроїв створіть I/O Device PLC1VIPA, що буде зв'язуватися через драйвер OPCClient. Зробіть зв'язок тегів Citect зі змінними OPC. 
 - [ ] Після завершення майстра, передивіться теги, які були створені. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EX2FS9YBgM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 12. Перевірка роботи тегів з VIPA OPC
 
-- [ ] У Citect на сторінці "OPCtest" виведіть два теги для відображення та зміни (наприклад через джин), які  перевірялися в OFS Client.
+- [ ] У Citect на сторінці "OPCtest" виведіть два теги для відображення та зміни (наприклад через джин KeyEntry.Parameter2), які  перевірялися в OFS Client.
 - [ ] Зробіть компілювання проекту та запустіть його на виконання. Введіть якісь значення. Перевірте чи співпадають значення з тими що показуються в OFS Client для VIPA OPC.
+
+
 
 ## 13. Завантаження та встановлення тестових застосунків OPC UA
 
 - [ ] Уважно прочитайте [Додаток 6.3. Налаштування та перевірка роботи серверів OPC UA](lab6a_3.md)
 - [ ] Завантажте та встановіть [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers.html)  (під Winidows). Доступ до завантаження потребує реєстрації, але це безкоштовно.
 - [ ] Завантажте та встановіть тестовий OPC UA Client [UaExpert](https://www.unified-automation.com/downloads/opc-ua-clients.html).
+
+
 
 ## 14. Запуск серверу та клієнту OPC UA
 
@@ -162,6 +180,8 @@ opc.tcp://DESKTOP-EJN0HKQ:48010
 
 рис.6.6. Довіра до сертифікату серверу
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tZOpSOzD39g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 15. Перегляд змісту OPC UA Сервера
 
 - [ ] Використовуючи UaExpert проаналізуйте зміст об'єктів першого (Root) та другого рівня (Objects, Types, Views), проаналізуйте: 
@@ -176,6 +196,8 @@ opc.tcp://DESKTOP-EJN0HKQ:48010
   - [ ] `Demo.Static.Arrays.AnalogMeasurement`
   - [ ] `Demo.Static.Arrays.Structure`
   - [ ] `Demo.Static.Matrix.Float`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-mjn6ygka0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 16.Використання Data Access View
 
@@ -193,6 +215,8 @@ opc.tcp://DESKTOP-EJN0HKQ:48010
 - [ ] Змініть налаштування уставки  `TemperatureSetPoint` рівною 70. Тепер значення температури повинно оновлюватися тільки при зміні на 1 градус.
 - [ ] Зробіть копію екрану для звіту.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JQ5aWykqe0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 17. Створення пристрою I/O в Citect для з'єднання з OPC UA  
 
 - [ ] Уважно прочитайте [Додаток 6.4. Налаштування Citect для роботи в якості OPC UA Client](lab6a_4.md)
@@ -200,10 +224,14 @@ opc.tcp://DESKTOP-EJN0HKQ:48010
 - [ ] У якості OPC UA Серверу вкажіть UA CPP, який встановлений до цього.
 - [ ] Зробіть лінкування тегів з гілкою `Demo->Dynamic->Scalar`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XWwcaRWtRSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 18. Перевірка роботи тегів OPC UA  
 
 - [ ] У Citect на сторінці "OPCtest" виведіть теги `Scalar\Float` для відображення.
 - [ ] Зробіть компілювання проекту та запустіть його на виконання. Перевірте чи співпадає значення з тим що показується в UA Expert.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9DivdwlDDBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 19. Налаштування Citect для роботи як OPC DA Server  
 
@@ -215,6 +243,8 @@ Citect може працювати не тільки як OPC DA Client, но і
 ![image-20211206000718416](media6/image-20211206000718416.png)
 
 рис.6.8. Активування OPC DA серверу в проекті Citect. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TnoLLbXRdns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 20. Перевірка звязку з Citect як OPC DA Server  
 
@@ -228,12 +258,16 @@ Citect може працювати не тільки як OPC DA Client, но і
 - [ ] Створіть групу, та добавте якусь змінну, наприклад `HEA_TT1`
 - [ ] Перевірте чи співпадає значення змінної в SCADA. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/epeI6ND3jD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 21. Встановлення та налаштування OPC UA Gateway для зв'язку OPC UA Client з Citect   
 
 - [ ] Уважно прочитайте [Додаток 6.5. Встановлення та налаштування OPC DA - OPC UA шлюза](lab6a_5.md). 
 - [ ] Завантажте та встановіть OPC UA Gateway.
 - [ ] Налаштуйте OPC UA Gateway для підключення до Citect як для OPC DA серверу.
 - [ ] За допомогою UA Expert перевірте працездатність з'єднання, відображаючи одну зі змінних Citect.   
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IjzNMyfehts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 22. Встановлення, налаштування та перевірка роботи HMI застосунку для Android
 
