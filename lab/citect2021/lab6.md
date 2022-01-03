@@ -132,7 +132,7 @@
 - [ ] У Citect на сторінці "OPCtest" виведіть два теги для відображення та зміни (наприклад через джин KeyEntry.Parameter2), які  перевірялися в OFS Client.
 - [ ] Зробіть компілювання проекту та запустіть його на виконання. Введіть якісь значення. Перевірте чи співпадають значення з тими що показуються в OFS Client для VIPA OPC.
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5uuILZGGjsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 13. Завантаження та встановлення тестових застосунків OPC UA
 
