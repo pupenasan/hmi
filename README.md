@@ -19,7 +19,7 @@
 
 - [Посібник Розроблення людино-машинних інтерфейсів та систем збирання даних з використанням програмних засобів SCADA/HMI. Київ : Видавництво Ліра-К, 2020. — 594 с.](https://pupenasan.github.io/hmibook/) можна замовити [в бібліотеці НУХТ](http://elibrary.nuft.edu.ua/library/DocRequestForm?doc_id=397603) 
 
-
+- [Проект Situational Awareness](citect/sa2020/README.md)
 
 [Репозиторій](https://github.com/pupenasan/hmi)
 
