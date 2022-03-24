@@ -24,7 +24,7 @@
 
 Індикатори тривоги складаються з рамки та прапорця, які з’являються навколо екстенту групи об’єктів або Джина. Ви можете використовувати їх для забезпечення чіткої візуальної індикації виникнення тривоги під час виконання.
 
-​                ![img](G:\san\AKIT\ДИСЦИП\ЛМІ\GitVer\citect\sa2020\salib\media\Alarm_Indicator.png)            
+​                ![img](media/Alarm_Indicator.png)            
 
 **Alarm border**
 
@@ -40,7 +40,7 @@
 
 У наведеному нижче прикладі показано коди форми, кольору та прапорців, які використовуються для позначення аварійних тривог, тривог високого та низького пріоритету в проекті, створеному на основі проекту Situational Awareness Starter Project.
 
-​                        ![img](G:\san\AKIT\ДИСЦИП\ЛМІ\GitVer\citect\sa2020\salib\media\Alarm_Indicator_Flags.png)                    
+​                        ![img](media/Alarm_Indicator_Flags.png)                    
 
 Якщо вам потрібно налаштувати власні прапорці сигналізації, див. [Create a Custom Flag for an Alarm Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Create_Custom_Flags_for_an_Alarm_Indicator.htm).
 
