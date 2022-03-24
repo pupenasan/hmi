@@ -6,7 +6,7 @@
 
 У наступних темах описано, як налаштувати вміст проекту, щоб він взаємодіяв з архітектурою, яка підтримує контекстні оновлення під час виконання.
 
-### Add Equipment Using Equipment Editor
+### Додавання обладнання використовуючи Equipment Editor
 
 [Add Equipment Using Equipment Editor](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm)   
 
@@ -19,16 +19,16 @@
 
 #### Створення нестандартних шаблонів обладнання
 
-Проект Situational Awareness Starter надає набір зразків шаблонів обладнання, які допоможуть створити обладнання. Шаблон обладнання — це файл XML, який використовує власні теги та атрибути для визначення полів вхідних і вихідних баз даних, а також визначення фільтрів і правил перетворення, які створюють теги з наявних полів бази даних. Він використовує існуючі [правила синтаксису TagGen](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/TagGen_XML_Template.html).
+Проект Situational Awareness Starter надає набір зразків шаблонів обладнання, які допоможуть створити обладнання. Шаблон обладнання — це файл XML, який використовує власні теги та атрибути для визначення полів вхідних і вихідних баз даних, а також означення фільтрів і правил перетворення, які створюють теги з наявних полів бази даних. Він використовує існуючі [правила синтаксису TagGen](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/TagGen_XML_Template.html).
 
 У рамках створення шаблону обладнання вам потрібно налаштувати шаблони обладнання відповідно до вашого фізичного пристрою. Для створення спеціального шаблону може знадобитися виконати одне або кілька з наступних завдань:
 
 1. Означте [Equipment Types](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Equipment_Types.htm).
 2. [Добавте елементи](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_an_Item_to_an_Equipment_Type.htm) до видів обладнання.
-3. [Зконфігуруйте custom parameters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Custom_Parameters_for_an_Equipment_Type.htm)  для кожного типу обладнання. Параметри, означені тут, зазвичай будуть однаковими для кожного екземпляра обладнання певного типу. Наприклад, діапазон значень для назв обладнання або сигналізації та їх значення за замовчуванням.
-4. Створіть власні теги, якщо потрібно. Ви можете визначити спеціальні теги (параметри), які можуть відрізнятися залежно від типу обладнання. Наприклад, адреса або інженерні одиниці для різних типів лічильників. У цьому випадку ви можете [визначити спеціальні теги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_a_Variable_Tag.html) у Plant SCADA Studio.
+3. [Зконфігуруйте custom parameters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Custom_Parameters_for_an_Equipment_Type.htm)  для кожного типу обладнання. Параметри, означені тут, зазвичай будуть однаковими для кожного екземпляра обладнання певного типу. Наприклад, діапазон значень для назв обладнання або тривог та їх значення за замовчуванням.
+4. Створіть власні теги, якщо потрібно. Ви можете означити спеціальні теги (параметри), які можуть відрізнятися залежно від типу обладнання. Наприклад, адреса або інженерні одиниці для різних типів лічильників. У цьому випадку ви можете [визначити спеціальні теги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_a_Variable_Tag.html) у Plant SCADA Studio.
 
-**Note**: За замовчуванням зразки шаблонів обладнання використовують аналогові межі тривоги. Якщо ви хочете використовувати ліміти ПЛК з обладнанням, див [Associate PLC Limits with Equipment](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm). 
+**Note**: За замовчуванням зразки шаблонів обладнання використовують аналогові межі тривоги. Якщо ви хочете використовувати ліміти ПЛК з обладнанням, див [Associate PLC Limits with Equipment](salib/AlarmLimits.md). 
 
 #### Створення екземплярів обладнання
 
@@ -265,19 +265,19 @@ For more information, see [Assign a Content Type to a Page](file:///C:/Program F
 
 Використання типів вмісту в поєднанні з панелями, які відповідають на типи вмісту, допоможе спростити обслуговування вашої системи, оскільки вам не потрібно буде чітко вказувати, де вміст має відображатися щоразу, коли ви вказуєте системі відображати сторінку вмісту. Натомість система сама вирішить це, використовуючи вашу конфігурацію панелі та тип вмісту сторінки, яка буде відображатися.
 
-The content types you can assign to a page are configured in the **Visualization** activity in Plant SCADA Studio (see [Content Types](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Content_Types.htm)). 
+Типи вмісту, які ви можете призначити сторінці, налаштовуються в дії **Visualization** у Plant SCADA Studio (див. [Типи вмісту](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/ Help/SCADA Help/Content/Content_Types.htm)).
 
-To assign a content type to a page:
+Щоб призначити тип вмісту для сторінки:
 
-1. In the **Visualization** activity, select **Pages**.
-2. Select the required page(s). See[ Browse Pages in Plant SCADA Studio](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Browse_Pages_in_Plant_SCADA_Studio.htm).
-3. Go to the **Content Type** field in the Property Grid. 
-4. Enter or select a content type. The drop-down list contains the content types that are available to the active project.
-5. If your project was created  using the Situational Awareness Starter project, a default set of  content types will be available via the SA_Include project. For a  description, see [Content Types](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Content_Types.htm). 
+1. У дії **Visualization** виберіть **Pages**.
+2. Виберіть потрібні сторінки. Див. [Перегляд сторінок у Plant SCADA Studio](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Browse_Pages_in_Plant_SCADA_Studio.htm).
+3. Перейдіть до поля **Тип вмісту** у сітці властивостей.
+4. Введіть або виберіть тип вмісту. Розкривний список містить типи вмісту, які доступні для активного проекту.
+5. Якщо ваш проект створено за допомогою проекту Situational Awareness Starter, набір типів вмісту за замовчуванням буде доступний через проект SA_Include. Щоб отримати опис, див. [Типи вмісту](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Content_Types.htm).
 
-6.  If you need to create a new content type, see [Configure Content Types](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Content_Types.htm). 
+6. Якщо вам потрібно створити новий тип вмісту, див. [Налаштування типів вмісту](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Content_Types.htm) .
 
-7. Click **Save**. 
+7. Натисніть **Save**.
 
 ### Prepare the Navigation Menu
 
@@ -740,3 +740,5 @@ The category is defined in the pane properties for the Faceplate pane in the Mas
 **Note**: If you have  configured your own faceplate, verify the category entered in the  Workspace pane properties dialog is the same entered when creating your  references to related equipment.
 
 **Note**: In advanced  configuration a workspace pane can have zero or more categories  configured in the Categories field (comma-separated list). For each  category, a super-genie association is created for each reference, using the name specified in the Association column. 
+
+[--> Налаштування Situational Awareness Project](custom.md)

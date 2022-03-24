@@ -1,45 +1,49 @@
-##### Equipment Custom Parameters
+[Проект Situational Awareness](../README.md) -> [Situational Awareness Library](readme.md)
 
-The following equipment parameters defined  in the equipment template are applicable to most meters, drives and  valves. They are configured on each [equipment instance created](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_an_Equipment_Instance.htm) in the Equipment Editor. Any exception is noted in the parameter description. 
+### Equipment Custom Parameters
+
+Наступні параметри обладнання, визначені в шаблоні обладнання, застосовні до більшості індикаторів, приводів і клапанів. Вони налаштовуються для кожного [створеного екземпляра обладнання](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_an_Equipment_Instance.htm) у редакторі обладнання. Будь-який виняток зазначається в описі параметра.
 
 [![img](G:\san\AKIT\ДИСЦИП\ЛМІ\GitVer\citect\sa2020\salib\media\Custom_Parameters_thumb_600_600.png)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/images/Custom_Parameters.png)            
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[InternalIODevice](javascript:void(0))
+**InternalIODevice**
 
-Name of the persisted  memory PLC that stores the value of internal tags to control the value  of a library object. For example, the PRHigh, PRLow, ORHigh and ORLow  tags may exist in the PLC
+Ім’я постійної пам’яті ПЛК , що зберігає значення внутрішніх тегів для керування значенням об’єкта бібліотеки. Наприклад, теги PRHigh, PRLow, ORHigh і ORLow можуть існувати в PLC
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[CicodeIODevice](javascript:void(0))
+**CicodeIODevice**
 
-Name of the I/O device that is used to store values for calculated variables. For example, EqStatus.
+Назва пристрою вводу-виводу, який використовується для зберігання значень обчислюваних змінних. Наприклад, EqStatus.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[EqStatusFunc](javascript:void(0))
+**EqStatusFunc**
 
-Name of the Cicode function needed to evaluate the value of the status indicator. For example, EquipmentStatus_Drive_GetValue. 
+Назва функції Cicode, необхідної для оцінки значення індикатора стану. Наприклад, EquipmentStatus_Drive_GetValue.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[CtrlMode](javascript:void(0))
+**CtrlMode**
 
-[Default value for the control mode](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode), which is a value of 0, 1,2,3 or 4 (Automatic, Manual, etc). The CtrlDef defines the current control mode of the equipment set at the PLC level. It takes the same values as the CtrlMode.
+[Значення за замовчуванням для режиму керування](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode), яке є значенням 0, 1,2,3 або 4 (автоматичний, ручний тощо). CtrlDef означує поточний режим керування обладнанням, встановленим на рівні ПЛК. Він приймає ті ж значення, що й CtrlMode.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[Range](javascript:void(0))
+**Range**
 
-Used to specify the  engineering high and low values for tags that have integer values. For  example, PV, PVTrack, SP, PRHigh, PRLow, ORHigh, ORLow. 
+Використовується для означення інженерних високих і низьких значень для тегів, які мають цілі значення. Наприклад, PV, PVTrack, SP, PRHigh, PRLow, ORHigh, ORLow.
 
-Note that most tags need to have the same range values. 
+Зауважте, що більшість тегів повинні мати однакові значення діапазону.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[Alarm Limits](javascript:void(0))
+**Alarm Limits**
 
-Used to define alarm limits if using analog alarms. 
+Використовується для означення меж тривог при використанні аналогових тривог.
 
-**Note**: This parameter is not available for valve objects. 
+**Примітка**: цей параметр недоступний для об'єктів клапана.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[Height](javascript:void(0))
+**Height**
 
-Used only for a Feeder Gate, this is used to specify the engineering range for the height of the gate. 
+Використовується лише для Feeder Gate, він використовується для означення інженерного діапазону висоти воріт.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[WindSpeedRange](javascript:void(0))
+**WindSpeedRange**
 
-Used only for a Wind Compass, this is used to specify the high and low values for wind speed tags. 
+Використовується лише для Wind Compass, він використовується для визначення високих і низьких значень для тегів швидкості вітру. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[SwitchPosition](javascript:void(0))
+**SwitchPosition**
 
-Used only for a Handswitch  Selector, this tag indicates the position of the handswitch - whether it is left (1), right (2) or center (3).
+Цей тег, який використовується лише для перемикача ручного перемикача, вказує положення ручного перемикача – ліворуч (1), праворуч (2) чи центральне (3).
+
+[--> Show/Hide Settings](showhidesettings.md)

@@ -183,17 +183,17 @@
 
 Ви можете використовувати меню правою кнопкою миші в списку тривог, щоб виконати такі дії під час виконання:
 
-- **Acknowledge** an alarm.
+- Квитування (**Acknowledge**) тривоги
 
 - Блокування тривог. Виберіть один із наступних варіантів:
-  - **Shelve for ...** — switches the view to the Shelve form, which allows you to disable an alarm for a specified period of time, or indefinitely. 
-  - **Shelve until ...** — switches the view to the Shelve form, which allows you to disable an alarm until a specified date and time. 
+  - **Shelve for ...** — перемикає вигляд на форму відкладених тривог, що дозволяє вимкнути тривоги на певний період часу або на невизначений термін 
+  - **Shelve until ...** — перемикає вигляд на форму відкладених тривог, що дозволяє вимкнути тривоги до вказаної дати й часу
 
-- **Restore** an alarm.
+- Повернення до активної (**Restore**) тривоги
 
-Панель під списком тривог показує налаштовану користувачем інформацію про [причину та відповідь](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Provide_Cause_and_Response_Information_to_Operators.htm) для вибраний тривоги. З тривожним сигналом може бути пов’язано до восьми наборів інформації про причини та реакції; Кнопки зі стрілками праворуч від панелі дозволяють оператору переміщатися між запропонованими відповідями. Щоб додати інформацію про причини та відповіді на сигнали тривоги, див. [Додати інформацію про причину та відповідь до нагадувань](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_Cause_and_Response_Information_for_Alarms.htm ).
+Панель під списком тривог показує налаштовану користувачем інформацію про [причину та відповідь](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Provide_Cause_and_Response_Information_to_Operators.htm) для вибраний тривоги. З тривожним сигналом може бути пов’язано до восьми наборів інформації про причини та реакції; Кнопки зі стрілками праворуч від панелі дозволяють оператору переміщатися між запропонованими відповідями. Щоб додати інформацію про причини та відповіді на сигнали тривоги, див. [Додати інформацію про причину та відповідь до тривог](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Add_Cause_and_Response_Information_for_Alarms.htm ).
 
-**Примітка.** Якщо об’єкт з активним [індикатором тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_Indicator.htm) не відображати будь-які нагадування в інформаційній зоні, якщо вибрано під час виконання, це може означати, що індикатор тривоги був налаштований так, щоб реагувати на «дочірні» рівні вниз по ієрархії обладнання або посилання на обладнання. Ці непрямі розташування обладнання не повідомляються в зоні інформації про тривоги для вибраного обладнання. Якщо така ситуація сталася, скористайтеся підрахунком тривоги вищого рівня або сторінкою нагадування, щоб визначити розташування активної тривоги.
+**Примітка.** Якщо об’єкт з активним [індикатором тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_Indicator.htm) не відображає жодні тривоги в інформаційній зоні, при виборі під час виконання, це може означати, що індикатор тривоги був налаштований так, щоб реагувати на «дочірні» рівні вниз по ієрархії обладнання або посилання на обладнання. Ці непрямі розташування обладнання не повідомляються в зоні інформації про тривоги для вибраного обладнання. Якщо сталася така ситуація, скористайтеся лічильником тривоги вищого рівня або сторінкою нагадування, щоб означити розташування активної тривоги.
 
 #### Trends
 
@@ -201,36 +201,36 @@
 
 ​        ![img](media/Situational_Awareness_InfoZone_Trend.png)        
 
-У поданні діаграми відображаються дані для вибраного об’єкта за допомогою набору пірїв із кольоровим кодуванням і перерахованими праворуч від діаграми. Кожна ручка малює зразкові значення в залежності від часу. За замовчуванням у поданні відображатимуться перші п’ять трендів в алфавітному порядку за назвою тегу.
+У поданні діаграми за допомогою набору пірїв із кольоровим кодуванням і перерахованими праворуч від діаграми відображаються дані для вибраного об’єкта. Кожне перо малює значення в залежності від часу. За замовчуванням у поданні відображатимуться перші п’ять трендів в алфавітному порядку за назвою тегу.
 
 Пера можна налаштувати одним із наступних способів:
 
 - Для кожного елемента обладнання, який відображатиметься на діаграмі: додайте [Equipment Runtime Parameter](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Manually_Define_Equipment_Runtime_Param.htm ) під назвою «InfoZoneTrends» для кожного обладнання, яке відображатиметься на діаграмі.
-- Як глобальний параметр за замовчуванням: налаштуйте параметр INI [[Workspace\]InfoZoneTrends](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/WorkspaceInfoZoneTrends .htm), щоб відобразити необхідні [елементи обладнання](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Items.htm).
-- За певним [Тип обладнання](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Equipment_Types.htm): налаштуйте параметр INI [[Workspace\]InfoZoneTrends.](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/WorkspaceInfoZoneTrendsType.htm), де `<Type>` відповідає імені типу в Equip перегляд. Наприклад, «InfoZoneTrends.Drive». Значенням параметрів є список назв елементів обладнання, розділений комами.
+- Як глобальний параметр за замовчуванням: налаштуйте параметр INI [`[Workspace]InfoZoneTrends`](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/WorkspaceInfoZoneTrends .htm), щоб відобразити необхідні [елементи обладнання](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Items.htm).
+- За певним [Типом обладнання](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Equipment_Types.htm): налаштуйте параметр INI [`[Workspace]InfoZoneTrends`](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/WorkspaceInfoZoneTrendsType.htm), де `<Type>` відповідає імені типу в Equip перегляд. Наприклад, «InfoZoneTrends.Drive». Значенням параметрів є список назв елементів обладнання, розділений комами.
 
 Наступні команди відображення доступні на панелі навігації, яка проходить у нижній частині перегляду діаграми.
 
-| Tool                             | Description                                                  |
-| -------------------------------- | ------------------------------------------------------------ |
-| ![img](media/SpanPicker.png)     | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Span Picker](javascript:void(0)) |
-| ![img](media/synchronizea.png)   | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Synchronize to Now](javascript:void(0)) |
-| ![img](media/autoscrollinga.png) | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Toggle Autoscrolling](javascript:void(0)) |
-| ![img](media/EndTime.png)        | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)End Date/Time Picker ](javascript:void(0)) |
+| Tool                             | Description                                 |
+| -------------------------------- | ------------------------------------------- |
+| ![img](media/SpanPicker.png)     | [Span Picker](javascript:void(0))           |
+| ![img](media/synchronizea.png)   | [Synchronize to Now](javascript:void(0))    |
+| ![img](media/autoscrollinga.png) | [Toggle Autoscrolling](javascript:void(0))  |
+| ![img](media/EndTime.png)        | [End Date/Time Picker ](javascript:void(0)) |
 
 Ви також можете використовувати такі командні кнопки:
 
-| Tool                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![img](media/SituationalAwareness_TrendZone_EditVScale.png)  | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Edit Vertical Scale](javascript:void(0)) |
-| ![img](media/SituationalAwareness_TrendZone_ToggleCursor.png) | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Toggle Cursor](javascript:void(0)) |
-| ![img](media/SituationalAwareness_TrendZone_DisplayTrendPage.png) | [![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Display in Trend Page](javascript:void(0)) |
+| Tool                                                         | Description                                 |
+| ------------------------------------------------------------ | ------------------------------------------- |
+| ![img](media/SituationalAwareness_TrendZone_EditVScale.png)  | [Edit Vertical Scale](javascript:void(0))   |
+| ![img](media/SituationalAwareness_TrendZone_ToggleCursor.png) | [Toggle Cursor](javascript:void(0))         |
+| ![img](media/SituationalAwareness_TrendZone_DisplayTrendPage.png) | [Display in Trend Page](javascript:void(0)) |
 
-#### Interlocks
+#### Взаємне блокування (Interlocks)
 
-Блокування — це фізичне з’єднання між двома частинами обладнання, яке пов’язує їх роботу, так що подія в одній частині обладнання ініціює дію в іншому (див. [Блокування](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Default.htm#Situational_Awareness_Interlocks.htm).
+Взаємне блокування (Interlocks) — це фізичне з’єднання між двома частинами обладнання, яке пов’язує їх роботу, так що подія в одній частині обладнання ініціює дію в іншому (див. [Блокування](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Default.htm#Situational_Awareness_Interlocks.htm)).
 
-Вкладка **Блокування** містить відомості про будь-які активні блокування, які можуть бути пов’язані з вибраним у даний момент обладнанням. Він містить додатковий набір вкладок, які відображають категорії, що використовуються для визначення природи блокування. Проект Situational Awareness Starter пропонує такі категорії за замовчуванням.
+Вкладка **Interlocks** містить відомості про будь-які активні блокування, які можуть бути пов’язані з вибраним у даний момент обладнанням. Він містить додатковий набір вкладок, які відображають категорії, що використовуються для означення природи блокування. Проект Situational Awareness Starter пропонує такі категорії за замовчуванням.
 
 - Safety — умови, що призводять до припинення роботи обладнання.
 - Process — умови, через які обладнання в процесі зупиняється.
@@ -244,104 +244,100 @@
 
 | Column  | Description                                                  |
 | ------- | ------------------------------------------------------------ |
-| State   | If an interlock is active, a black lock icon is displayed.    <br />![img](media/Interlocks_blackicon_27x27.png)If an interlock has cleared, a white box is displayed.    ![img](media/Interlock_cleared_20x20.png) |
-| Bypass  | Interlocks can  be configured to support a bypass. This means an operator can manually  override the interlock, forcing the locked process to be available to  start. See [Configure a Bypass for an Interlock](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Configure_a_Bypass_for_an_Interlock.htm).If an interlock is capable of being bypassed (but is currently not bypassed), a gray lock icon is displayed.     <br />![img](media/Interlock_notlocked_23x23.png)[![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)To bypass an interlock:](javascript:void(0))     If the interlock is currently bypassed, a purple lock icon is displayed.     <br />![img](media/purple_interlock_bypassed.png)[![Closed](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)To remove a bypass:](javascript:void(0))     If an interlock is not configured to support a bypass, no icon is displayed in the column. |
-| Comment | A description of the interlock. The description is sourced from the **Comment** field for the associated Equipment Reference. |
+| State   | Якщо блокування активне, відображається чорний значок замка.    ![img](media/Interlocks_blackicon_27x27.png)<br />Якщо блокування знято, відображається біле поле.   ![img](media/Interlock_cleared_20x20.png) |
+| Bypass  | Блокування можна налаштувати для підтримки обходу (bypass). Це означає, що оператор може вручну скасувати блокування, змусивши запустити заблокований процес. Див. [Налаштування обходу для блокування](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Configure_a_Bypass_for_an_Interlock.htm). <br />Якщо блокування можна обійти. (але наразі це не обходить), відображається сірий значок замка. ![img](media/Interlock_notlocked_23x23.png)<br />Для обходу блокування - Якщо блокування в даний момент обходиться, відображається фіолетовий значок замка ![img](media/purple_interlock_bypassed.png)<br />Для відключення байпасу - Якщо блокування не налаштовано на підтримку обходу, у стовпці не відображається жодна піктограма . |
+| Comment | Опис блокування. Опис отримано з поля **Коментар** для пов’язаного посилання на обладнання. |
 
-**Примітка.** Розташування стовпців за замовчуванням базується на форматі відображення, визначеному в системному проекті SA_Include. Формат буде називатися "Interlock_HD1080" або "Interlock_UHD4K", залежно від роздільної здатності основної сторінки робочої області. Ви можете налаштувати цей формат, змінивши [[Format\]FormatName](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/FormatFormatName.html) у перегляді **Параметри** дії **Налаштування** (див. [Параметри бази даних проекту](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content /Project_Database_Parameters.htm)).
+**Примітка.** Розташування стовпців за замовчуванням базується на форматі відображення, визначеному в системному проекті SA_Include. Формат буде називатися "Interlock_HD1080" або "Interlock_UHD4K", залежно від роздільної здатності основної сторінки робочої області. Ви можете налаштувати цей формат, змінивши [`[Format]FormatName`](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/FormatFormatName.html) у перегляді **Параметри** дії **Налаштування** (див. [Параметри бази даних проекту](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content /Project_Database_Parameters.htm)).
 
 Щоб перейти безпосередньо на сторінку, на якій розміщено блокування, клацніть правою кнопкою миші блокування та виберіть **Навігація**.
 
-### Navigation Zone
+### Навігаційна зона (Navigation Zone)
 
-The Navigation Zone on the operator dashboard serves two purposes:
+Зона навігації на інформаційній панелі оператора виконує дві цілі:
 
-- Page navigation — the tabs and buttons  can be used to switch between different display pages. 
-- Alarm counts — each tab and  button displays an alarm count for the location it opens, providing an  overview of the current alarm conditions. 
+- Навігація сторінкою — вкладки та кнопки можна використовувати для перемикання між різними сторінками відображення.
+- Кількість тривог — кожна вкладка та кнопка відображають кількість тривог для місця, яке воно відкриває, забезпечуючи огляд поточних умов тривоги.
 
 ![img](media/SA_Navigation_Section.png)
 
-**Note:** To enable alarm counts in the  Navigation Zone, there are a number of project settings that need to be  configured correctly. For more information, see [Enable Navigation Zone Alarm Counts](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Enable_Navigation_Zone_Alarm_Counts.htm).
+**Примітка.** Щоб увімкнути лічильник тривог в зоні навігації, існує ряд налаштувань проекту, які потрібно правильно налаштувати. Додаткову інформацію див. у розділі [Увімкнути підрахунок сигналів навігаційної зони](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Enable_Navigation_Zone_Alarm_Counts.htm).
 
-#### Page Navigation
+#### Навігація по сторінкам (Page Navigation)
 
-The layout of the tabs and buttons is determined by a project's page menu. 
+Розташування вкладок і кнопок визначається через меню сторінок проекту.
 
-Level 1 of the menu sets  the overall context for the workspace. The tabs along the navigation  section header represent the menu's level 2 entries. The buttons on each tab represent up to 20 lower-level menu entries, displayed from left to right in arrangement determined by the Order property.
+Рівень 1 меню встановлює загальний контекст для робочої області. Вкладки вздовж заголовка розділу навігації представляють пункти меню 2 рівня. Кнопки на кожній вкладці представляють до 20 пунктів меню нижнього рівня, які відображаються зліва направо в порядку, визначеному властивістю Order.
 
-#### Alarm Counts
+#### Лічильники тривог (Alarm Counts)
 
-Every tab and button in the navigation zone supports an alarm count that indicates how many alarms  are currently active for equipment homed on the associated page. 
+Кожна вкладка та кнопка в навігаційній зоні підтримують лічильник тивог, який вказує, скільки наразі активних тривог для обладнання, розміщеного на відповідній сторінці.
 
 ​        ![img](media/SA_Navigation_AlarmCount.png)    
 
-By default, the alarm count represents the following:
+За замовчуванням лічильник тривог відображає наступне:
 
-1. The number of active alarms in the highest priority (that is, the priority with the lowest value)
-2. The number of active alarms in the next highest priority
-3. The number of active alarms in the third highest priority
-4. The number of alarms that are currently shelved.
+1. Кількість активних тривог з найвищим пріоритетом (тобто пріоритетом з найменшим значенням)
+2. Кількість активних тривог у наступному найвищому пріоритеті
+3. Кількість активних тривог у третьому за пріоритетом
+4. Кількість тривог, які зараз відтерміновані.
 
-**Note:** If required, you can use the parameter [[Workspace\]NumberOfTopPriorities](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/WorkspaceNumberOfTopPriorities.html)  to display an additional alarm count for the fourth highest priority. For more information, see [Add an Additional Alarm Count to the Navigation Zone](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_an_Additional_Alarm_Count.htm).
+**Примітка.** Якщо потрібно, ви можете використовувати параметр [`[Workspace]NumberOfTopPriorities`](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ ParametersCitectHTML/Content/WorkspaceNumberOfTopPriorities.html), щоб відобразити додаткову кількість тивог для четвертого пріоритету. Додаткову інформацію див. у розділі [Додати додаткову кількість тривог до зони навігації](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_an_Additional_Alarm_Count.htm).
 
-The maximum value that can  be displayed for each alarm count is 99. If more than 99 alarms are  active in a particular category, "99+" will display. You can confirm the exact number of alarms via a tool tip. 
+Максимальне значення, яке можна відобразити для кожного лічильника тривог становить 99. Якщо в певній категорії активних більше 99 тривог, відобразиться «99+». Ви можете підтвердити точну кількість тривог за допомогою підказки.
 
-Each value appears to the  left of an animated icon that indicates the priority the value  represents. These icons are configured via the **Small Genie Name** property for each alarm priority.  For more information, see [Configure Display Properties for an Alarm Priority](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Display_Properties_for_an_Alarm_Prioirty.htm).
+Кожне значення з’являється ліворуч від анімованої піктограми, яка вказує на пріоритет, який представляє значення. Ці піктограми налаштовуються за допомогою властивості **Small Genie Name** для кожного пріоритету тривоги. Для отримання додаткової інформації див. [Налаштування властивостей відображення для пріоритету тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Display_Properties_for_an_Alarm_Prioirty.htm).
 
-A grey bar is used to highlight the tab and button that contain the most recent unacknowledged alarm that is  currently in an ON state. The number next to the priority which is most  important will also be highlighted. 
+Сіра смуга використовується для виділення вкладки та кнопки, які містять останній непідтверджений сигнал тривоги, який наразі перебуває у стані ON. Також буде виділено число поруч із найважливішим пріоритетом.
 
-For more information on how to prepare a project’s menu for the navigation zone of the operator dashboard, see [Prepare the Navigation Menu](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Prepare_Navigation_Menus.htm)
+Додаткову інформацію про те, як підготувати меню проекту для зони навігації інформаційної панелі оператора, див. у розділі  [Prepare the Navigation Menu](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Prepare_Navigation_Menus.htm)
 
-### Default Alarm Pages
+### Сторінки тривог за замовченням 
 
-Проект, створений за допомогою проекту Situational Awareness Starter Project, включатиме набір сторінок тривоги за замовчуванням, які доступні з середовища виконання [Панель заголовка](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/ SCADA Help/Content/Situational_Awareness_Headerbar.htm). Виберіть одну з кнопок, описаних у таблиці нижче, щоб відобразити сторінку нагадування в області вмісту сторінки (див. [Макет за замовчуванням](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Default_Layout.htm)).
+Проект, створений за допомогою проекту Situational Awareness Starter Project, включатиме набір сторінок тривог за замовчуванням, які доступні з середовища виконання [Панель заголовка](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/ SCADA Help/Content/Situational_Awareness_Headerbar.htm). Виберіть одну з кнопок, описаних у таблиці нижче, щоб відобразити сторінку нагадування в області вмісту сторінки (див. [Макет за замовчуванням](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Default_Layout.htm)).
 
 |                                                |                   |                                                              |
 | ---------------------------------------------- | ----------------- | ------------------------------------------------------------ |
-| ![img](media/SA_Default_Alarm_Page_Icons1.png) | Active Alarms     | Alarms that are unacknowledged, or acknowledged and still in an alarm state. |
-| ![img](media/SA_Default_Alarm_Page_Icons2.png) | Historical Events | An historical log of alarms and operator activity.           |
-| ![img](media/SA_Default_Alarm_Page_Icons3.png) | Shelved Alarms    | Alarms that are temporarily shelved/disabled.                |
-| ![img](media/SA_Default_Alarm_Page_Icons4.png) | Hardware Alarms   | Hardware alarms that are either unacknowledged or acknowledged and still in alarm state. |
+| ![img](media/SA_Default_Alarm_Page_Icons1.png) | Active Alarms     | Тривоги, які не підтверджені або підтверджені і все ще знаходяться в стані тривоги. |
+| ![img](media/SA_Default_Alarm_Page_Icons2.png) | Historical Events | Історичний журнал тривог і дій оператора.                    |
+| ![img](media/SA_Default_Alarm_Page_Icons3.png) | Shelved Alarms    | Тривоги, які тимчасово відтерміновані/заблоковані.           |
+| ![img](media/SA_Default_Alarm_Page_Icons4.png) | Hardware Alarms   | Апаратні тривоги, які або не підтверджені, або підтверджені і все ще знаходяться в стані тривоги. |
 
-Окрім сторінки «Апаратні сигнали» (яка включає лише основний список нагадувань), ці сторінки мають загальний макет, який містить такі розділи:
+Окрім сторінки «Апаратні тривоги» (яка включає лише основний список тривог), ці сторінки мають загальний макет, який містить такі розділи:
 
 ![img](media/Situational_Awareness_DefaultAlarmPage.png)
 
-#### Alarms List
+#### Список тривог (Alarms List)
 
 Зміст списку тривог визначається наступним:
 
 - Фільтри, які зараз увімкнено (див. [Фільтри](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Default_AlarmPages.htm?tocpath=Situational Awareness Projects| Макет за замовчуванням|_____6#Фільтри)).
 - Будь-який поточний вибір у перегляді дерева. Список буде включати лише тривоги, пов’язані з вибраними елементами (див. [Перегляд дерева](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Default_AlarmPages.htm?tocpath =Проекти ситуаційної поінформованості|Макет за замовчуванням|_____6#TreeView)) і будь-яке вибране обладнання, на яке посилаються (див. [Референс устаткування](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/ Content/Situational_Awareness_Default_AlarmPages.htm?tocpath=Проекти ситуаційної поінформованості|Макет за замовчуванням|_____6#Довідка)).
 
-Розташування стовпців за замовчуванням визначається типом сторінки нагадування, яка відображається, і форматом за замовчуванням, визначеним для неї [[Format\]FormatName](file:///C:/Program Files (x86)/AVEVA Plant SCADA Параметр /Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/FormatFormatName.html). Ви можете змінити порядок стовпців, якщо потрібно.
+Розташування стовпців за замовчуванням визначається типом сторінки нагадування, яка відображається, і форматом за замовчуванням, визначеним для неї [`[Format]FormatName`](file:///C:/Program Files (x86)/AVEVA Plant SCADA Параметр /Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/FormatFormatName.html). Ви можете змінити порядок стовпців, якщо потрібно.
 
-#### Tree View
+#### Перегляд дерева (Tree View)
 
 Перегляд дерева надає ієрархічний вигляд ієрархії обладнання проекту. Ви можете використовувати його для фільтрації відображеного списку нагадувань.
 
 ​        ![img](media/SA_Default_Alarm_Page_Treeview.png)    
 
-
-
 Кожен елемент у перегляді дерева містить:
 
 - Прапорці дозволяють вибрати один або кілька елементів у дереві.
-- Підрахунок тривог вказує кількість пов'язаних тивог у трьох головних пріоритетах тривог, а також кількість відкладених тривожних сигналів.
+- Лічильник тривог вказує кількість пов'язаних тивог у трьох головних пріоритетах тривог, а також кількість відтермінованих тривог.
 
 Список тривог буде відфільтровано, щоб відобразити тривоги, пов’язані з вибраними елементами.
 
-**Примітка.** Ви можете використовувати параметр [[Workspace\]NumberOfTopPriorities](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/ WorkspaceNumberOfTopPriorities.html), щоб відобразити кількість тривог для чотирьох найбільших пріоритетів тривоги (замість трьох перших). Для отримання додаткової інформації про налаштування див. [Налаштування властивостей дисплея для четвертого пріоритету тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Configure_a Fourth_Alarm_Priority.ht).
+**Примітка.** Ви можете використовувати параметр [`[Workspace]NumberOfTopPriorities`](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/ParametersCitectHTML/Content/ WorkspaceNumberOfTopPriorities.html), щоб відобразити кількість тривог для чотирьох найбільших пріоритетів тривоги (замість трьох перших). Для отримання додаткової інформації про налаштування див. [Налаштування властивостей дисплея для четвертого пріоритету тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Configure_a Fourth_Alarm_Priority.ht). Щоб налаштувати перегляд дерева, див. [Додати дерево на сторінку](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_a_Treeview_to_a_Page.htm).
 
-Щоб налаштувати перегляд дерева, див. [Додати дерево на сторінку](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_a_Treeview_to_a_Page.htm).
+#### Фільтри (Filters)
 
-#### Filters
-
-Цей розділ сторінки нагадувань дозволяє фільтрувати список нагадувань за пріоритетом, станом і підтвердженням. Опис **Поточний фільтр** вказує, чи активні якісь фільтри для списку тривог.
+Цей розділ сторінки тривог дозволяє фільтрувати список тривог за пріоритетом, станом і підтвердженням. Опис **Поточний фільтр** вказує, чи активні якісь фільтри для списку тривог.
 
 **Примітка.** Ви можете додати свої власні кнопки фільтрів на сторінку тривог, використовуючи набір наданих Genie. Див. [Додати кнопку фільтра сигналізації](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_an_Alarm_Filter_Button.htm).
 
-**Priority Filters**    
+**Фільтри за пріоритетами (Priority Filters)**    
 
 Кнопки пріоритету тривог дозволяють відфільтрувати тривоги, які входять до трьох основних пріоритетів тривог. За замовчуванням вибрано три кнопки (як позначено кольоровим фоном).
 
@@ -351,15 +347,15 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 ​        ![img](media/SA_Default_Alarm_Page_PrioritiesOff.png)    
 
-На сторінці Історичні події також є кнопка, за допомогою якої можна відфільтрувати тривожні сигнали.
+На сторінці Історичні події також є кнопка, за допомогою якої можна відфільтрувати тривоги.
 
 ​        ![img](media/SA_Default_Alarm_Page_ShelvedOn.png)    
 
 Ви можете додати четвертий за величиною фільтр пріоритету тривоги до сторінок тривог. Див. [Додати фільтр пріоритету четвертого нагадування до сторінок нагадування](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_a_Fourth_Alarm_Filter_Button.ht).
 
-**State Filters**    
+Фільтри за станами (**State Filters**)    
 
-Кнопка фільтра стану дозволяє відфільтрувати нагадування, які знаходяться в певному стані.
+Кнопка фільтра за станами дозволяє відфільтрувати тривоги, які знаходяться в певному стані.
 
 ​        ![img](media/SA_Default_Alarm_Page_State.png)    
 
@@ -373,7 +369,7 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 ​        ![img](media/SA_Default_Alarm_Page_StateCurrent.png)    
 
-**Acknowledgment Filters**    
+**Фільтр за квитуванням (Acknowledgment Filters)**    
 
 На сторінці історичних подій також є кнопка, яка дозволяє фільтрувати нагадування **Підтверджено** і **Непідтверджено**.
 
@@ -381,7 +377,7 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 За замовчуванням вибрано обидві кнопки (як позначено кольоровим фоном). Якщо вимкнути кнопку, пов’язані нагадування буде видалено зі списку.
 
-#### Cause & Response Information
+#### Інформація про причину і реакцію(Cause & Response Information)
 
 У цьому розділі сторінки нагадувань відображається інформація про причину та реакцію для вибраної тривоги (see [Provide Cause and Response Information to Operators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Provide_Cause_and_Response_Information_to_Operators.htm)). 
 
@@ -394,7 +390,7 @@ For more information on how to prepare a project’s menu for the navigation zon
 - Response Time — проміжок часу, протягом якого необхідно діяти на вказану відповідь.
 - Consequence — опис ймовірного результату, якщо запропонована відповідь не буде виконана протягом зазначеного часу відповіді.
 
-Якщо для нагадування налаштовано кілька наборів властивостей причини та реагування, ви можете використовувати кнопки зі стрілками у верхньому правому куті, щоб прокрутити їх.
+Якщо для тривоги налаштовано кілька наборів властивостей причини та реагування, ви можете використовувати кнопки зі стрілками у верхньому правому куті, щоб прокрутити їх.
 
 #### Referenced Equipment
 
@@ -408,7 +404,7 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 Якщо прапорець має сірий фон, це означає, що частина обладнання вже вибрано в перегляді дерева. Якщо ви виберете **Очистити все**, коли частина обладнання знаходиться в цьому стані, буде скасовано вибір цього обладнання як у списку посилання на обладнання, так і в перегляді дерева.
 
-### Default Trend Pages
+### Сторінки трендів за замовченням (Default Trend Pages)
 
 Проект, створений за допомогою проекту Situational Awareness Starter Project, включатиме сторінку трендів за замовчуванням, доступну за допомогою [Header Bar](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Headerbar.htm). Натисніть на значок нижче, щоб відобразити сторінку тенденцій в області вмісту сторінки (see [Default Layout](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Default_Layout.htm)). 
 
@@ -426,7 +422,7 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 **Note**:  Ви можете запустити сторінку тренду з інших сторінок за допомогою кнопок на вкладці «Тренди» інформаційної зони. Це запустить сторінку тренду з трендрм для об’єкта, вибраного на цій сторінці.
 
-#### Tree View
+#### Перегляд дерева (Tree View)
 
 Перегляд дерева надає ієрархічний вигляд ієрархії обладнання проекту.
 
@@ -435,8 +431,8 @@ For more information on how to prepare a project’s menu for the navigation zon
 У перегляді дерева відображається:
 
 - Галочки для об'єктів, які мають активний тренд.
-- Сірі галочки для об'єктів, діти яких мають активний тренд.
-- Підрахунок тривог, який вказує кількість пов’язаних тривог у трьох головних пріоритетах нагадування, а також кількість тривожних сигналів, відкладених на полиці.
+- Сірі галочки для об'єктів, дочірні об'єкти яких мають активний тренд.
+- Лічильник тривог, який вказує кількість пов’язаних тривог у трьох головних пріоритетах нагадування, а також кількість тривожних сигналів, відкладених на полиці.
 - Кнопки для розширення (+) і згортання (-) дерева.
 - Поле пошуку, яке можна використовувати для фільтрації відображеного списку об'єктів.
 
@@ -460,7 +456,7 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 Відображає діаграму трендів на основі вибраного обладнання та опцій.
 
-#### Main Toolbar
+#### Головна панель (Main Toolbar)
 
 Головна панель інструментів розташована над діаграмою. Він містить команди, які дозволяють виконувати загальні операції, наприклад, зберігати та відкривати подання, друкувати звіти тощо. У таблиці нижче описані кнопки, які включені на головну панель інструментів.
 
@@ -482,35 +478,27 @@ For more information on how to prepare a project’s menu for the navigation zon
 
 #### Navigation Toolbar
 
-The Navigation toolbar  contains commands to allow you to navigate forward or backward through  trends, as well as other navigation-related tasks.
+Панель інструментів навігації містить команди, які дозволяють переміщатися вперед або назад по тренду, а також інші пов’язані з навігацією завдання.
 
 ​        ![img](media/SA_DefaultTrendPage_NavigationToolbar.png)    
 
-A **Start Time Picker** is located on the left-hand side of the navigation toolbar, an **End Time Picker** is located on the right. You can use these to Specify a Start Time and  End Time. If a time picker control is using Daylight Savings time, the  clock to the left of the control will have a shaded segment.
+**Вибір часу початку** розташований зліва на панелі інструментів навігації, **Вибір часу завершення** — праворуч. Ви можете використовувати їх для означення часу початку та закінчення. Якщо елемент керування вибору часу використовує літній час, годинник ліворуч від елемента керування матиме затінений сегмент.
 
 ​        ![img](media/Daylight Savings.png)    
 
-The **Span Picker** contains commonly used predefined time spans that you can select from a drop-down menu. The time span of the trend display represents the  difference between the start time and the end time. Selecting a time  span adjusts the start time and leaves the end time as it is. To set a  time span that is not included in the list of predefined times, see [Set a Nonstandard Time Span](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Edit_Span.html). See [Also Lock the Time Span](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Span_Lock.html).
-
-The Navigation toolbar also includes a set of command buttons. You can use these buttons to perform the following tasks:
-
-- [Navigate Backward or Forward through your Data](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Navigating_time.html)        
-- [Synchronize Every Pen to "Now."](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Synchronize_to_Now.html)        
-- [Toggle Auto-scrolling of the Display](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Toggle_Autoscrolling.html)        
-- [Zoom In or Zoom Out](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Zoom_InZoom_Out.html)        
-- [Undo the Last Zoom Operation](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Undo_Last_Zoom.html)        
-- [Toggle between Zoom Mode and Normal Mode](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Toggle_Box_Zoom.html)        
-- [Edit the Vertical (value) Scale](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Edit_Vertical_Scale.html).
+**Вибір інтервалу** містить часто використовувані попередньо визначені проміжки часу, які можна вибрати зі спадного меню. Проміжок часу відображення тренду представляє різницю між часом початку та часом завершення. Вибір інтервалу часу регулює час початку та залишає час завершення без змін. Щоб встановити проміжок часу, який не входить до списку попередньо визначених часів, див. [Встановити нестандартний часовий проміжок](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/ Content/Edit_Span.html). Див. [Також заблокувати часовий проміжок](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Span_Lock.html).
 
 #### Object View
 
-The Object View displays  the list of objects (equipment) displayed in the trend chart along with  properties of the pens such as name, color, scale and so on. The  following properties are displayed:
+Перегляд об’єктів відображає список об’єктів (обладнання), що відображаються на діаграмі трендів, разом із властивостями пера, такими як назва, колір, масштаб тощо. Відображаються такі властивості:
 
 | Column            | Description                                                  |
 | :---------------- | :----------------------------------------------------------- |
-| Scale             | Vertical axis start and end position of the pen.             |
-| Engineering Units | Engineering units associated with the pen.                   |
-| Comment           | The trend/alarm comment defined for the pen.                 |
-| Alarm Name        | Name of associated alarm tag.                                |
-| Cluster           | Name of the cluster in which the object is defined.          |
-| Error             | Displays the error of the last data request. Blank if last data request succeeded |
+| Scale             | Початкове та кінцеве положення пера по вертикальній осі.     |
+| Engineering Units | Інженерні одиниці, пов'язані з пером.                        |
+| Comment           | Коментар тренду/тривоги, визначений для пера.                |
+| Alarm Name        | Назва пов'язаного тега тривоги                               |
+| Cluster           | Ім'я кластера, в якому означено об'єкт.                      |
+| Error             | Показує помилку останнього запиту даних. Порожнє, якщо останній запит даних був успішним |
+
+[--> Тривоги](alarms.md)

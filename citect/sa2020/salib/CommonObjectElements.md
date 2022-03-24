@@ -1,34 +1,72 @@
-#### Common Object Elements
+[Проект Situational Awareness](../README.md) -> [Situational Awareness Library](readme.md)
 
-The objects within the Situational Awareness library share a set of properties and behaviors that are common across objects. 
+### Загальні елементи об'єктів 
+
+[Help](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Content/ASM_Common_Object_Elements.htm)
+
+Об’єкти в бібліотеці Situational Awareness поділяють набір властивостей і поведінки, які є спільними для об’єктів.
 
 ​                ![img](media/Common_Elements.png)            
 
- These include:
+До них входять:
 
-- [Alarm indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Use_Alarm_Indicators.htm)                
+- Alarm indicator        
 
-- [Status indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Status_Indicators.htm)                
-- [Output bar](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_OutputBar_Indicator.htm)                
-- [Equipment Running State Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Multiple_Equipment_Objects.htm).
+- Status indicator             
+- Output bar         
+- Equipment Running State Indicators
 
-Any exceptions to the  properties are noted in the individual object descriptions.
+Будь-які винятки з властивостей зазначаються в описах окремих об’єктів.
 
-##### Status Indicators
+#### Використання тривожних індикаторів
+
+[Alarm indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Use_Alarm_Indicators.htm)
+
+Індикатори тривоги складаються з рамки та прапорця, які з’являються навколо екстенту групи об’єктів або Джина. Ви можете використовувати їх для забезпечення чіткої візуальної індикації виникнення тривоги під час виконання.
+
+​                ![img](G:\san\AKIT\ДИСЦИП\ЛМІ\GitVer\citect\sa2020\salib\media\Alarm_Indicator.png)            
+
+**Alarm border**
+
+Коли виникає відповідний стан тривоги, навколо групи об’єктів або Genie з’явиться рамка тривоги.
+
+**Alarm flag**
+
+Прапорець тривоги надає додаткову інформацію про тривогу, представляючи:
+
+- колір прапорці
+- форма прапорці
+- код прапорця, який може вказувати пріоритет тривоги або тип тривоги.
+
+У наведеному нижче прикладі показано коди форми, кольору та прапорців, які використовуються для позначення аварійних тривог, тривог високого та низького пріоритету в проекті, створеному на основі проекту Situational Awareness Starter Project.
+
+​                        ![img](G:\san\AKIT\ДИСЦИП\ЛМІ\GitVer\citect\sa2020\salib\media\Alarm_Indicator_Flags.png)                    
+
+Якщо вам потрібно налаштувати власні прапорці сигналізації, див. [Create a Custom Flag for an Alarm Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Create_Custom_Flags_for_an_Alarm_Indicator.htm).
+
+Крім використання кольору для означення пріоритету тривоги, зовнішній вигляд індикатора тривоги можна використовувати для означення поточного стану тривоги. Наприклад, якщо тривога не підтверджена, індикатор блимає. Для отримання додаткової інформації див. [Стани тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_States.htm).
+
+Ви можете розташувати прапорець тривоги в кількох місцях навколо межі тривоги об’єкта. Щоб позначити певний стан тривоги, індикатор тривоги може блимати або відображати світліший варіант кольору.
+
+Щоб налаштувати індикатор тривоги для групи об'єктів або Genie, необхідно виконати наступні завдання:
+
+1. Підтвердьте, що необхідні пріоритети тривоги призначені категорії тривоги. Див. [Categorize Alarms](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CategorizeAlarms.htm).
+2. Визначте властивості відображення для пріоритетів тривоги, які буде представляти індикатор. Див. [Налаштування властивостей відображення для пріоритету тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_Display_Properties_for_an_Alarm_Prioirty.htm).
+3. Для кожної групи об'єктів або Genie визначте властивості індикатора тривоги в Graphics Builder. Див. [Індикатор тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_Indicator.htm).
+
+#### Status Indicators
+
+[Status indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Status_Indicators.htm)   
 
 Індикатори стану використовуються для представлення різних умов, не пов’язаних з тривожним об’єктом, таких як ненормальна якість даних або стани системи керування. Індикатор стану з’являтиметься лише тоді, коли умова запуску істинна.
 
 ​                ![img](media/Common_Elements_Status_Indicator.png)            
 
-The status indicator is a separate genie and is used to represent various states of an object. 
-
-The status indicator symbols can be found in the SA_Library  project in a library called sa_status_indicator.
+Індикатор стану є окремим джином і використовується для представлення різних станів об’єкта. Символи індикаторів стану можна знайти в проекті SA_Library у бібліотеці, яка називається sa_status_indicator.
 
 **Status Indicator States**
 
-Connects to: EquipmentName.EqStatus
-
-A status indicator can represent the following states.
+Connects to: EquipmentName.EqStatus. Індикатор стану може представляти наступні стани.
 
 |                          Symbol                          | State                                          | Name |
 | :------------------------------------------------------: | ---------------------------------------------- | :--: |
@@ -53,133 +91,138 @@ A status indicator can represent the following states.
 |       ![img](media/Status_Indicator_Deviation.png)       | Deviation                                      | d15  |
 |       ![img](media/Status_Indicator_Telephone.png)       | Reminder to call outside personnel             | d17  |
 
-У сценаріях, де кілька станів можуть бути активними одночасно, є порядок пріоритету щодо того, який індикатор буде відображатися. Наприклад, PID-контролер, який перебуває в режимі ініціалізації, але також має імітований PV, відображатиме індикатор «S», навіть якщо також була активна умова блокування.
+У сценаріях, де кілька станів можуть бути активними одночасно, є порядок пріоритету щодо того, який індикатор буде відображатися. Наприклад, PID-регулятор, який перебуває в режимі ініціалізації, але також має імітований PV, відображатиме індикатор «S», навіть якщо також була активна умова блокування.
 
 **Status Indicator Order of Precedence**
 
-The following diagram outlines the order of precedence:
+Наступна діаграма показує порядок пріоритетності:
 
  ![img](media/StatusIndicator_order of Prec.png)                    
 
-Індикатори стану можна налаштувати для більшості об’єктів бібліотеки, за винятком NumericInput і TextInput. Приклади були надані лише для приводів, лічильників та клапанів.
+Індикатори стану можна налаштувати для більшості об’єктів бібліотеки, за винятком NumericInput і TextInput. Приклади були надані лише для приводів, вимірювачів та клапанів.
 
 **Customizing Equipment to use Status Indicators**
 
-Status Indicators can be  used to highlight a non-alarm state of an object or equipment. You can  configure equipment to use status indicators one of two ways:
+Індикатори стану можуть використовуватися для виділення нетривожного стану об’єкта або обладнання. Ви можете налаштувати обладнання для використання індикаторів стану одним із двох способів:
 
-1. Using the Equipment Editor 
+1) Використовуючи Equipment Editor 
 
-2. - Click on the Equipment Tab and from the list of Equipment select the relevant equipment.
-   - Open the param_list panel
-   - Edit the EqStatusFunc field
-   - ​    ![img](media/SA_param_list.png)
+- Натисніть на вкладку Обладнання та зі списку Обладнання виберіть відповідне обладнання.
 
-3. If not using templates, you can configure the status indicator directly  using the EqStatus item name of the equipment. Go to System Model ->  Variables. 
+- Відкрийте панель param_list 
 
-The SA_Style_1_MultiRes  starter project includes an example (Indicators.ci) of how to configure  equipment using sample functions to call one  of the indicators.  Variations of the equipment status indicator functions have been  provided for Meters, Valves and Drives only.
+- Редагуйте поле EqStatusFunc 
+
+![img](media/SA_param_list.png)
+
+2) Якщо ви не використовуєте шаблони, ви можете налаштувати індикатор стану безпосередньо за допомогою назви елемента EqStatus обладнання. Перейдіть до Модель системи -> Змінні. 
+
+Початковий проект SA_Style_1_MultiRes містить приклад (Indicators.ci) того, як налаштувати обладнання за допомогою зразкових функцій для виклику одного з індикаторів. Варіанти функцій індикатора стану обладнання були передбачені лише для вимірювачів, клапанів і приводів.
 
 - [EquipmentStatus_Meter_GetValue](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_EquipmentStatus_Meter_GetValue.htm) 
 - [EquipmentStatus_Valve_GetValue](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_EquipmentStatus_Valve_GetValue.htm) 
 - [EquipmentStatus_Drive_GetValue](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_EquipmentStatus_Drive_GetValue.htm) 
 
-These functions map the  relevant status tags from a PLC's code into the values required by the  various indicators. Different pieces of equipment have different  relevant states for each of these indicators, so when required, make  your own copy of the example cicode file.  You can then create  variations or unique versions of the sample functions to use in your  project.
+Ці функції відображають відповідні теги стану з коду ПЛК у значення, необхідні для різних індикаторів. Різні частини обладнання мають різні відповідні стани для кожного з цих індикаторів, тому, якщо потрібно, створіть власну копію файлу прикладу cicode. Потім ви можете створити варіанти або унікальні версії зразкових функцій для використання у своєму проекті.
 
-Refer to the comments within the cicode file Indicators.ci for more information on how to customize and use these functions.
+Зверніться до коментарів у файлі cicode Indicators.ci для отримання додаткової інформації про те, як налаштувати та використовувати ці функції.
 
-##### Output (OP) Bar 
+#### Output (OP) Bar 
 
-An output (OP) bar provides a visual  representation of the current output for a piece of equipment. It can be used with multiple types of objects (control meters, variable speed  drives, and control valves). 
+[Output bar](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_OutputBar_Indicator.htm)     
 
-The information displayed by an OP bar may be presented as two values:
+Панель виходу (OP) забезпечує візуальне представлення поточного виходу для частини обладнання. Її можна використовувати з кількома типами об’єктів (control meters, приводами зі змінною швидкістю та регулюючими клапанами).
 
-- Output — the value set for the output
-- Actual output — the current output value indicated by the readback indicator (also referred to as feedback indicator).
+Інформація, що відображається панеллю OP, може бути представлена у вигляді двох значень:
 
-Using a furnace as an example, the output  would be the temperature at which the furnace is set to operate. The  actual output would be the current temperature of the furnace as it  moves towards the specified setting.
+- Output (Вихід) — значення, встановлене для виходу
+- Actual output (Фактичний вихід) — поточне вихідне значення, яке вказується індикатором положення (також званим індикатором зворотного зв'язку).
 
-The  output is represented by the main OP bar, while actual output is represented by a readback indicator. 
+Використовуючи піч як приклад, вихідним буде температура, при якій піч налаштована на роботу. Фактичним виходом буде поточна температура печі, коли вона рухається до заданого параметра.
+
+Вихід представлений головною панеллю OP, а фактичний вихід представлений індикатором зворотного зв'язку.
 
 ​                ![img](media/Common_Elements_OP_bar.png)            
 
 **Output (OP) bar**
 
- The outer rectangle  represents the entire range of the output, from the low scale value to  the high scale value (for example, 0—100%). 
+Зовнішній прямокутник представляє весь діапазон виводу, від низького значення шкали до високого значення шкали (наприклад, 0—100%).
 
-The following colors are used to represent the  OP value:
+Для представлення значення OP використовуються наступні кольори:
 
-- White represents 0% (or the low scale value)
-- Black represents 100% (or the high scale value)
-- Grey represents all  output values in between.
+- Білий колір означає 0% (або найменше значення шкали)
+- Чорний означає 100% (або високе значення шкали)
+- Сірий відображає всі вихідні значення між ними.
 
  ![img](media/Common_Elements_OP_bar_fill.png)                    
 
-**Note**: In the case of valves,  the valve head will remain grey, but the OP bar will change to black when the OP reaches 100%. 
+У разі клапанів ВМ клапана залишиться сірим, але стовпчик OP зміниться на чорний, коли OP досягне 100%.
 
 **Readback Indicator**
 
-The readback indicator (also known as a feedback indicator) is a small filled triangle that is used to show:
+Індикатор зворотного зчитування (також відомий як індикатор зворотного зв’язку) — це невеликий заповнений трикутник, який використовується для показу:
 
--  Actual output (for controllers)
-- Speed (for variable speed drives)
-- Position (for valves).
+- Фактичний вихід (для регуляторів)
+- Швидкість (для приводів зі змінною швидкістю)
+- Позиція (для клапанів).
 
- If this information is not available from the control system, the readback indicator is not displayed. 
+Якщо ця інформація недоступна з системи керування, індикатор зворотного зчитування не відображається.
 
-The readback indicator displays the following colors:
+Індикатор зворотного зчитування відображає такі кольори:
 
-- White at 0% (or minimum)
-- Black at 100% (or maximum)
-- Grey for all values in between.
+- Білий на 0% (або мінімум)
+- Чорний на 100% (або максимум)
+- Сірий для всіх значень між ними.
 
  ![img](media/Common_Elements_OP_bar_readback.png)                    
 
-An OP bar can be specified in the  Presentation Options dialog box for meters, drives and valves, but the  behavior is the same in all instances. The following examples  demonstrate positioning for an OP bar on a control meter, a control  valve and a VSD pump. 
+У діалоговому вікні «Presentation Options» для вимірювачів, приводів і клапанів можна вказати стовпчик OP, але поведінка однакова у всіх випадках. Наведені нижче приклади демонструють позиціонування OP-стовпчика на контрольному вимірювачі, регулюючому клапані та насосі VSD.
 
 ​                ![img](media/Common_Elements_OP_bar_examples_348x211.png)            
 
 #### Equipment Running State Indicators
 
-An Equipment Running State Indicator is a  compact indicator that can be used to represent a variety of states for  drive objects and some types of valves. These states can include run  status, direction, interlocks, alarms, lockouts, and more.
+[Equipment Running State Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Multiple_Equipment_Objects.htm).
+
+Індикатор робочого стану обладнання – це компактний індикатор, який можна використовувати для представлення різноманітних станів приводних об’єктів та деяких типів клапанів. Ці стани можуть включати стан роботи, напрямок, блокування, тривогу, блокування тощо.
 
 ​                ![img](media/Common_Elements_MEO_Example.png)            
 
-You can use Equipment Running State Indicator in the following ways:
+Ви можете використовувати індикатор робочого стану обладнання такими способами:
 
 **Represent a group of up to five drives using one symbol**
 
-A primary reason for using  Equipment Running State Indicators is to allow equipment to be displayed on a page as group. For example, it is possible to represent a group of up to five pumps using one pump symbol and four Equipment Running State Indicators. 
+Основною причиною використання індикаторів стану обладнання є можливість відображати обладнання на сторінці як групу. Наприклад, можна представити групу до п’яти насосів, використовуючи один символ насоса та чотири індикатори робочого стану обладнання.
 
  ![img](media/Common_Elements_MEO_Grouped.png)                    
 
-This allows an entire group of drives to be monitored using one compact object. 
+Це дозволяє контролювати цілу групу накопичувачів за допомогою одного компактного об’єкта.
 
 **Display alarms states for a group of drives**
 
-When used with a symbol  representing a group of drives, an Equipment Running State Indicator  will reflect the occurrence of any alarms on an individual drive within  the group. An alarm condition is indicated by a border inside the  Equipment Running State Indicator, allowing the status of the drive to  remain visible. 
-
-The alarm status for the main object will reflect the highest priority alarm on any of the individual drives.
+При використанні із символом, що представляє групу приводів, індикатор стану роботи обладнання відображатиме виникнення будь-яких тривог на окремому приводі в групі. Стан тривоги позначається рамкою всередині індикатора робочого стану обладнання, завдяки чому статус привода залишається видимим. Стан тривоги для основного об’єкта буде відображати тривогу найвищого пріоритету на будь-якому з окремих приводів.
 
  ![img](media/Common_Elements_MEO_Alarms.png)                    
 
 **Integrate an Equipment Running State Indicator into a compact drive symbol**
 
-If available space on the  screen is limited, compact drives can be used. Instead of showing a  square Equipment Running State Indicator box under the symbol, a  circular Equipment Running State Indicator is placed inside the symbol.
+Якщо доступний простір на екрані обмежений, можна використовувати компактні приводи. Замість відображення квадратного поля індикатора робочого стану обладнання під символом, круглий індикатор робочого стану обладнання розміщується всередині символу.
 
  ![img](media/Common_Elements_MEO_Compact_Drive.png)                    
 
-The Equipment Running State Indicator does not have a border around it. If the commanded and actual states are the same, the  Equipment Running State Indicator  circle  blends into the fill of the symbol.
+Індикатор стану запущеного обладнання не має межі навколо нього. Якщо командний та фактичний стани збігаються, коло індикатора робочого стану обладнання зливається із заливкою символу.
 
 **Represent the current state of valves**
 
-For valves, the Equipment Running State Indicator symbols are shown in the valve head instead of a separate box. 
+Для клапанів символи індикатора робочого стану обладнання відображаються в ВМ клапана замість окремого поля.
 
  ![img](media/Common_Elements_MEO_Valves.png)                    
 
 ##### Equipment Running States
 
-[Equipment Running State Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Multiple_Equipment_Objects.htm) use the following symbols to indicate the operational state of a piece of equipment. The RunStatus tag is used for indicating out-of-service states with Equipment Running State value of 2, 3 or 4. 
+[Індикатори робочого стану обладнання](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Multiple_Equipment_Objects.htm) використовуйте наступні символи для вказівки робочого стану частини обладнання. Тег RunStatus використовується для вказівки непрацездатних станів зі значенням Equipment Running State 2, 3 або 4.
 
-OOS and OOSDisabled are digital tags that drive the value of equipment running states. 
+OOS і OOSDisabled — це цифрові теги, які визначають значення стану обладнання.
 
 | Equipment Running State | Symbol                                                       | Description                                                  |
 | ----------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
@@ -208,3 +251,5 @@ OOS and OOSDisabled are digital tags that drive the value of equipment running s
 | 22                      | ![img](media/MEO_Indicator_Interlock_By_Sequence.png)        | Interlocked by a sequence and not running                    |
 | 23                      | ![img](media/MEO_Indicator_Selected_OOS_Upstream.png)        | On / Open and Out to Maintenance / Out of Service            |
 | 24                      | ![img](media/MEO_Indicator_On_Open_OOS_Upstream.png)         | Off / Closed and Selected Out of Service by upstream equipment |
+
+[--> Equipment Custom Parameters](EquipmentCustomParameters.md)

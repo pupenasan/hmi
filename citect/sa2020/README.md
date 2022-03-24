@@ -21,11 +21,11 @@
 **Примітка.** Уникайте внесення змін до включеного проекту SA_Include для використання як проекту під час виконання. Оновлення Plant SCADA встановить нову версію проекту, яка перезапише всі внесені вами зміни.
 
 -  [Ключові компоненти проекту Situational Awareness](keycomponents.md)
--  [Автозповнення](Autofill.md)
+-  [Автозаповнення](Autofill.md)
 -  [Макет за замовченням](defaultlayout.md)
 -  [Тривоги](alarms.md)
 -  [Бібліотеки](libraries.md)
 -  [Блокування](interlocks.md)
--  [Розпочати з Situational Awareness Project](gettingstarted.md)
+-  [Початок роботи з Situational Awareness Project](gettingstarted.md)
 -  [Конфігурування проекту](configyourproject.md)
 -  [Налаштування Situational Awareness Project](custom.md)

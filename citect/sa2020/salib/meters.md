@@ -1,10 +1,14 @@
+[Проект Situational Awareness](../README.md) -> [Situational Awareness Library](readme.md)
+
 #### Meters
 
-Meters provide a graphical and a numeric  representation of instrument readings. The graphical representation  allows you to visually compare the PV with reference values such as  alarm limits and/or user-configured reference values (e.g., the  “tracker” or optimal range). Many of the meters have variations that  allow them to also be used to represent a controller. These variations  include additional elements such as output  (OP) and feedback indicator  (FB).
+[Help](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Content/ASM_Meters.htm)
 
-You can insert multiple instances of a meter in duplicate or triplicate by using the [MeterMultiple.xml  Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Multiple_Meter.htm). 
+Meters (вимірювачі) забезпечують графічне та числове відображення показань приладу. Графічне представлення дозволяє візуально порівнювати PV з контрольними значеннями, такими як межі тривоги та/або налаштовані користувачем опорні значення (наприклад, «трекер» або оптимальний діапазон). Багато вимірювачів мають варіації, які дозволяють також використовувати їх для представлення регулятору. Ці варіації включають додаткові елементи, такі як вихід (OP) та індикатор зворотного зв’язку (FB).
 
-Meters are  associated with equipment, and require the following items to be defined:
+Ви можете вставити кілька екземплярів вимірювача в двох або трьох примірниках за допомогою  [MeterMultiple.xml  Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Multiple_Meter.htm). 
+
+Вимірювачі пов’язані з обладнанням і вимагають визначення таких елементів: 
 
 | Item Name                                                    | Description                                    |
 | ------------------------------------------------------------ | ---------------------------------------------- |
@@ -22,7 +26,7 @@ Meters are  associated with equipment, and require the following items to be def
 | [SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint) | Setpoint                                       |
 | [TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker) | Controls whether or not a tracker is displayed |
 
-The Meter objects available in the Situational Awareness library include:
+Об’єкти вимірювача, доступні в бібліотеці Situational Awareness, включають:
 
 - [Analyzer](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Analyzer.htm)
 - [Deviation](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Deviation.htm)
@@ -36,37 +40,37 @@ The Meter objects available in the Situational Awareness library include:
 
 ##### Meter Orientations
 
-For most meters, several orientations are provided in order to give page designers flexibility in how the graphics are laid out.
+Для більшості вимірювачів передбачено кілька орієнтацій, щоб надати розробникам сторінок гнучкість у тому, як викладена графіка.
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Mirrored](javascript:void(0))
+**Mirrored**
 
-A mirrored meter reverses  the left/right position of some meter elements as shown in the example  below. The positions of the running state indicator, rate of change  arrow,  PV, engineering units, and  mode indicator (for control meters)  are affected. 
+Дзеркальний вимірювач змінює положення ліворуч і праворуч деяких елементів вимірювача, як показано в прикладі нижче. Впливають на положення індикатора робочого стану, стрілки швидкості зміни, PV, інженерних одиниць та індикатора режиму (для control meters).
 
 ![img](media/MeterVersion_Mirrorred.png)    
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Horizontal](javascript:void(0))
+**Horizontal**
 
-The orientation of the  meter is changed to horizontal as shown in the example below. Note that  the proportions of the alarm border, meter symbol and controller output  indicator are slightly different for the horizontal version compared to  the vertical version.
+Орієнтація вимірювача змінюється на горизонтальну, як показано в прикладі нижче. Зверніть увагу, що пропорції межі тривоги, символу вимірювача та індикатора виходу регулятору  дещо відрізняються для горизонтальної версії порівняно з вертикальною.
 
 ![img](media/MeterVersion_Horizontal.png)    
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Horizontal + Mirrored](javascript:void(0))
+**Horizontal + Mirrored**
 
-Horizontal meters can also  be mirrored. Typically, this orientation is used primarily with regular  meters rather than control meters.
+Горизонтальні лічильники також можуть бути дзеркальними. Як правило, ця орієнтація використовується переважно зі звичайними лічильниками, а не контрольними.
 
 ![img](media/MeterVersion_HorizontalMirr.png)    
 
 ##### Meter Common Elements
 
-The figure below shows an example of the elements that make up a meter.
+На малюнку нижче показаний приклад елементів, з яких складається метр.
 
 ![img](media/Meters_CommonElements.png)    
 
 **Meter Symbol and Graphical PV**
 
-Graphical PV connects to: EquipmentName.PV, EquipmentName.PVTarget
+Графічний PV підключається до: EquipmentName.PV, EquipmentName.PVTarget
 
-The appearance of the meter symbol and graphical PV tells operators what type of reading is being  displayed (flow vs. temperature vs. pressure, etc.). For example, flow  meters are represented as a basic ‘stick’ shape, with a black dot as the graphical PV. Temperature meters resemble a thermometer. Level meters  resemble a (thin) vessel with a fill that rises and falls to represent  the level, and so on. The symbols and PVs for each type of meter are  shown in the following image.
+Зовнішній вигляд символу вимірювача та графічного PV повідомляє операторам, який тип показань відображається (потік проти температури та тиску тощо). Наприклад, витратоміри представлені як базова форма «палиці» з чорною крапкою як графічний PV. Температури нагадують термометр. Рівнеміри нагадують (тонку) посудину з заливкою, яка піднімається і опускається, щоб відобразити рівень, і так далі. Символи та PV для кожного типу лічильників показано на наступному зображенні.
 
 | Analyzer Meter                              | Deviation Meter                              | Flow Meter                       | Level Meter                              | Misc Meter                              | Pressure Meter                       | Target Meter                              | Temperature Meter                |
 | ------------------------------------------- | -------------------------------------------- | -------------------------------- | ---------------------------------------- | --------------------------------------- | ------------------------------------ | ----------------------------------------- | -------------------------------- |
@@ -74,23 +78,23 @@ The appearance of the meter symbol and graphical PV tells operators what type of
 
 **Full Range Indicators**
 
-Connects to: EquipmentName.PRHigh, EquipmentName.PRLow, EquipmentName.PR
+Підключається до: EquipmentName.PRHigh, EquipmentName.PRLow, EquipmentName.PR
 
-Each meter allows you to  set a “normal” operating range ( “practical” range). During most  operating situations, the meter’s full range is much bigger than the  actual region of interest. By setting the normal operating range you can see meaningful variation in the PV when looking at the meter.
+Кожен вимірювач дозволяє встановити «нормальний» робочий діапазон («практичний» діапазон). Під час більшості робочих ситуацій повний діапазон вимірювача набагато більше, ніж фактична область інтересу. Встановивши нормальний робочий діапазон, ви можете побачити значущі зміни в PV, дивлячись на вимірювач.
 
-The EquipmentName.PR item is applicable to Deviation meters only. PRHigh and PRLow are not applicable to these meters.
+Пункт `EquipmentName.PR` застосовний лише до вимірювачів відхилень. PRHigh і PRLow не застосовуються до цих вимірювачів.
 
-If the PV moves outside the normal operating range, the meter scale will automatically change to  show the full range of the instrument. To differentiate a meter that is  showing its full range, additional flags appear at the top of the meter  and the meter symbol line color changes from grey to black, as in the  example below:
+Якщо PV виходить за межі нормального робочого діапазону, шкала вимірювача автоматично зміниться, щоб відобразити весь діапазон приладу. Щоб розрізнити вимірювач, який показує весь діапазон, у верхній частині лічильника з’являються додаткові прапорці, а колір лінії символу лічильника змінюється з сірого на чорний, як у прикладі нижче:
 
 ![img](media/Meters_FullRangeIndicators.png)    
 
 **Alarm Limits**
 
-Connects to:  EquipmentName.PV (analog alarm - current) or (EquipmentName.HHAlm,  EquipmentName.HAlm, EquipmentName.LAlm, EquipmentName.LLAlm) or  PLC Alarm Limits if configured.
+Підключається до:  `EquipmentName.PV` (analog alarm - current) або (`EquipmentName.HHAlm`,  `EquipmentName.HAlm`, `EquipmentName.LAlm`, `EquipmentName.LLAlm`) або  PLC Alarm Limits if configured.
 
-The alarm limit indicators  appear on the meter symbol to show the location of any configured alarm  limits. This allows operators to see when a PV is approaching an alarm  limit. Four types of alarm limits are shown using different symbols.
+На символі вимірювача  з’являються індикатори ліміту тривоги, щоб показати розташування будь-яких налаштованих меж тривоги. Це дозволяє операторам бачити, коли PV наближається до межі тривоги. Чотири типи меж тривоги відображаються різними символами.
 
-**Note**: For more information about configuring PLC alarm limits, see [Associate PLC Limits with Equipment.](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm)
+**Note**: Додаткову інформацію про налаштування лімітів тривоги ПЛК див [Associate PLC Limits with Equipment.](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm)
 
 |                                          |                       |
 | ---------------------------------------- | --------------------- |
@@ -99,25 +103,25 @@ The alarm limit indicators  appear on the meter symbol to show the location of a
 | ![img](media/Meters_LowAlarmLimit.png)   | Low alarm limit       |
 | ![img](media/Meters_LoLoAlarmLimits.png) | Low Low alarm limit   |
 
-For more information, see [Alarm Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_Indicator.htm).
+Детальніше, див [Alarm Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_Indicator.htm).
 
-An alarm limit indicator  will not appear if the corresponding alarm limit is not configured for  the instrument or if the limit is outside of the range shown by the  meter. Note that the precise width of the alarm limit indicators varies  somewhat for different meter types in order to accommodate the width of  the meter symbol. For example, alarm limit indicators are wider on a  level meter than on a flow meter.
+Індикатор ліміту тривоги не з’явиться, якщо відповідне обмеження тривоги не налаштовано для приладу або якщо межа виходить за межі діапазону, показаного вимірвювачем. Зауважте, що точна ширина індикаторів ліміту тривоги дещо відрізняється для різних типів вимірювачів, щоб врахувати ширину символу вимірювача. Наприклад, індикатори ліміту тривоги ширші на рівнемірі, ніж на витратомірі.
 
 **Engineering Units**
 
-Connects to: EquipmentName.PV (eng units field).
+Підключається до: `EquipmentName.PV` (eng units field).
 
-The engineering units represent the unit of measurement for the instrument.
+Інженерні одиниці представляють одиницю вимірювання для приладу.
 
 **PV**
 
 Connects to: EquipmentName.PV, EquipmentName.PVTarget
 
-The numeric PV provides a  text-based representation of the instrument reading. This provides  operators with precise values when needed.
+Числовий PV забезпечує текстове представлення показань приладу. Це надає операторам точні значення, коли це необхідно.
 
-**Display Name/Nickname**
+**Відображувальне значення/Nickname**
 
-The display name/nickname  shows the instrument name (by default), or, if entered by the user, a  “display name”. The nickname is usually a common name used to help  identify the reading (for example, “Oil temp”, instead of “TI1001”). The field accommodates up to 79 characters. 
+Відображуване ім’я/псевдонім показує назву інструменту (за замовчуванням) або, якщо введено користувачем, «відображаючу назву». Псевдонім зазвичай використовується, щоб допомогти ідентифікувати показання (наприклад, «Температура масла» замість «TI1001»). Поле вміщує до 79 символів.
 
 ![img](media/Meters_tagName.png)    
 
@@ -125,7 +129,7 @@ The display name/nickname  shows the instrument name (by default), or, if entere
 
 Connects to: EquipmentName.ORHigh, EquipmentName.ORLow, Visibility connected to EquipmentName.ORDsp.
 
-The optimal range box  highlights a specific range of the meter. Typically, operators will use  this feature to remind themselves of the desired or “optimal” range for  the PV, depending on the operating conditions. It should be possible to  enable and set the endpoints for the optimal range from the point  detail.  If the optimal range is not set or enabled, the box is not  shown.
+Оптимальний діапазон виділяє певний діапазон вимірювача. Як правило, оператори використовують цю функцію, щоб нагадати собі про бажаний або «оптимальний» діапазон для PV, залежно від умов експлуатації. Повинна бути можливість увімкнути та встановити кінцеві точки для оптимального діапазону від деталей точки. Якщо оптимальний діапазон не встановлено або не ввімкнено, поле не відображається.
 
 ![img](media/Meters_OptimalRange.png)    
 
@@ -133,13 +137,13 @@ The optimal range box  highlights a specific range of the meter. Typically, oper
 
 Connects to: EquipmentName.PVTrack, EquipmentName.OPTrack, EquipmentName.TrackDsp.
 
-Similar to the optimal  range box, the tracker is a user-configured indicator that marks a  specific value on the meter. An operator can mark the current value of a PV so that when they look at the reading again later, they can see if  it has changed. The tracker can be set and enabled/disabled from the  meter faceplate.
+Подібно до коробки оптимального діапазону, трекер є налаштованим користувачем індикатором, який позначає конкретне значення на вимірювачі. Оператор може позначити поточне значення PV, щоб, коли вони пізніше знову переглянуть показання, вони могли побачити, чи змінилося воно. Трекер можна налаштувати та ввімкнути/вимкнути з передньої панелі вимірювача.
 
 ![img](media/Meters_Tracker.png)    
 
-#####  Control Meters - Common Elements
+#####  Керівні вимірювачі (Control Meters) - Common Elements
 
-When a meter is used to show readings from a controller, additional information is included. Control meters include all of the [common elements](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm) previously described for regular meters, plus the additional elements shown below.
+Коли вимірювач використовується для показу показань з регулятору, включається додаткова інформація. Керівні вимірювачі включають усі [загальні елементи](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm), описані раніше для звичайних вимірювачів, а також додаткові елементи, показані нижче.
 
 ![img](media/ControlMeters_CommonElements.png)    
 
@@ -147,25 +151,25 @@ When a meter is used to show readings from a controller, additional information 
 
 Connects to: EquipmentName.SP
 
-The setpoint indicator is  an additional mark on the meter symbol (similar to the tracker and alarm limit indicators) which shows the position of the controller setpoint  value.
+Індикатор уставки — це додаткова позначка на символі вимірювача (подібна до індикаторів трекера та ліміту тривоги), яка показує положення заданого значення регулятору.
 
 **Output Indicator**
 
 Connects to: EquipmentName.OP
 
-The outer rectangle shape with white fill represents the entire range of the [controller output](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_OutputBar_Indicator.htm) (typically 0-100%), while the darker fill represents the output value.
+Форма зовнішнього прямокутника з білою заливкою представляє весь діапазон [виводу регулятору](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_OutputBar_Indicator.htm) ( зазвичай 0-100%), тоді як темніша заливка представляє вихідне значення.
 
 **Feedback Indicator**
 
 Connects to: EquipmentName.FB
 
-This small triangular  indicator represents the actual output for the controller (if available  from the control system). It shares the same scale as the controller  output indicator (e.g. 0-100%). This allows the operator to quickly see  if the output and actual output values match. This can be particularly  useful where the controller has a ramping function.
+Цей невеликий трикутний індикатор представляє фактичний вихід для регулятору (якщо доступний з системи керування). Він має ту саму шкалу, що і індикатор виходу регулятору (наприклад, 0-100%). Це дозволяє оператору швидко побачити, чи збігаються вихідні та фактичні вихідні значення. Це може бути особливо корисно, коли регулятор має функцію наростання.
 
 **Mode Indicator**
 
 Connects to: EquipmentName.CtrlMode, EquipmentName.CtrlModeDef
 
-This is a single-character  code that indicates the mode of the controller. Typically, the set of  modes includes Manual (M), Auto (A), and Cascade (C).
+Це односимвольний код, який вказує на режим роботи регулятору. Як правило, набір режимів включає ручний (M), автоматичний (A) і каскадний (C).
 
 ![img](media/Meter_ControllerMode.png)    
 
@@ -177,21 +181,23 @@ This is a single-character  code that indicates the mode of the controller. Typi
 - 3 – Local (L)
 - 4 – Special control (computer symbol)
 
-**Note**: The Mode  Indicator is not displayed if the tag is set to CtrlModeDef. To view the control mode at all times, remove the CtrlModeDef tag from the  equipment template. 
+**Примітка**: Індикатор режиму не відображається, якщо для тега встановлено значення CtrlModeDef. Щоб постійно переглядати режим керування, видаліть тег CtrlModeDef із шаблону обладнання.
 
 ##### Meter Special Elements
 
-Certain meters can have elements in addition to those described in [Meter Common Elements](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm). There are three special elements.
+Деякі вимірювачі можуть мати елементи на додаток до описаних у [Загальні елементи вимірювача](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm). Є три спеціальні елементи.
 
 **Differential Indicator**
 
-The delta symbol (Δ) is  used for temperature and pressure meters to indicate when a differential reading is being displayed. It is a static element which is enabled at  configuration and is not connected to the control system. It consists of a simple triangle shape which is placed next to the meter.
+Символ дельта (Δ) використовується для вимірювачів температури та тиску, щоб вказати, коли відображаються диференціальні показання. Це статичний елемент, який включається при конфігурації і не підключається до системи керування. Він складається з простого трикутника, який розміщений поруч із лічильником.
 
 ![img](media/Meters_DeltaSymbol.png)    
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)](javascript:void(0))[Descriptor](javascript:void(0))
+**Descriptor**
 
 The Miscellaneous,  Deviation, and Analyzer meters can all be used to show many different  types of readings. Therefore, it is recommended that short text  (up to 3 characters) is provided to help identify the reading (e.g., “O2” for  Oxygen content, “SG” for density, “Vis” for viscosity, “Trq” for torque, etc.) .  
+
+Вимірники Miscellaneous, Deviation та Analyzer  можуть використовуватися для відображення різних типів показань. Тому рекомендується надавати короткий текст (до 3 символів), щоб допомогти визначити показання (наприклад, “O2” для вмісту кисню, “SG” для густини, «Vis» для в’язкості, «Trq» для крутного моменту тощо .) .
 
 ![img](media/Meters_Descriptor.png)    
 
@@ -216,7 +222,7 @@ Connects to: EquipmentName.Timer, EquipmentName.TimerEXP
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -224,7 +230,7 @@ Connects to: EquipmentName.Timer, EquipmentName.TimerEXP
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -268,7 +274,7 @@ The deviation meter is used to represent  the difference between two values. A p
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -276,7 +282,7 @@ The deviation meter is used to represent  the difference between two values. A p
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -322,7 +328,7 @@ This object provides a compact way to  monitor two related levels simultaneously
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -330,7 +336,7 @@ This object provides a compact way to  monitor two related levels simultaneously
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -370,7 +376,7 @@ The flow indication is presented on a  linear scale, containing a “floating ba
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -378,7 +384,7 @@ The flow indication is presented on a  linear scale, containing a “floating ba
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -424,7 +430,7 @@ Level meters are provided in both vertical  and horizontal orientations, althoug
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -432,7 +438,7 @@ Level meters are provided in both vertical  and horizontal orientations, althoug
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -476,7 +482,7 @@ The miscellaneous meter indication is  presented on a linear scale, containing a
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -484,7 +490,7 @@ The miscellaneous meter indication is  presented on a linear scale, containing a
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -528,7 +534,7 @@ The following presentation options are available for this object.
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -536,7 +542,7 @@ The following presentation options are available for this object.
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -580,7 +586,7 @@ The Target meter is used to show deviations from setpoint in level.
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -588,7 +594,7 @@ The Target meter is used to show deviations from setpoint in level.
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
@@ -632,7 +638,7 @@ Temperatures are indicated on a linear  scale.  Temperature meters can be used t
 | Associated Faceplate(s)                         | [Analog Controller](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Controller.htm)[Analog Indicator](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_FP_Analog_Indicator.htm) |
 | Equipment.Items that the Faceplate Expects      | [OP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_OP)[ORHigh, ORLow, ORDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_OR)[PRHigh, PRLow](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Full_Range_Indicators)[OPTrack, PVTrack, TrackDsp](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_Tracker)[PV](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Meters_Common_Elements.htm#Meters_NumericPV)[SP](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Setpoint)[CtrlMode, CtrlModeDef](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_COntrol_Meters_Common_Elements.htm#Meters_Mode)AutoCmd, ManCmd, CasCmd    [RunStatus](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#RunStatus_Tag)[OOS, OOSDisabled](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_MeO_States.htm#OOS_Tags) |
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Configuration Tasks](javascript:void(0))
+**Configuration Tasks**
 
 - [Create equipment and organize equipment in a hierarchy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm): Create equipment instances for the required objects, and organize the  equipment in a hierarchy. Objects can be referred to by their name when  you add Composite Genies to a graphics page. You can add one or more instances of an equipment to a page.
 - [Associate PLC Alarm Limits for Meters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Configure_PLC_Limits_with_Equipment.htm): This is an optional task that is required if you want to use PLC alarm limits instead of the standard analog alarm limits.
@@ -640,7 +646,7 @@ Temperatures are indicated on a linear  scale.  Temperature meters can be used t
 - [Create a new faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Create_A_New_FP.htm): Add a [faceplate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Library_Faceplates.htm) for the equipment to allow operators to engage with the equipment at runtime.                    
 - Write Cicode functions to initialize PR and OR values. Refer to the Cicode Reference Online help for more information. It is recommended that for a  Dual Level meter you set these values on both meters to the same value. 
 
-[![Open](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Skins/Default/Stylesheets/Images/transparent.gif)Presentation Options](javascript:void(0))
+**Presentation Options**
 
 The following presentation options are available for this object.
 
