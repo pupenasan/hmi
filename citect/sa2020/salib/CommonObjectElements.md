@@ -34,8 +34,8 @@
 
 Прапорець тривоги надає додаткову інформацію про тривогу, представляючи:
 
-- колір прапорці
-- форма прапорці
+- колір прапорця
+- форма прапорця
 - код прапорця, який може вказувати пріоритет тривоги або тип тривоги.
 
 У наведеному нижче прикладі показано коди форми, кольору та прапорців, які використовуються для позначення аварійних тривог, тривог високого та низького пріоритету в проекті, створеному на основі проекту Situational Awareness Starter Project.
@@ -66,30 +66,30 @@
 
 **Status Indicator States**
 
-Connects to: EquipmentName.EqStatus. Індикатор стану може представляти наступні стани.
+Connects to: `EquipmentName.EqStatus`. Індикатор стану може представляти наступні стани.
 
-|                          Symbol                          | State                                          | Name |
-| :------------------------------------------------------: | ---------------------------------------------- | :--: |
-|    ![img](media/Status_Indicator_Bad_Data_39x39.png)     | Bad data.                                      |  d2  |
-|    ![img](media/Status_Indicator_Uncertain_data.png)     | Uncertain data or invalid automation state.    |  d1  |
-|     ![img](media/Status_Indicator_Simulate_mode.png)     | Simulate mode - forcing a value to a point.    |  d4  |
-|       ![img](media/Status_Indicator_Offscale.png)        | Offscale.                                      | d12  |
-|      ![img](media/Status_Indicator_Interlocked.png)      | Interlocked.                                   |  d6  |
-|  ![img](media/Status_Indicator_Interlock_bypassed.png)   | Interlock bypassed.                            |  d5  |
-|        ![img](media/Status_Indicator_Paused.png)         | Paused.                                        | d19  |
-|      ![img](media/Status_Indicator_BadComs_IO.png)       | Bad Communication between IO Server and Client | d13  |
-|       ![img](media/Status_Indicator_Tracking.png)        | Tracking                                       | d20  |
-|       ![img](media/Status_Indicator_Clamping.png)        | Clamped                                        | d21  |
-|     ![img](media/Status_Indicator_Off-spec_data.png)     | Off-spec lab data.                             |  d7  |
-|      ![img](media/Status_Indicator_Maintenance.png)      | Maintenance.                                   |  d8  |
-|     ![img](media/Status_Indicator_Message_40x39.png)     | Message.                                       |  d9  |
-|   ![img](media/Status_Indicator_Restart_required.png)    | Restart of the machine is required.            | d11  |
-| ![img](media/Status_Indicator_Initialization_manual.png) | Initialization manual or index car.            |  d3  |
-|     ![img](media/Status_Indicator_Timer_notice.png)      | Timer is active.                               | d10  |
-|    ![img](media/Status_Indicator_Calibrate_mode.png)     | Calibrate mode. Used to calibrate instruments. | d16  |
-|     ![img](media/Status_Indicator_BadComms_PLC.png)      | Bad Communication between Gateway and PLC.     | d14  |
-|       ![img](media/Status_Indicator_Deviation.png)       | Deviation                                      | d15  |
-|       ![img](media/Status_Indicator_Telephone.png)       | Reminder to call outside personnel             | d17  |
+|                          Symbol                          | State                                                    | Name |
+| :------------------------------------------------------: | -------------------------------------------------------- | :--: |
+|    ![img](media/Status_Indicator_Bad_Data_39x39.png)     | Погані дані                                              |  d2  |
+|    ![img](media/Status_Indicator_Uncertain_data.png)     | Невизначені дані або недійсний стан автоматизації        |  d1  |
+|     ![img](media/Status_Indicator_Simulate_mode.png)     | Режим імітації - примусове приведення значення до точки. |  d4  |
+|       ![img](media/Status_Indicator_Offscale.png)        | За межами масштабу                                       | d12  |
+|      ![img](media/Status_Indicator_Interlocked.png)      | Заблоковано                                              |  d6  |
+|  ![img](media/Status_Indicator_Interlock_bypassed.png)   | Байпас блокування                                        |  d5  |
+|        ![img](media/Status_Indicator_Paused.png)         | Пауза                                                    | d19  |
+|      ![img](media/Status_Indicator_BadComs_IO.png)       | Поганий зв'язок між IO Server та Client                  | d13  |
+|       ![img](media/Status_Indicator_Tracking.png)        | Стеження (Tracking)                                      | d20  |
+|       ![img](media/Status_Indicator_Clamping.png)        | Clamped                                                  | d21  |
+|     ![img](media/Status_Indicator_Off-spec_data.png)     | Невідповідні лабораторні дані.                           |  d7  |
+|      ![img](media/Status_Indicator_Maintenance.png)      | Технічне обслуговування.                                 |  d8  |
+|     ![img](media/Status_Indicator_Message_40x39.png)     | Повідомлення.                                            |  d9  |
+|   ![img](media/Status_Indicator_Restart_required.png)    | Необхідно перезавантажити машину.                        | d11  |
+| ![img](media/Status_Indicator_Initialization_manual.png) | Initialization manual or index car.                      |  d3  |
+|     ![img](media/Status_Indicator_Timer_notice.png)      | Timer is active.                                         | d10  |
+|    ![img](media/Status_Indicator_Calibrate_mode.png)     | Calibrate mode. Used to calibrate instruments.           | d16  |
+|     ![img](media/Status_Indicator_BadComms_PLC.png)      | Bad Communication between Gateway and PLC.               | d14  |
+|       ![img](media/Status_Indicator_Deviation.png)       | Deviation                                                | d15  |
+|       ![img](media/Status_Indicator_Telephone.png)       | Reminder to call outside personnel                       | d17  |
 
 У сценаріях, де кілька станів можуть бути активними одночасно, є порядок пріоритету щодо того, який індикатор буде відображатися. Наприклад, PID-регулятор, який перебуває в режимі ініціалізації, але також має імітований PV, відображатиме індикатор «S», навіть якщо також була активна умова блокування.
 
@@ -115,9 +115,9 @@ Connects to: EquipmentName.EqStatus. Індикатор стану може пр
 
 ![img](media/SA_param_list.png)
 
-2) Якщо ви не використовуєте шаблони, ви можете налаштувати індикатор стану безпосередньо за допомогою назви елемента EqStatus обладнання. Перейдіть до Модель системи -> Змінні. 
+2) Якщо ви не використовуєте шаблони, ви можете налаштувати індикатор стану безпосередньо за допомогою назви елемента `EqStatus` обладнання. Перейдіть до Модель системи -> Змінні. 
 
-Початковий проект SA_Style_1_MultiRes містить приклад (Indicators.ci) того, як налаштувати обладнання за допомогою зразкових функцій для виклику одного з індикаторів. Варіанти функцій індикатора стану обладнання були передбачені лише для вимірювачів, клапанів і приводів.
+Початковий проект `SA_Style_1_MultiRes` містить приклад (`Indicators.ci`) того, як налаштувати обладнання за допомогою зразкових функцій для виклику одного з індикаторів. Варіанти функцій індикатора стану обладнання були передбачені лише для вимірювачів, клапанів і приводів.
 
 - [EquipmentStatus_Meter_GetValue](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_EquipmentStatus_Meter_GetValue.htm) 
 - [EquipmentStatus_Valve_GetValue](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_EquipmentStatus_Valve_GetValue.htm) 
