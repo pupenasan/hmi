@@ -2,7 +2,9 @@
 
 # Лекція 9. Анімовані компоненти та навігація
 
+[<-- Лекція 8. Розроблення дисплеїв та анімованих елементів](lec8.md)
 
+[--> Лекція 10. Загальні принципи розроблення підсистеми тривог та подій](lec10.md)
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/EZKVLZ7c0gE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

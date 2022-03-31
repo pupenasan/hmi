@@ -488,6 +488,16 @@ O2: рамка компонента в стані тривоги.
 
 *Рис. 2.36.* Приклад відображення трендів запуску установки
 
+
+
+Розробленню підсистеми HMI присвячена окрема лекція.
+
+
+
+[< -- Лекція 1. Місце засобів SCADA/HMI в структурі керування](lec1.md)
+
+[--> Лекція 3. Інші функції SCADA/HMI](lec3.md)
+
 ## Контрольні запитання 
 
 1.     Які типи дисплеїв (сторінок) можуть відображатися на екрані оператору АРМу?
@@ -538,3 +548,4 @@ O2: рамка компонента в стані тривоги.
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/mATzoZJwaPk7pU" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/pupenasan/21-238464575" title="2.1. Функції графічного людино-машинного інтерфейсу" target="_blank">2.1. Функції графічного людино-машинного інтерфейсу</a> </strong> from <strong><a href="https://www.slideshare.net/pupenasan" target="_blank">Пупена Александр</a></strong> </div>
 
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/3khryzehfIXXg4" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/pupenasan/23-238464851" title="2_3 Функції графічного людино-машинного інтерфейсу: високоефективний ЛМІ" target="_blank">2_3 Функції графічного людино-машинного інтерфейсу: високоефективний ЛМІ</a> </strong> from <strong><a href="https://www.slideshare.net/pupenasan" target="_blank">Пупена Александр</a></strong> </div>
+

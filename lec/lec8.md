@@ -2,7 +2,9 @@
 
 # Лекція 8. Розроблення дисплеїв та анімованих елементів
 
+[<-- Лекція 7. Підсистема введення/виведення. Використання OPC](lec7.md)
 
+[--> Лекція 9. Анімовані компоненти та навігація](lec9.md)
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/rSx-kg1tJ_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

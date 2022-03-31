@@ -2,6 +2,10 @@
 
 # Лекція 12. Розроблення підсистеми трендів
 
+[<-- Лекція 11. Приклади розроблення тривог і подій в середовищах SCADA/HMI](lec11.md)
+
+[--> Лекція 13. Підсистеми захисту, скриптів](lec13.md)
+
 <iframe width="400" height="225" src="https://www.youtube.com/embed/Ir5XyD6KDiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/dk7R8Nf_wjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
