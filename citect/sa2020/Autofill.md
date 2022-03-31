@@ -35,15 +35,15 @@
 
 Коли ви означуєте обладнання в проекті Plant SCADA, ви використовуєте властивість **Content**, щоб пов’язувати кожну частину обладнання з певним типом вмісту. У наведеному вище прикладі налаштовано таку ієрархію обладнання.
 
-| Equipment                                | Level | Content     | Content Type | Description                        |
-| ---------------------------------------- | ----- | ----------- | ------------ | ---------------------------------- |
-| Plant                                    | 1     | Overview_L1 | L1           | Associated with a level 1 page.    |
-| Plant.Area1                              | 2     | Area_L2     | L2           | Associated with a level 2 page.    |
-| Plant.Area1.Tank1                        | 3     | Tank1_L3    | L3           | Associated with a level 3 page.    |
-| Plant.Area1.Tank1.InputPump              | 4     | Drive_FP    | FP           | Associated with a drive faceplate. |
-| Plant.Area1.Tank1.InputPump.InputValve   | 5     | Valve_FP    | FP           | Associated with a valve faceplate. |
-| Plant.Area1.Tank1.OutputPump             | 4     | Drive_FP    | FP           | Associated with a drive faceplate. |
-| Plant.Area1.Tank1.OutputPump.OutputValve | 5     | Valve_FP    | FP           | Associated with a valve faceplate. |
+| Equipment                                | Level | Content     | Content Type | Description                             |
+| ---------------------------------------- | ----- | ----------- | ------------ | --------------------------------------- |
+| Plant                                    | 1     | Overview_L1 | L1           | Пов'язаний з сторінкою рівня 1.         |
+| Plant.Area1                              | 2     | Area_L2     | L2           | Пов'язаний з сторінкою рівня 2          |
+| Plant.Area1.Tank1                        | 3     | Tank1_L3    | L3           | Пов'язаний з сторінкою рівня 3          |
+| Plant.Area1.Tank1.InputPump              | 4     | Drive_FP    | FP           | Пов'язаний з передньою панеллю приводу. |
+| Plant.Area1.Tank1.InputPump.InputValve   | 5     | Valve_FP    | FP           | Пов'язаний з передньою панеллю клапана. |
+| Plant.Area1.Tank1.OutputPump             | 4     | Drive_FP    | FP           | Пов'язаний з передньою панеллю приводу. |
+| Plant.Area1.Tank1.OutputPump.OutputValve | 5     | Valve_FP    | FP           | Пов'язаний з передньою панеллю клапана. |
 
 Детальніше див у  [Add Equipment Using Equipment Editor](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Add_Equipment_Using_Equipment_Editor.htm).
 

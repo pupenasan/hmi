@@ -97,7 +97,7 @@ Connects to: `EquipmentName.EqStatus`. Індикатор стану може п
 
 Наступна діаграма показує порядок пріоритетності:
 
- ![img](media/StatusIndicator_order of Prec.png)                    
+ ![img](media/StatusIndicator_order_of_Prec.png)                    
 
 Індикатори стану можна налаштувати для більшості об’єктів бібліотеки, за винятком NumericInput і TextInput. Приклади були надані лише для приводів, вимірювачів та клапанів.
 
