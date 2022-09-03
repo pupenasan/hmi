@@ -16,19 +16,19 @@ Library objects are accessible in Graphics Builder from the following object lib
 
 | Library Name      | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| sa_belt           | Contains [belt objects](belt.md) such as aprons, belts and conveyors. |
-| sa_chart          | Contains [additional objects](additional.md) such as polar star and XY Bar Graph. |
-| sa_common         | Contains the selection adorner objects to display borders around objects, output bar, tracker, labels and OOS indicators. |
-| sa_dataobjects    | Contains  objects such as up/down buttons, numeric and text input that provide  additional methods of displaying data and related properties. |
-| sa_deviationmeter | Contains the [Deviation meter](meters.md) object and its components including alarm limits, PV tracker, etc. |
-| sa_drive          | Contains [drive objects](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Drive_Objects.htm) such as compressors, brakes, pumps, etc in different sizes and orientations. |
-| sa_dualmeter      | Contains the [Dual meter](meters.md) object and its components including alarm limits, PV tracker, etc. |
-| sa_faceplates     | Contains the components to build a [faceplate](faceplates.md). |
-| sa_meter          | Contains [meter objects](meters.md) such as  analyzer, pressure, temperature meters, etc in different sizes and orientations. |
-| sa_mining         | Contains [mining objects](mining.md) such as crushers, cutters, magnets, etc |
-| sa_misc           | Contains [additional objects](additional.md) such as alarm light, handswitch selector, etc. |
-| sa_trend          | Contains [trend objects](trends.md) such as pens, limits, trend tail, etc. |
-| sa_valve          | Contains [valve objects](valves.md) such as simple valves, control valves, damper valves, etc in different sizes and orientations. |
+| sa_belt           | Містить [ланцюгові об’єкти](belt.md), такі як жолоб, стрічки та конвеєри. |
+| sa_chart          | Містить [додаткові об’єкти](additional.md), такі як полярна зірка та стовпчаста діаграма XY. |
+| sa_common         | Містить об'єкти прикраси виділення для відображення меж навколо об'єктів, панелі виводу, трекера, міток та індикаторів OOS. |
+| sa_dataobjects    | Містить такі об’єкти, як кнопки вгору/вниз, числове та текстове введення, які надають додаткові методи відображення даних і пов’язаних властивостей. |
+| sa_deviationmeter | Містить об’єкт [Deviation meter](meters.md) та його компоненти, включаючи межі сигналізації, PV-трекер тощо. |
+| sa_drive          | Містить [об’єкти приводів](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/ASM_Drive_Objects.htm), такі як компресори, гальма, насоси тощо різних розмірів та орієнтації. |
+| sa_dualmeter      | Містить об’єкт [Dual meter](meters.md) та його компоненти, включаючи межі сигналізації, PV-трекер тощо. |
+| sa_faceplates     | Містить компоненти для створення [faceplates](faceplates.md). |
+| sa_meter          | Містить [об’єкти вимірювання](meters.md), такі як аналізатор, вимірювач тиску, температури тощо в різних розмірах та орієнтаціях. |
+| sa_mining         | Містить [об'єкти видобутку](mining.md), такі як дробарки, різаки, магніти тощо |
+| sa_misc           | Містить [додаткові об’єкти](additional.md), такі як тривоги, перемикач ручного перемикача тощо. |
+| sa_trend          | Містить [об’єкти тренду](trends.md), такі як ручки, межі, край тренду тощо. |
+| sa_valve          | Містить [об'єкти клапанів](valves.md), такі як прості клапани, регулюючі клапани, клапани заслонок тощо в різних розмірах та орієнтаціях |
 
 - [Common Object Elements](CommonObjectElements.md)
 - [Equipment Custom Parameters](EquipmentCustomParameters.md)

@@ -1,48 +1,54 @@
-## Composite Genies
+## Композитні джини
 
-[Help](file:///C:/Program%20Files%20(x86)/AVEVA%20Plant%20SCADA/Bin/Help/SCADA%20Help/Content/Composite_Genies.htm)
+Це адаптована версія довідки.
 
-Композитний Джин — це набір окремих Джинів, зібраних у єдиний об’єкт. Окремі об’єкти та їх властивості означуються у файлі шаблону XML разом із макетами для колекції, тобто Composite Genie. Ви можете вставити кілька екземплярів складеного об’єкта на графічну сторінку та вказати різні параметри, включаючи значення, вирівнювання та параметри відображення для кожного екземпляра, щоб налаштувати Composite Genie відповідно до ваших вимог.
+**Композитний Джин (Composite Genie)** — це набір окремих Джинів, зібраних у єдиний об’єкт. Окремі об’єкти та їх властивості означуються у файлі шаблону XML разом із макетами для колекції, тобто Composite Genie. Ви можете вставити кілька екземплярів складеного об’єкта на графічну сторінку та щоб налаштувати Composite Genie для кожного екземпляра відповідно до ваших вимог вказати різні параметри, включаючи значення, вирівнювання та параметри відображення.
 
-Наприклад, ви хочете створити дзеркальний об’єкт компресора, який може додатково відображати мітку, індикатор режиму та вимірювач поряд із символом. До Plant SCADA 2020 R2 ви могли створити окремі джини для кожної з перестановок, або ви могли створити одного джина, який використовував видимість для відображення/приховування елементів під час виконання. За допомогою Composite Genies ви можете просто вибрати [шаблон XML](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Composite_Genie_Templates.htm) для компресора, який надає [набір параметрів представлення](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Insert_a_Composite_Genie.htm) для налаштування мітки, орієнтації тощо. Все, що вам потрібно зробити, це встановити значення для цих параметрів і вставити об’єкт на сторінку.
+Наприклад, ви хочете створити дзеркальний об’єкт компресора, який може додатково відображати мітку, індикатор режиму та вимірювач поряд із символом. До Plant SCADA 2020 R2 ви могли створити окремі джини для кожної з перестановок, або ви могли створити одного джина, який використовував видимість для відображення/приховування елементів під час виконання. За допомогою Composite Genies ви можете просто вибрати відповідний шаблон XML для компресора, який надає набір параметрів представлення для налаштування мітки, орієнтації тощо. Все, що вам потрібно зробити, це встановити значення для цих параметрів і вставити об’єкт на сторінку.
 
-| Without Composite Genies                                     | Using Composite Genies                                       |
+| Без композитного джина                                       | Використовуючи композитний джин                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Замість того, щоб вставляти та налаштовувати окремих Genies:    ![img](media/GeniesCollection1.png)<br />Вам потрібно змінити макет і вирівнювання цих Джинів вручну | [Insert a Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Insert_a_Composite_Genie.htm):    ![img](media/CompositeGenie1.png)Усі [компоненти викладені акуратно](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Composite_Genie_Templates.htm) з параметрами вирівнювання та макета, які інженери можуть налаштувати. |
-| Якщо ви додасте вказівку відповідного обладнання до свого компресора Genie вище, вирівнювання об’єктів потрібно відрегулювати для розміщення нового Genie:     ![img](media/GeniesCollection2.png) | З Composite Genie просто відкрийте [Параметри презентації](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Insert_a_Composite_Genie.htm) і виберіть, щоб додати вихідний рядок, що призводить до:![img](media/CompositeGenie2.png) |
+| Вставляти та налаштовувати окремі Джини.    ![img](media/GeniesCollection1.png)<br />Змінити макет і вирівнювання цих Джинів вручну. | Вставити композитний джин   ![img](media/CompositeGenie1.png)Усі компоненти викладені акуратно з параметрами вирівнювання та макета, які інженери можуть налаштувати. |
+| Якщо ви додасте вказівку відповідного обладнання до свого компресора Джин вище, вирівнювання об’єктів потрібно відрегулювати для розміщення нового Genie:     ![img](media/GeniesCollection2.png) | З композитним джином просто відкрийте параметри представлення (Presentation Options ) і виставте відповідну опцію відображення:![img](media/CompositeGenie2.png) |
 
-З використанням Composite Genies:
+З використанням композитних джинів:
 
-- Розмір бібліотек об’єктів можна значно зменшити, оскільки потрібно підтримувати лише один Composite Genie, а не підтримувати декілька перестановок кожного об’єкта, що використовується на графічних сторінках.
+- Розмір бібліотек об’єктів можна значно зменшити, оскільки потрібно підтримувати лише один композитний джин, а не підтримувати декілька комбінацій для кожного об’єкта, що використовується на графічних сторінках.
 
-- Інженери можуть отримати більш чітке уявлення про дизайн своєї сторінки, оскільки Composite Genie відображає лише ті параметри, які були вибрані.
-- Доступний розширений інтерфейс параметрів. Використовуючи XML-шаблон, дизайнери бібліотек можуть збагатити інтерфейс параметрів, що дозволяє операторам вибирати з різних макетів, режимів, представляє параметри з урахуванням залежностей, правил імен тощо.
+- Інженери можуть отримати більш чітке уявлення про дизайн своєї сторінки, оскільки композитний джин відображає лише ті параметри, які були вибрані.
+- Доступний розширений інтерфейс параметрів. Використовуючи XML-шаблон, розробники бібліотек можуть збагатити інтерфейс параметрів, що дозволяє операторам вибирати з різних макетів, режимів, представляє параметри з урахуванням залежностей, правил імен тощо.
 
-Як і у випадку з Джинами та символами, Composite Genies можна вставити для використання на графічній сторінці, шаблоні або суперджині. Ви можете виконувати такі операції:
+Як і у випадку з Джинами та символами, композитні джини можна вставити для використання на графічній сторінці, шаблоні або суперджині. Ви можете виконувати такі операції:
 
-- [Insert a Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Insert_a_Composite_Genie.htm)
-- [Edit/Update a Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Edit_Update_Composite_Genie.htm)
-- [Delete Unused Composite Genie Instances](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Delete_Unused_Composite_Genie_Instances.htm)
-- [Delete a Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Delete_a_Composite_Genie.htm)
+- вставляти композитні джини
+- редагувати/оновлювати композитні джини
 
-### Вставте Composite Genie
+- видаляти не використовувані екземпляри композитних джинів
+- видаляти композитні джини
 
-Composite Genie можна вставити в будь-яку графічну сторінку, шаблон або Super Genie. Його не можна вставити в джина або символ.
+З композитним джином зв'язано кілька понять:
 
-**Примітка.** На зовнішній вигляд Composite Genies можуть впливати різні налаштування DPI. Рекомендується, щоб під час запуску Graphics Builder для параметра **Масштаб і макет** було встановлено значення "100%" у налаштуваннях **Дисплей** Windows™. Після зміни параметра «Масштаб і макет» для комп’ютера слід перезавантаження його.
+- **Composite Genie Templates** - шаблон композитного джина, це XML-шаблон, де описане все що необхідно для розміщення і налаштування екземплярів композитних джинів.
+- **Composite Genie Instances** - екземпяр композитного джина, реалізація композитного джина з готовими налаштуваннями. Він зберігається в папці проекту `_CompositionCaches`. Не слід змінювати властивості цієї папки, вручну видаляти чи змінювати файли в цій папці, бо це приводить до помилок під час вставки композитних джинів на графічні сторінки.
+- **Composite Genie** - композитний джин, вставлений на сторінку екземпляр. У одного екземпляра може бути кілька композитних джинів на кількох сторінках. Ідентифікатор екземпляру можна подивитися `Tools->GoTo Object`. Видалення композитного джина не приводить до видалення екземпляру, який треба видаляти через упакування бібліотек (описано нижче) 
 
-To insert a Composite Genie:
+Таким чином при вставці нового композитного джина на основі вибраного шаблону створюється екземпляр, в якому будуть зберігатися усі його налаштування. 
 
-1. Open Graphics Builder.
-2. Click the **Paste Composite Genie** button in the Objects toolbox. 
-3. ​    ![img](media/PasteCompositeGenie_32x29.png)
+### Вставлення композитного джина
 
-4. The Open dialog box is displayed.
+Композитний джин можна вставити в будь-яку графічну сторінку, шаблон або супер джин. Його не можна вставити в джин або символ.
 
-5. Select the XML template for the Composite Genie from the list of templates.
-6. **Note**: The template file that you select needs to be in located in the Composite Genies folder in the  current project folder (or one of its included projects).
+**Примітка.** На зовнішній вигляд композитних джинів можуть впливати різні налаштування DPI. Рекомендується, щоб під час запуску Graphics Builder для параметра **Масштаб і структура** було встановлено значення "100%" у налаштуваннях **Дисплей** Windows™. Після зміни параметра «Масштаб і структура» для комп’ютера слід перезавантаження його.
 
-7. Click **OK**. The Presentation Options dialog box is displayed.
+Щоб вставити композитний джин:
+
+1) Відкрийте Graphics Builder.
+
+2) Натисніть кнопку **Paste Composite Genie** на панелі інструментів «Об’єкти». ![img](media/PasteCompositeGenie_32x29.png) Відобразиться діалогове вікно Open .
+
+3) Виберіть шаблон XML для композитного джина зі списку шаблонів. Файл шаблону, який ви вибрали, повинен знаходитися в папці Composite Genies у папці поточного проекту (або в одному з проектів, що включені до нього).
+
+4) Натисніть **ОК**. Відобразиться діалогове вікно Presentation Options (параметри представлення).
 
 ![img](media/PresOptions1.png)    
 
@@ -57,148 +63,140 @@ To insert a Composite Genie:
 
 **Note**: You cannot rotate or mirror a Composite Genie that has been inserted on a page.
 
-### Edit/Update a Composite Genie
+5) Введіть або виберіть значення для відображених параметрів. Залежно від вибраних параметрів деякі елементи можуть бути приховані або відображені. Наприклад, на Composite Genies `Meter`, коли ви встановлюєте прапорець **Display Control Output**, відображаються параметри **Display Trend** і **Trend Type**.
 
-Щоб відредагувати параметри для існуючого Composite Genie:
+6) Для пошуку параметрів у діалоговому вікні використовуйте поле **Search**. Щоб знайти параметр введіть назву параметра або частину назви. Очистіть поле пошуку, перш ніж натискати **OK** у діалоговому вікні «Presentation Options».
+
+7) Щоб відобразити параметри, для яких вибрано чи вказано неправильні значення або вони не встановлені використовуйте опцію **Show only parameters with invalid input**.
+
+8) Натисніть **OK**, щоб вставити композитний джин, або **Cancel**, щоб закрити діалогове вікно не вставляючи його.
+
+Ви не можете обертати чи віддзеркалювати композитний джин, який було вставлено на сторінку.
+
+### Редагування/Оновлення композитних джинів
+
+Щоб відредагувати параметри для існуючого композитного джина:
 
 1. Відкрийте Graphics Builder.
-2. Клацніть, щоб вибрати вставлений Composite Genie.
-3. Клацніть правою кнопкою миші Composite Genie і виберіть у контекстному меню **Редагувати Composite Genie**. Відобразиться діалогове вікно Параметри презентації з назвою екземпляра Composite Genie та ідентифікатором шаблону.
+2. Клацніть, щоб вибрати вставлений композитний джин.
+3. Клацніть правою кнопкою миші або подвійним кліком композитний джин і виберіть у контекстному меню **Edit Composite Genie**. Відобразиться діалогове вікно з назвою екземпляра Composite Genie та ідентифікатором шаблону.
 4. Відредагуйте необхідні параметри.
 5. Натисніть **ОК**.
 
 Подвійне клацання по ID шаблону вибирає ідентифікатор. Ви можете скопіювати ідентифікатор і використовувати його для пошуку повторюваних екземплярів шаблону в Провіднику Windows.
 
-Якщо ви модифікуєте Composite Genie після використання його у своєму проекті, усі екземпляри Composite Genie можуть автоматично оновлюватися за допомогою останньої версії шаблону. Зміни, включаючи оновлення міток, джинів і макета, будуть поширені на всі екземпляри. Якщо шаблон оновлений, пов’язані екземпляри не оновлюватимуться.
+Якщо ви модифікуєте композитний джин після використання його у своєму проекті, усі його екземпляри можуть автоматично оновлюватися за допомогою останньої версії шаблону. Зміни, включаючи оновлення тегів, джинів і макета, будуть поширені на всі екземпляри. Якщо шаблон оновлений, пов’язані екземпляри не оновлюватимуться.
 
-**Примітка**: не слід змінювати властивості папки, в якій зберігаються екземпляри Composite Genie (%PROGRAMDATA%\AVEVA Plant SCADA 2020 R2\User\<Назва проекту>\_CompositionCaches). Не слід вручну видаляти чи змінювати файли в цій папці. Такі дії призводять до помилок під час вставки Composite Genies на графічні сторінки.
+Не слід змінювати властивості папки, в якій зберігаються екземпляри композитних джинів (`%PROGRAMDATA%\AVEVA Plant SCADA 2020 R2\User\<Назва проекту>\_CompositionCaches`). Не слід вручну видаляти чи змінювати файли в цій папці. Такі дії призводять до помилок під час вставки композитних джинів на графічні сторінки.
 
-Якщо під час оновлення виникла проблема, з’являється повідомлення про помилку. У повідомленні детально описана причина та доступні варіанти вирішення проблеми. Помилка може виникнути, якщо Composite Genie не існує або якщо проект є помилковим.
-
-Наприклад, якщо ви створюєте копію існуючого шаблону, але зберігаєте той самий GUID у XML-файлі скопійованого шаблону, ви побачите таке повідомлення:
+Якщо під час оновлення виникла проблема, з’являється повідомлення про помилку. У повідомленні детально описана причина та доступні варіанти вирішення проблеми. Помилка може виникнути, якщо композитного джина немає, або якщо проект є помилковим. Наприклад, якщо ви створюєте копію існуючого шаблону, але зберігаєте той самий GUID у XML-файлі скопійованого шаблону, ви побачите таке повідомлення:
 
 ![img](media/CG_Update_Error_590x345.png)    
 
-**Update a Particular Instance**
+**Оновлення окремого екземпляру**
 
-Оновлення конкретного екземпляра Composite Genie дозволяє вам перевірити зміни в Composite Genie, не впливаючи на інші екземпляри об’єкта на інших сторінках.
+Оновлення конкретного екземпляра композитного джина дозволяє вам перевірити зміни в ньому, не впливаючи на інші екземпляри об’єкта на інших сторінках. Щоб оновити певний екземпляр композитного джина:
 
-To update a particular instance of a Composite Genie:
+1. Відкрийте Graphics Builder.
+2. За потреби оновіть шаблон композитного джина.
+3. Двічі клацніть екземпляр, представлений шаблоном. Відобразиться діалогове вікно зі зміненими параметрами. 
+4. Натисніть **ОК**. Зміни, включаючи оновлення тегів, джинів і макета, будуть поширені на цей екземпляр композитного джина.
+5. Збережіть сторінку.
 
-1. Open Graphics Builder. 
-2. Update the Composite Genie template as required.
-3. Double-click the instance represented by the template. The Presentation Options  dialog box is displayed with the modified parameters. For example if you have added a new parameter, the Presentation Options dialog should show the parameter.
-4. Click **OK**. The changes including updates to labels, genies and layout will be propagated to this instance of the Composite Genie.
-5. Save the page. 
+Перш ніж застосувати зміни до всіх екземплярів композитного джина на всіх сторінках, перевірте зміни, дотримуючись інструкцій вище.
 
-**Note**: Before you  apply the changes to all instances of Composite Genies across all pages, verify the changes using the instructions above.
+**Оновлення всіх екземплярів**
 
-**Update All Instances**
+  Щоб оновити екземпляри Composite Genies:
 
- To update instances of Composite Genies: 
+1. Відкрийте Graphics Builder.
+2. У меню **Tools** виберіть **Update Pages**. Ця команда замінить існуючі екземпляри композитних джинів на їх найновішу доступну версію. Ця команда вплине лише на активний проект і його компоненти. Зкомпілюйте проект, щоб зміни вступили в силу для середовища виконання. Цю зміну неможливо скасувати.
 
-1. Open Graphics Builder. 
-2. On the **Tools** menu, select **Update Pages**. This command will replace an existing Composite Genie with its newest  version available. This command will only affect the Active project and  its includes. Compile the project for the changes to take effect for  runtime. 
+Якщо сторінка середовища виконання містить оновлений екземпляр композитного джина, онлайн-зміни оновлять середовище виконання. 
 
-**Note**: This change cannot be reversed.
+### Видалення невикористаних екземплярів композитних джинів
 
-**Note**: If a runtime page contains an updated Composite Genie instance, an online change will update runtime. Refer to [Online Changes](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Online_Changes.htm) for more information.
+Коли ви додаєте на сторінку композитний джин у папці проекту автоматично створюється екземпляр композитного джину, який унікально ідентифікується параметрами представлення (presentation options). Це встановлює посилання графічного об’єкта на цей екземпляр композитного джина. Може існувати декілька графічних об’єктів, які посилаються на один екземпляр композитного джина, якщо їхні параметри представлення однакові. Таким чином, видалення графічного об’єкта не видаляє пов’язаний екземпляр композитного джина.
 
-### Delete Unused Composite Genie Instances
+З часом може з’явитися кілька екземплярів композитного джина, не пов’язаних із жодним графічним об’єктом. Ці невикористані екземпляри композитних джинів можуть уповільнити роботу та зайняти місце на диску проекту. Щоб видалити невикористані екземпляри, можна скористатися опцією **Pack Libraries**.
 
-When you add a graphic object as a  Composite Genie on a page, a Composite Genie instance that is uniquely  identified by its presentation options, is automatically created in the  project folder. This establishes a reference from the graphic object to  this Composite Genie instance. There can be multiple graphic objects  that refer to the same instance of a Composite Genie if their  presentation options are the same. Therefore, deleting a graphic object  does not delete the associated Composite Genie instance.
+Щоб видалити невикористані екземпляри:
 
-Over time there can be a number of  Composite Genie instances that are not associated with any graphic  object.  These unused Composite Genie instances can slow down operations and occupy project disk space.  You can use the **Pack Libraries** option to remove unused instances.
-
-**Note**: You should not modify the properties of the folder in which Composite Genie instances are stored (%PROGRAMDATA%\AVEVA Plant SCADA 2020 R2\User\<Project Name>\_CompositionCaches). You should not manually delete or modify  files in this folder. Doing so may either prevent your pages from  opening or cause your Composite Genies to be displayed incorrectly.
-
-To delete unused instances:
-
-1. Open Graphics Builder.
-2. On the **Tools** menu, select **Pack Libraries in Active Projects** or **Pack Libraries in Active and Included Projects**. The following message is displayed. 
+1. Відкрийте Graphics Builder.
+2. У меню **Tools** виберіть **Pack Libraries in Active Projects** або **Pack Libraries in Active and Included Projects**. Відобразиться таке повідомлення.
 
 ![img](media/Clear_CGCache_Pack.png)    
 
-1. Click **Yes**. All unused instances of Composite Genies will be deleted.
+3) Натисніть **Yes**. Усі екземпляри Composite Genies, які не використовуються, буде видалено.
 
-### Delete a Composite Genie
+### Видалення композитного джина
 
-To delete a Composite Genie:
+Щоб видалити Composite Genie:
 
-1. Open the page in which the Composite Genie has been inserted.
-2. Click to select the Composite Genie.
-3. Press the **Delete** key. This will remove the Composite Genie from the page.
-4. Save the page.
+1. Відкрийте сторінку, на якій було вставлено Composite Genie.
+2. Виберіть Composite Genie.
+3. Натисніть клавішу **Delete**. Це видалить Composite Genie зі сторінки.
+4. Збережіть сторінку.
 
-### Composite Genie Templates
+### Шаблон композитного джина
 
-Plant SCADA надає широкий асортимент готових композитних Genies у формі XML-шаблонів. Шаблон XML містить означення Composite Genie. Інженер бібліотеки може змінити існуючий шаблон XML або створити нові шаблони, що означують їхні власні Composite Genies. Рекомендується зробити копію шаблону перед його зміненням, щоб шаблони не перезаписувалися під час повторної інсталяції Plant SCADA.
+Plant SCADA надає широкий асортимент готових композитних джинів у формі XML-шаблонів. Шаблон XML містить означення композитного джина. Розробник бібліотеки може змінити існуючий шаблон XML або створити нові шаблони, що означують їхні власні Composite Genies. Рекомендується зробити копію шаблону перед його зміненням, щоб шаблони не перезаписувалися під час повторної інсталяції Plant SCADA. Шаблони XML для композитних джинів знаходяться в папці `%PROGRAMDATA%\AVEVA Plant SCADA 2020 R2\User\<ім’я проекту>\Composite Genies`.
 
-**ВАЖЛИВО**: якщо ви робите копію шаблону, вам потрібно призначити новий GUID шаблону та всім композиціям у шаблоні. Для отримання додаткової інформації див. [Visual Template](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Visual_Template.htm) і [Compositions](file:// /C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Composites.htm).
+**ВАЖЛИВО**: якщо ви робите копію шаблону, вам потрібно призначити новий GUID шаблону та всім композиціям у шаблоні. Це описано нижче.
 
-Шаблони XML для Composite Genies знаходяться в папці `%PROGRAMDATA%\AVEVA Plant SCADA 2020 R2\User\<ім’я проекту>\Composite Genies`.
+Файл **CompositionTemplate.xsd**, розташований у `%PROGRAMFILES(X86)%\AVEVA Plant SCADA\Bin`, містить схему для шаблонів XML для Composite Genie. Цей файл описує елементи та атрибути, які можуть міститися в XML шаблоні для Composite Genie, а також порядок, у якому елементи та атрибути потрібно додати до шаблону. Файл XML шаблону перевіряється відповідно до цього файлу XSD. Коли ви змінюєте шаблон XML або створюєте новий, рекомендується використовувати хороший XML-редактор, який підтримує виявлення помилок схеми, щоб помилки були виділені та їх можна було легко виправити. Помилки можуть виникнути, якщо файл XML для Composite Genie не відповідає означенням у базовому XSD, якщо є повторювані ідентифікатори елементів, невизначені умови тощо. В усіх випадках коли оператор вставляє Composite Genie на сторінку повідомлятиметься про помилки з деталями номера рядка та положення помилки. Деталі описані нижче.
 
-Файл **CompositionTemplate.xsd**, розташований у `%PROGRAMFILES(X86)%\AVEVA Plant SCADA\Bin`, містить схему для шаблонів Composite Genie XML. Цей файл описує елементи та атрибути, які можуть міститися в шаблоні XML для Composite Genie, а також порядок, у якому елементи та атрибути потрібно додати до шаблону XML. Файл шаблону XML перевіряється щодо файлу XSD. Коли ви змінюєте шаблон XML або створюєте новий, рекомендується використовувати хороший XML-редактор, який підтримує виявлення помилок схеми, щоб помилки були виділені та їх можна було легко виправити.
+Шаблон XML для Composite Genie містить такі розділи:
 
-Помилки можуть виникнути, якщо файл XML для Composite Genie не відповідає означенням у базовому XSD. Крім того, помилки можуть виникати, якщо є повторювані ідентифікатори елементів, невизначені умови тощо. В обох випадках повідомлятимуться про помилки з деталями номера рядка та положення помилки, коли оператор вставляє Composite Genie на сторінку. Додаткову інформацію див. у розділі [Редагувати/оновлювати Composite Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Edit_Update_Composite_Genie.htm).
-
-An XML template for a Composite Genie contains the following elements:
-
-- [Visual Template](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Visual_Template.htm)
-- [Parameters](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Parameters.htm)
-- [Content Items](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Content_Items.htm)
-- [Compositions](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Composites.htm)
-- [Conditions](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Conditions.htm)
-- [Alarm Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_AlarmIndicators.htm)
+- Visual Template
+- Parameters
+- Content Items
+- Compositions
+- Conditions
+- Alarm Indicators
 
 Кожен з цих елементів детально пояснюється в розділах нижче. Рекомендується переглянути ці розділи, перш ніж змінювати існуючі шаблони XML або створювати нові шаблони.
 
 #### Visual Template
 
-Цей розділ містить стандартні декларації XML. Крім того, цей розділ містить GUID, який є унікальним ідентифікатором для шаблону XML.
-
-**Примітка**: якщо ви змінюєте існуючий шаблон або створюєте новий шаблон Composite Genie, ви повинні перевірити XML-файл, завантаживши файл означення схеми (CompositionTemplate.xsd, який знаходиться в папці `<Папка інсталяції Plant SCADA>\bin `) у свій XML-редактор.
-
-Якщо ви створюєте власного Composite Genie, вам потрібно буде створити для нього GUID. Для створення GUID доступно кілька онлайн-інструментів.
+Цей розділ містить стандартні декларації XML. Крім того, цей розділ містить GUID, який є унікальним ідентифікатором для шаблону XML. Якщо ви змінюєте існуючий шаблон або створюєте новий шаблон Composite Genie, ви повинні перевірити XML-файл, завантаживши файл означення схеми (CompositionTemplate.xsd, який знаходиться в папці `<Папка інсталяції Plant SCADA>\bin `) у свій XML-редактор. Якщо ви створюєте власного Composite Genie, вам потрібно буде створити для нього GUID. Для створення GUID доступно кілька онлайн-інструментів, наприклад [guidgenerator](https://www.guidgenerator.com/).
 
 Щоб створити GUID:
 
-1. Знайдіть термін «генерувати GUID» у браузері за допомогою будь-якої пошукової системи. Відобразиться список веб-сайтів, які можуть генерувати GUID.
-2. Відкрийте будь-який із сайтів.
-3. Виберіть формат для GUID. Формат GUID має включати дужки та дефіси і має бути у верхньому регістрі. Наприклад, `{1E49C603-FCBC-4913-ABD1-97920283C6BD}`.
-4. Згенеруйте GUID.
+1. Виберіть формат для GUID. Формат GUID має включати дужки та дефіси і має бути у верхньому регістрі. Наприклад, `{1E49C603-FCBC-4913-ABD1-97920283C6BD}`.
+2. Згенеруйте GUID.
 
-**Example**
+**Приклад**
 
 ![img](media/CG_VisualTemplate_505x114.png)    
 
 #### Parameters
 
-Елемент `<Parameter>` означує атрибути, які будуть відображатися як параметри презентації для користувача, коли він вставляє Composite Genie на графічну сторінку. Він складається з наступних атрибутів для кожного параметра:
+Елемент `<Parameter>` означує атрибути, які будуть відображатися як параметри представлення для користувача, коли він вставляє Composite Genie на графічну сторінку. Він складається з наступних атрибутів для кожного параметра:
 
 | Attribute    | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
-| Name         | Unique name for the parameter.                               |
-| Label        | Display name for the parameter.                              |
-| Type         | Data type of the parameter – Boolean, Integer or String.     |
-| MinLength    | Minimum number of characters that the parameter value needs to contain. |
-| MaxLength    | Maximum allowable characters for the parameter value         |
-| MinValue     | Minimum value that can be specified for the parameter        |
-| MaxValue     | Maximum allowable value for the parameter                    |
-| DefaultValue | Default value set for the parameter                          |
-| NamingRules  | Naming rules can be  used to force the user to enter parameter values in a particular format. For example, to use equipment naming rules, set this attribute to  “Equipment”. Refer to the Equipment Naming Rules and [Tag Naming Rules](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Tag_Names.htm) sections for more information. |
-| Description  | Description of the  parameter. This appears at the bottom of the Parameter Options dialog  box when the operator clicks to specify the value for a parameter. It is recommended that you enter a description for the parameter in order to  help engineers to specify valid values for the parameters. |
-| Values       | List of selectable  values if an option is to be displayed as a dropdown list in the  Parameter Options dialog box.  To create a list of values, each value needs to be declared with a  unique ID and Label. The label will appear as one of the values the user can select. For example, if you need an option titled “Orientation”  with the values “Vertical” and “Horizontal” available for selection, the following code needs to be included in the Parameters element:     ![img](media/CG_ValueDefinitionCode.png) |
+| Name         | Унікальна назва для параметра                                |
+| Label        | Відображувана назва для параметра.                           |
+| Type         | Тип даних параметра – Boolean, Integer або String.           |
+| MinLength    | Мінімальна кількість символів, яку має містити значення параметра. |
+| MaxLength    | Максимально допустима кількість символів для значення параметра |
+| MinValue     | Мінімальне значення, яке можна вказати для параметра         |
+| MaxValue     | Максимально допустиме значення для параметра                 |
+| DefaultValue | Для параметра встановлено значення за замовчуванням          |
+| NamingRules  | Правила іменування, які можна використовувати, щоб змусити користувача вводити значення параметрів у певному форматі. Наприклад, щоб використовувати правила іменування обладнання, встановіть для цього атрибута значення «Equipment». Для отримання додаткової інформації зверніться до розділів «Правила найменування обладнання» та Правила назви тегів |
+| Description  | Опис параметра. Це з’являється в нижній частині діалогового вікна Parameter Options, коли оператор клацає, щоб вказати значення параметра. Рекомендується ввести опис параметра, щоб допомогти розробникам вказати дійсні значення для параметрів. |
+| Values       | Список значень, які можна вибрати, якщо параметр має відображатися як спадний список у діалоговому вікні Parameter Options. Щоб створити список значень, кожне значення має бути оголошено з унікальним ідентифікатором (Id) та міткою (Label). Мітка відображатиметься як одне із значень, які користувач може вибрати. Наприклад, якщо вам потрібна опція під назвою «Orientation» зі значеннями «Vertical» і «Horizontal», доступними для вибору, до елемента «Parameter» необхідно включити наступний код:     <br />![img](media/CG_ValueDefinitionCode.png) |
 
-Визначення параметрів можуть включати елемент `<Dependency>` для відображення або приховування параметрів. Цей елемент може використовувати умови Global, Parameter або Composite, щоб показати або приховати параметр на основі вибору опції або значення оператором. Для отримання додаткової інформації про умови зверніться до [Умови](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Conditions.htm).
+Означення параметрів можуть включати елемент `<Dependency>` для відображення або приховування параметрів. Цей елемент може використовувати умови Global, Parameter або Composite, щоб показати або приховати параметр на основі вибору опції або значення, що введене оператором. Для отримання додаткової інформації про умови зверніться до відповідного пункту нижче.
 
 **Простий приклад **
 
-Це простий приклад, коли залежність була означена за допомогою елемента `<Dependency>`, щоб показати параметр **Label**, лише якщо оператор вибрав прапорець **Відображати мітку**. Це досягається за допомогою використання [Global Condition](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_Conditions.htm). Ви також можете використовувати параметри та/або складені умови в елементі `<Dependency>`.
+Це простий приклад, коли залежність була означена за допомогою елемента `<Dependency>`, щоб показати параметр **Label**, лише якщо оператор вибрав прапорець **Display Label**. Це досягається за допомогою використання Global Condition. Ви також можете використовувати параметри та/або складені умови в елементі `<Dependency>`.
 
 ![img](media/CG_ParametersSimpleCode.png)    
 
-Наведений вище код відобразить такі параметри презентації.
+Наведений вище код відобразить такі параметри відображення.
 
 ![img](media/CG_Presentation_Options_Simple.png)    
 
@@ -206,13 +204,21 @@ An XML template for a Composite Genie contains the following elements:
 
 Цей приклад надає трохи складніший сценарій з параметрами, які відображаються на основі вибору значення оператором. Тому необхідно означити список значень і залежність.
 
-- Зверніться до XML-коду для параметра “Number of sub equipment”. Цей параметр може приймати значення 0, 1, 2, 3, 4 або 5. Атрибут `<Values>` визначає цей список значень, які можна вибрати (див. зразок коду нижче).
+- Зверніться до XML-коду для параметра “Number of sub equipment”. Цей параметр може приймати значення 0, 1, 2, 3, 4 або 5. Атрибут `<Values>` означує цей список значень, які можна вибрати (див. зразок коду нижче).
 
 ![img](media/CG_CompressorCodeValues.png)    
 
-- Залежно від значення, яке оператор вибирає для цього параметра, будуть відображатися параметри допоміжного обладнання. Наприклад, якщо оператор вибирає 0 для параметра  “Number of sub equipment”, параметр Sub Equipment не відображатиметься, якщо користувач вибирає 1, відображатиметься один параметр Sub  Equipment  з міткою Sub Equipment #1 Name, якщо користувач вибере 2, відображатимуться два параметри Sub Equipment з мітками Sub Equipment #1 Name та Sub Equipment #2 Name тощо. Користувач може вибрати до 5 одиниць додаткового обладнання.
-- Щоб мати можливість вибрати 5 одиниць допоміжного обладнання, потрібно означити параметр для кожної частини допоміжного обладнання. Крім того, для кожного з цих параметрів повинна бути визначена залежність (див. нижче приклад коду, який показує визначення для двох частин підобладнання).
-- Залежність визначається за допомогою атрибута `<Dependency>`. Для допоміжного обладнання 1 має бути задоволена глобальна умова «Show_MEO1». Щоб отримати детальну інформацію про умови, перегляньте розділ Умови.
+- Залежно від значення, яке оператор вибирає для цього параметра, будуть відображатися параметри Sub Equipment. Наприклад:
+  - якщо оператор вибирає 0 для параметра  “Number of sub equipment”, параметр Sub Equipment не відображатиметься
+  - якщо користувач вибирає 1, відображатиметься один параметр Sub  Equipment з міткою Sub Equipment #1 Name
+  - якщо користувач вибере 2, відображатимуться два параметри Sub Equipment з мітками Sub Equipment #1 Name та Sub Equipment #2 Name 
+  - тощо. 
+
+
+ Користувач може вибрати до 5 одиниць Sub Equipment .
+
+- Щоб мати можливість вибрати 5 одиниць Sub Equipment, потрібно означити параметр для кожної частини Sub Equipment. Крім того, для кожного з цих параметрів повинна бути означена залежність (див. нижче приклад коду, який показує означення для двох частин Sub Equipment ).
+- Залежність означується за допомогою атрибута `<Dependency>`. Для Sub Equipment 1 має бути задоволена глобальна умова «Show_MEO1». Щоб отримати детальну інформацію про умови, перегляньте розділ Умови нижче.
 
 ![img](media/CG_CompressorCodeParameters.png)    
 
@@ -220,323 +226,315 @@ An XML template for a Composite Genie contains the following elements:
 
 #### Alarm Indicators
 
-Елемент `<AlarmIndicators>` є додатковим елементом для відображення [індикаторів тривоги](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Alarm_Indicator.htm) для обладнання. Він містить такі дочірні елементи:
+Елемент `<AlarmIndicators>` є додатковим елементом для відображення індикаторів тривоги для обладнання. Він містить такі дочірні елементи:
 
-| Element       | Description                                                  | Attribute                 | Description                                                  |
-| ------------- | ------------------------------------------------------------ | ------------------------- | ------------------------------------------------------------ |
-| EquipmentLink | Defines each piece of related  equipment for which an alarm needs to be displayed. | Id                        | A unique string  identifier with which `<AlarmIndicator>` elements in  compositions can refer to the forward-declared equipment link. |
-|               |                                                              | TemplateParameter         | Name of the template parameter.  The value of this is used as the equipment expression of the alarm indicator.  The template parameter needs to be defined in the  `<Parameters>` element in the same document. |
-|               |                                                              | IncludeEquipmentReference | Set this to 'true' to include  equipment references when determining the highest priority alarm for the  alarm indicator. Set this to 'false' if you do not want to include equipment  references. |
-|               |                                                              | Hierarchy                 | Node in the equipment hierarchy  that will be used to determine the highest priority alarm for the alarm  indicator. You can set this to include equipment that occur at nodes down the  equipment hierarchy (referred to as "children"). Set this to one of  the following:EquipmentOnly     EquipmentAndChildren     ChildrenOnly |
-| BorderStyle   | Defines the alarm display  settings.                         | Id                        | A unique string identifier with  which `<AlarmIndicator>` elements in compositions can refer to the  forward declared border style. |
-|               |                                                              | Width                     | Sets the width of the alarm  border (in pixels).             |
-|               |                                                              | Padding                   | Sets the amount of space (in  pixels) between the extent of the object group or Genie and the inside edge  of the alarm border. |
-|               |                                                              | IsInside                  | Set this to 'true' to place the  border within the extent of the object group or Composite Genie. Note that  you cannot set a padding in this case. |
-|               |                                                              | IsDefault                 | Set this to 'true' to make this  border style the default style. |
+| Element           | Description                                                  | Attribute                 | Description                                                  |
+| ----------------- | ------------------------------------------------------------ | ------------------------- | ------------------------------------------------------------ |
+| **EquipmentLink** | Означує кожну частину супутнього обладнання, для якого потрібно відобразити сигнал тривоги. | Id                        | Унікальний ідентифікатор string , за допомогою якого елементи `<AlarmIndicator>` у композиціях можуть посилатися на пряме оголошене посилання на обладнання. |
+|                   |                                                              | TemplateParameter         | Назва параметра шаблону. Значення цього використовується як вираз обладнання для індикатора тривоги. Параметр шаблону потрібно визначити в елементі `<Parameters>` того самого документа. |
+|                   |                                                              | IncludeEquipmentReference | Встановіть значення «true», щоб включити посилання на обладнання під час визначення найвищого пріоритету тривоги для індикатора тривоги. Встановіть для цього значення «false», якщо ви не хочете включати посилання на обладнання. |
+|                   |                                                              | Hierarchy                 | Вузол в ієрархії обладнання, який буде використовуватися для визначення найвищого пріоритету тривоги для індикатора тривоги. Ви можете встановити це, щоб включати обладнання, яке зустрічається на вузлах нижче ієрархії обладнання (іменується «дітей»). Встановіть для цього один із наступних параметрів: EquipmentOnly EquipmentAndChildren ChildrenOnly. |
+| **BorderStyle**   | Defines the alarm display  settings.                         | Id                        | Унікальний ідентифікатор string , за допомогою якого елементи `<AlarmIndicator>` у композиціях можуть посилатися на передній оголошений стиль рамки. |
+|                   |                                                              | Width                     | Sets the width of the alarm  border (in pixels).             |
+|                   |                                                              | Padding                   | Sets the amount of space (in  pixels) between the extent of the object group or Genie and the inside edge  of the alarm border. |
+|                   |                                                              | IsInside                  | Set this to 'true' to place the  border within the extent of the object group or Composite Genie. Note that  you cannot set a padding in this case. |
+|                   |                                                              | IsDefault                 | Set this to 'true' to make this  border style the default style. |
 
-**Note**: An alarm indicator is applied  to all equipment items within the Composite Genie. The items are  automatically grouped and the alarm border is applied to the composite  if there are more than two visible items in the container. 
+Індикатор тривоги застосовується до всіх елементів обладнання в Composite Genie.  Якщо в контейнері є більше двох видимих елементів вони автоматично групуються, і для них застосовується границя тривоги (alarm border).
 
-**Example**
+**Приклад**
 
-![img](media/CG_AlarmIndicator.png)    
+<a href="media/CG_AlarmIndicator.png"><img src="media/CG_AlarmIndicator.png" alt="img"  /></a>    
 
 #### Content Items
 
-The `<ContentItems>` element defines  the library objects (Genies) that are available to be included in  compositions for the Composite Genie. It contains one or more  `<ContentItem>` child elements, each of which comprises the  following attributes:
+Елемент `<ContentItems>` означує об'єкти бібліотеки (Genies), які доступні для включення до композицій для Composite Genie. Він містить один або кілька дочірніх елементів `<ContentItem>`, кожен з яких містить такі атрибути:
 
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| Id        | Unique numeric identifier within the `<ContentItems>` section.  **Note**: You should not use the same numeric Id for more than one `<ContentItem>` elements. Doing so would result in an error when the system reads this visual template document. |
-| Type      | This is set to the type of the object that makes up the Composite Genie and should not be modified. **Note**: In this version Composite Genies constitute only Genies. So, Type is set to “Genie” in the XML templates. |
-| Project   | Name of the project  which contains the referred library object. The project needs to be  either the same as the project in which the visual template resides or  one of its include projects. **Note**:  If the  project is renamed, the Genie will not be available for use unless this  attribute is modified in the XML template. Keep this in mind when  renaming a project. |
-| Library   | Name of the object library to which this item belongs.       |
-| Item      | Name of the item to be included in the Composite Genie.      |
+| Id        | Унікальний числовий ідентифікатор у розділі `<ContentItems>`. **Примітка**. Ви не повинні використовувати той самий числовий ідентифікатор для кількох елементів `<ContentItem>`. Це призведе до помилки, коли система прочитає цей документ візуального шаблону. |
+| Type      | Це встановлюється на тип об’єкта, який входить в  Composite Genie, і не повинен бути змінений. **Примітка**: У цій версії Composite Genies складається тільки з джинів. Таким чином, Type встановлено на «Genie» у XML-шаблонах. |
+| Project   | Ім'я проекту, який містить зазначений об'єкт бібліотеки. Проект має бути таким же, як проект, у якому знаходиться візуальний шаблон, або один із проектів, що включають. **Примітка**: якщо проект буде перейменовано, Genie не буде доступним для використання, якщо цей атрибут не буде змінено в шаблоні XML. Пам’ятайте про це під час перейменування проекту. |
+| Library   | Ім'я бібліотеки об'єктів, до якої належить цей елемент.      |
+| Item      | Назва елементу, який буде включено до Composite Genie.       |
 
-**Note**: You need to explicitly define each and every item that you want to include in your compositions.
+**Note**: Вам потрібно чітко визначити кожен елемент, який ви хочете включити у свої композиції.
 
-**Example**
+**Приклад**
 
-Each line in the code below defines an item, in this case a Genie, that will be available to be included in a composition.
+Кожен рядок у коді нижче означує елемент, у даному випадку Джин, який буде доступний для включення до композиції.
 
 ![img](media/CG_ContentItmesCode.png)    
 
 #### Compositions
 
-The `<Composition>` element details the “composition” of the Composite Genie, that is, the possible layouts,  parameter conditions and parameters that constitute the Composite Genie.  It contains multiple elements each with a set of attributes.  Typically, the XML template for a Composite Genie is made up of several  compositions to represent the different layouts available. Each  composition can define only one layout. The template needs to have at  least one composition.
+Елемент `<Composition>` детально описує “композицію” композитного джину, тобто можливі макети, умови параметрів і параметри, які складають Composite Genie. Він містить кілька елементів, кожен із набором атрибутів. Зазвичай шаблон XML для Composite Genie складається з кількох композицій для представлення різних доступних макетів. Кожна композиція може визначати лише один макет. Шаблон повинен мати принаймні одну композицію.
 
 | Attribute      | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
-| Composition Id | Unique identifier for the composition. This is an ID that is generated using the GUID Generator tool. |
+| Composition Id | Унікальний ідентифікатор композиції. Це ідентифікатор, який створюється за допомогою інструмента GUID Generator. |
 
-**Example**
+**Приклад**
 
 ![img](media/CG_CompositionIdCode.png)    
 
 ##### Prerequisites
 
-Within a composition, one or more  prerequisites may be defined within the <Prerequisite> element.  Prerequisites  are made up of conditions, which are evaluated at  runtime. If a prerequisite is true, the corresponding composition will  be applied. Otherwise, the next composition will be evaluated, and a  composition will be applied only when the prerequisite is satisfied.  Prerequisites are applied sequentially.  For more information, refer to  the Conditions topic.
+У межах композиції в елементі `<Prerequisite>` можуть бути означені одна або кілька передумов. Передумови складаються з умов, які оцінюються під час виконання. Якщо передумова виконується, буде застосована відповідна композиція. В іншому випадку буде перевірена наступна композиція. Композиція буде застосована лише тоді, коли буде виконана передумова. Передумови перевіряються послідовно. Для отримання додаткової інформації зверніться до розділу Conditions .
 
-**Note**: When defining conditions, it  is recommended that you start with the most complex condition first and  then add conditions in decreasing order of complexity. This is so that  the most specific composition is selected for the Composite Genie.
+Означуючи умови, рекомендується спочатку почати з найскладнішої умови, а потім додати умови в порядку зменшення їх складності. Це робиться для того, щоб для Composite Genie була обрана найбільш специфічна (конкретніша) композиція.
 
 | Attribute          | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| GlobalConditionRef | Used to refer to a predefined Global condition               |
-| ParameterCondition | Used to specify conditions by comparing a template parameter value to a predefined value. |
-| CompositeCondition | Used to combine  more than one condition with either AND or OR relation specified in its  attribute. Its child conditions can be made up of predefined Global  conditions `<GlobalConditionRef Id="..."/>`, a Parameter condition  and nested Composite conditions. |
+| GlobalConditionRef | Використовується для посилання на попередньо означену глобальну умову |
+| ParameterCondition | Використовується для означення умов шляхом порівняння значення параметра шаблону із попередньо означеним значенням. |
+| CompositeCondition | Використовується для поєднання більш ніж однієї умови з відношенням AND або OR, зазначеним у його атрибуті. Його дочірні умови можуть складатися з попередньо означених глобальних умов `<GlobalConditionRef Id="..."/>`, умови параметра та вкладених складених умов. |
 
-**Example**![img](media/CG_Prerequisite.png)    
-
-
+**Приклад**![img](media/CG_Prerequisite.png)    
 
 ##### Container
 
-The Container element is mandatory, and contains the details of the layout, Plant SCADA content items (library objects) to be included in the Composite Genie,  their alignment and other display options such as margins (left, right,  top and bottom).
+Елемент Container є обов’язковим і містить деталі макета, елементи вмісту Plant SCADA (об’єкти бібліотеки), які будуть включені в Composite Genie, їх вирівнювання та інші параметри відображення, такі як поля (ліворуч, праворуч, верхнє та нижнє).
 
-| Attribute      | Description                                                  | Attribute                                                    | Description                                                  |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Layout         |                                                              | Hotspot                                                      | Specifies the page co-ordinates where the Composite Genie is placed when inserted on to a page. |
-| Container      | Defines the layout options for the Composite Genie including the alignment, margin and stacking options. | Margin                                                       | Positioning (left, top, right and bottom margins) of the object on the page relative to the alignment. |
-|                | Layout                                                       | Specifies how the container is laid out - Stacked Horizontal, Stacked Vertical or 				Overlaid. For more information, refer to the More about Layouts section. |                                                              |
-|                | VisibleWhen                                                  | Used to show/hide the container based on a Global condition. The container will be visible only when the condition is satisfied. |                                                              |
-|                | CreateGroup                                                  | Determines whether the  contents of the container will be a group. When the contents of a  container are in a group, the placement of the contents are  automatically adjusted to accommodate the largest object/text when the  container is re-sized and also at runtime if animations are included. By default, the contents of a container are placed in a group. If the  contents are not grouped, each item needs to be re-sized and placed  manually. You can use the GoTo Object dialog to view the hierarchy of  items in a container.**Note**: The size of a container is defined by the biggest object in the container. |                                                              |
-|                | AnimationName                                                | Sets the animation name to apply to the object. This is unique to the layout.**Note**: An  animation name should begin with a letter and contain only  letters,  numbers and the following symbols: _, %, $, @ and #. It should not  exceed 26 characters. |                                                              |
-|                | HorizontalAlignment                                          | Sets the alignment of the container to display horizontally within its parent. |                                                              |
-|                | VerticalAlignment                                            | Sets the alignment of the container to display vertically within its parent. |                                                              |
-|                | ZIndex                                                       | Determines the position of the container when multiple containers are overlaid. The object with the lowest ZIndex is stacked on top of the pile while the object with  the highest ZIndex is placed at the bottom of the stack of containers.  The ZIndex is relative within a container whether or not objects in the  container are grouped. For more information, refer to the More about  Layouts section. |                                                              |
-| AlarmIndicator | Sets the alarm indicator that needs to be displayed for this composition. | VisibleWhen                                                  | Alarm Indicator will be displayed if the condition specified here is satisfied. |
-| EquipmentLink  | Reference to the Alarm Indicator to be displayed as defined in the <AlarmIndicators> element. |                                                              |                                                              |
-| BorderStyle    | Reference to the border style to be used for the Alarm Indicator as defined in the <AlarmIndicators> element. |                                                              |                                                              |
-| Content        | Defines the Plant SCADA content items that are available within this composition. | Item ID                                                      | Reference to the Plant SCADA content item such as a Genie. Each item included here should have been included in the <ContentItems> element. |
-|                | HorizontalAlignment                                          | Whether the item will be left, right or center-aligned.      |                                                              |
-|                | VerticalAlignment                                            | Whether the item will be top, middle or bottom aligned.      |                                                              |
-|                | Margin                                                       | Left, top, bottom and right margins. For information, see the More about Margins topic. |                                                              |
-|                | VisibleWhen                                                  | Item will be displayed if the condition specified here is satisfied. |                                                              |
-|                | AnimationName                                                | Name of the item as configured in the General Access properties.**Note**: An  animation name should begin with a letter and contain only  letters,  numbers and the following symbols: _, %, $, @ and #. It should not  exceed 26 characters. |                                                              |
-|                | ZIndex                                                       | Determines the position of the item when multiple items are overlaid. The item with the lowest  ZIndex is placed on top of the stack. |                                                              |
-| Parameter      | For each item that you  add to a composition, you need to link it to a parameter defined in the  XML template. This is done so that the value of the parameters can be  passed into the substitution in the content item (for example,  %Equipment%) through the Composite Genie. | Name                                                         | Name of the  substitution parameter specified without the % (for example, "Equipment" for %Equipment% substitution). This name is case sensitive. |
-|                | TemplateParameter                                            | Name of parameter as specified in the Parameter element, the value of which is passed into the substitution in the content item. |                                                              |
+| Attribute          | Description                                                  | Attribute           | Description                                                  |
+| ------------------ | ------------------------------------------------------------ | ------------------- | ------------------------------------------------------------ |
+| **Layout**         |                                                              | Hotspot             | Означує координати сторінки, де розміщується Composite Genie при вставці на сторінку. |
+| **Container**      | Означує параметри макета для Composite Genie, включаючи параметри вирівнювання, поля та укладання. | Margin              | Розташування (ліве, верхнє, праве і нижнє поля left, top, right, bottom margins) об’єкта на сторінці відносно вирівнювання. |
+|                    |                                                              | Layout              | Означує спосіб розміщення контейнера: з накладенням по горизонталі, зі складенням вертикально або з накладенням. Stacked Horizontal, Stacked Vertical , Overlaid Для отримання додаткової інформації зверніться до розділу «Докладніше про макети». |
+|                    |                                                              | VisibleWhen         | Використовується, щоб показати/приховати контейнер на основі глобальної умови. Контейнер буде видно лише тоді, коли умова буде виконана. |
+|                    |                                                              | CreateGroup         | Означує, чи буде вміст контейнера групою. Коли вміст контейнера знаходиться в групі, розміщення вмісту автоматично коригується, щоб вмістити найбільший об’єкт/текст при зміні розміру контейнера, а також під час виконання, якщо включено анімацію. За замовчуванням вміст контейнера розміщується в групі. Якщо вміст не згруповано, кожен елемент потрібно змінити розмір і розмістити вручну. Ви можете використовувати діалогове вікно GoTo Object, щоб переглянути ієрархію елементів у контейнері. Розмір контейнера означується найбільшим об’єктом у контейнері. |
+|                    |                                                              | AnimationName       | Встановлює назву анімації для застосування до об’єкта. Це унікально для макета. Назва анімації має починатися з літери та містити лише літери, цифри та такі символи: _, %, $, @ та #. Вона не повинна перевищувати 26 символів. |
+|                    |                                                              | HorizontalAlignment | Встановлює вирівнювання контейнера для горизонтального відображення всередині його батьківського елемента. |
+|                    |                                                              | VerticalAlignment   | Встановлює вирівнювання контейнера для вертикального відображення в межах його батьківського елемента. |
+|                    |                                                              | ZIndex              | Означує положення контейнера, коли кілька контейнерів перекриваються. Об’єкт з найнижчим ZIndex укладається на вершину купи, а об’єкт з найвищим ZIndex розміщується внизу стопки контейнерів. ZIndex є відносним у контейнері, незалежно від того, згруповані чи ні об’єкти в контейнері. Щоб отримати додаткові відомості, зверніться до розділу «Докладніше про макети». |
+| **AlarmIndicator** | Встановлює індикатор тривоги, який має відображатися для цієї композиції. | VisibleWhen         | Індикатор тривоги буде відображено, якщо зазначена тут умова задовольняється. |
+| **EquipmentLink**  | Посилання на індикатор тривоги, який буде відображатися, як означено в елементі `<AlarmIndicators>`. |                     |                                                              |
+| **BorderStyle**    | Посилання на стиль межі, який буде використовуватися для індикатора тривоги, як означено в елементі `<AlarmIndicators>`. |                     |                                                              |
+| **Content**        | Означує елементи вмісту Plant SCADA, доступні в цій композиції. | Item ID             | Посилання на елемент вмісту Plant SCADA, наприклад Genie. Кожен включений тут елемент мав бути включений до елемента `<ContentItems>`. |
+|                    |                                                              | HorizontalAlignment | Означає, чи буде елемент вирівняний по лівому, правому або центральному краю. |
+|                    |                                                              | VerticalAlignment   | Означує, чи буде елемент вирівняний зверху, посередині чи знизу. |
+|                    |                                                              | Margin              | Ліве, верхнє, нижнє та праве поля. Щоб отримати інформацію, перегляньте тему «Докладніше про поля». |
+|                    |                                                              | VisibleWhen         | Елемент буде відображено, якщо зазначена тут умова виконана. |
+|                    |                                                              | AnimationName       | Назва елемента, налаштована у властивостях загального доступу. Назва анімації має починатися з літери та містити лише літери, цифри та такі символи:` _, %, $, @, #`. Він не повинен перевищувати 26 символів. |
+|                    |                                                              | ZIndex              | Означує позицію елемента, коли накладаються кілька елементів. Елемент із найнижчим ZIndex розміщується на вершині стека. |
+| **Parameter**      | Для кожного елемента, який ви додаєте до композиції, вам потрібно зв’язати його з параметром, означеним у шаблоні XML. Це робиться для того, щоб значення параметрів можна було передати в заміну в елементі вмісту (наприклад, %Equipment%) через Composite Genie. | Name                | This name is case sensitive. Назва параметра заміни, указана без % (наприклад, «Equipment» для заміни %Equipment%). Ця назва чутлива до регістру. |
+|                    |                                                              | TemplateParameter   | Ім’я параметра, як зазначено в елементі Parameter, значення якого передається для підстановки в елементі вмісту. |
 
-**Example - Layout**
+**Приклад - Layout**
 
-This example shows the Hotspot co-ordinates for positioning the Composite Genie at a particular location on the page.
+У цьому прикладі показано координати Hotspot точки для розміщення Composite Genie у певному місці на сторінці.
 
 ![img](media/CG_Layout_HotSpot.png)    
 
-**Example - Container**
+**Приклад- Container**
 
-This example shows the code for a container, which includes:
+У цьому прикладі показано код для контейнера, який включає:
 
-- layout options for the container and conditions when it is to be displayed (using the VisibleWhen attribute)
-- content items and conditions when they are to be displayed (using the VisibleWhen attribute)
-- parameters to be passed into template parameters     ![img](media/CG_LayoutCode.png)    
+- параметри макета для контейнера та умови його відображення (за допомогою атрибута VisibleWhen)
+- елементи вмісту та умови, коли вони мають відображатися (за допомогою атрибута VisibleWhen)
+- параметри, які передаються в параметри шаблону
 
-###### More about Margins and Alignment
+![img](media/CG_LayoutCode.png)    
 
-Margins and alignment determine the positioning of a Composite Genie. They can be use in conjunction to set the [layout](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_More_About_Layouts.htm) of Composite Genies. 
+###### Докладніше про поля та вирівнювання
 
-**Margins**
+Поля та вирівнювання означують позиціонування Composite Genie. Їх можна використовувати разом, щоб налаштувати макет Composite Genies.
 
-Margins may be specified  for a container or a content item within a container. Margins can be  used to set the distance between an object and its child, and determine  the positioning of an object relative to its parent. Margins are  specified as a set of four numbers separated by a comma. For example, 2, 0,1,3. Here 2 is the Left margin, 0 is the Top margin, 1 is the right  margin and 3 is the bottom margin. The values for margins may be the  same or different depending upon your requirements. Margins are  specified in pixels.
+**Поля (Margins)**
 
-Margins are applied to the  container as a whole, and/or to each individual item. For example, a  container margin of 2 pixels for the left, top, right and bottom can be  defined with:
+Поля можуть бути вказані для контейнера або елемента вмісту всередині контейнера. Поля можна використовувати для встановлення відстані між об’єктом і його дочірнім об’єктом, а також для означення розташування об’єкта відносно його батьківського об’єкта. Поля вказуються як набір із чотирьох чисел, розділених комою. Наприклад, `2, 0,1,3`. Тут 2 – це ліве поле, 0 – верхнє поле, 1 – праве поле, а 3 – нижнє поле. Значення маржі можуть бути однаковими або різними залежно від ваших вимог. Поля вказуються в пікселях.
+
+Поля застосовуються до контейнера в цілому та/або до кожного окремого елемента. Наприклад, поле контейнера в 2 пікселі для лівого, верхнього, правого та нижнього можна визначити за допомогою:
 
 ![img](media/CG_Container_margins.png)    
 
-This will apply a 2-pixel margin to the group of items within the container.
-
-Margins can be applied to an item within the container as follows:
+Це застосує 2-піксельне поле до групи елементів у контейнері. Поля можна застосувати до елемента всередині контейнера наступним чином:
 
 ![img](media/CG_ContainerMargins1.png)    
 
-This will apply a 2-pixel margin on all sides of the object that has the ItemID 1.
+Це застосує 2-піксельне поле з усіх боків об’єкта, який має ItemID 1.
 
 ![img](media/CG_Margins.png)    
 
-**Alignment**
+**Alignment (Вирівнювання)**
 
 HorizontalAlignment
 
-The HorizontalAlignment attribute sets the alignment that will be applied to child objects. It can set to:
+Атрибут HorizontalAlignment встановлює вирівнювання, яке буде застосовано до дочірніх об’єктів. Він може встановити:
 
-- Left - Child objects are aligned to the left of the parent object's allocated space.
-- Center - Child objects are aligned to the center of the parent object's allocated space.
-- Right - Child objects are aligned to the right of the parent object's allocated space.
+- Left – дочірні об’єкти вирівнюються ліворуч від виділеного простору батьківського об’єкта.
+- Center - дочірні об'єкти вирівнюються по центру виділеного простору батьківського об'єкта.
+- Right - дочірні об'єкти вирівнюються праворуч від виділеного простору батьківського об'єкта.
 
 ![img](media/CG_HorizontalAlignment.png)    
 
 VerticalAlignment
 
-The VerticalAlignment attribute sets the alignment that will be applied to child objects. It can be set to:
+Атрибут VerticalAlignment встановлює вирівнювання, яке буде застосовано до дочірніх об’єктів. Його можна встановити на:
 
-- Top - Child objects are aligned to the top of the parent object's allocated space. 
-- Center - Child objects are aligned to the center of the parent object's allocated space. 
-- Bottom - Child objects are aligned to the bottom of the parent object's allocated space.
+- Top – дочірні об’єкти вирівнюються за верхньою межею виділеного простору батьківського об’єкта.
+- Center - дочірні об'єкти вирівнюються по центру виділеного простору батьківського об'єкта.
+- Bottom – дочірні об’єкти вирівнюються за нижньою частиною виділеного простору для батьківського об’єкта.
 
 ![img](media/CG_VerticalAlignment.png)    
 
-###### More about Layouts
+###### Докладніше про макети
 
-Layouts can be defined at the container  level or at the object level. It is recommended that layout attributes  be defined for the parent object with respect to the positioning  required for the child object as shown in the examples below. 
+Макети (Layouts ) можна означити на рівні контейнера або на рівні об’єкта. Рекомендується, щоб атрибути макета були означені для батьківського об’єкта з урахуванням позиціонування, необхідного для дочірнього об’єкта, як показано в наведених нижче прикладах. Рекомендується групувати об’єкти, якщо у вас змінюється анімація, розмір або положення під час виконання.
 
-**Note**: It is recommended that you group objects if you have changing animations, size or positions at runtime.
+Макети бувають наступних типів:
 
-Layouts are of the following types:
+- **StackedHorizontal**:  Об'єкти вирівнюються зліва направо. За замовчуванням об’єкти як група вирівнюються по центру. Щоб вирівняти об’єкти в групі зверху або знизу, установіть для атрибута VerticalAlignment значення «Top» або «Bottom» відповідно. Це потрібно встановити в шаблоні XML. Якщо у вас в групі два об'єкти, вам потрібно вказати вертикальне вирівнювання тільки для другого елемента. Потім другий елемент буде вирівняно відносно першого. Використовуйте атрибут Margin, щоб керувати накладанням об’єктів. Від'ємне значення поля розташує елемент ближче до об’єкта поруч.
 
-- **StackedHorizontal**:  Objects are aligned from left to right. By default, the objects as a  group, are center aligned. To top- or bottom-align the objects within  the group, set the VerticalAlignment attribute to “Top” or “Bottom”,  respectively.  This needs to be set in in the XML template. If you have  two objects in a group, you need to specify the vertical alignment only  for the second item. The second item will then be aligned relative to  the first one. Use the Margin attribute to control overlap of objects. A negative margin setting will position an item closer to the object next to it.
+- **StackedVertical**: Об'єкти вирівнюються зверху вниз. За замовчуванням об’єкти, як група, вирівняні по центру. Щоб вирівняти об’єкти в групі за лівим або правим краєм, установіть для атрибута HorizontalAlignment значення «Left» або «Right» відповідно. Якщо у вас в групі два об’єкти, вам потрібно вказати горизонтальне вирівнювання лише для другого об’єкта. Потім другий елемент буде вирівняно відносно першого об’єкта. Це потрібно встановити в шаблоні XML. Використовуйте атрибут Margin, щоб керувати накладанням об’єктів. Налаштування від'ємного поля розташує елемент ближче до елемента під ним.
 
-- **StackedVertical**: Objects  are aligned from top to bottom. By default, the objects, as a group, are center aligned. To left- or right-align the objects within the group,  set the HorizontalAlignment attribute to “Left” or “Right”,  respectively. If you have two objects in a group, you need to specify  the horizontal alignment only for the second object. The second item  will then be aligned relative to the first object. This needs to be set  in in the XML template. Use the Margin attribute to control overlap of  objects. A negative margin setting will position an item closer to the  item below it.
+- **Overlaid**: Усі об’єкти розміщуються в одному місці, а порядок їх розміщення керується значенням ZIndex. Об’єкт із найнижчим ZIndex буде у верхній частині накладеного стека. Більші об’єкти можна складати внизу та накладати на них менші об’єкти, а найменший об’єкт – зверху.
 
-- **Overlaid**: All objects are placed at the same spot, and the order in which they are placed is  controlled by the value of the ZIndex.  The object with the lowest  ZIndex will be at the top of the overlaid stack. Bigger objects can be  stacked at the bottom and overlaid with smaller objects with the  smallest object on the top.
-
-**Example: StackedHorizontal**
+**Приклад: StackedHorizontal**
 
 ![img](media/CG_StackedHorizontal_315x280.png)    
 
 ![img](media/CG_StackedHorizontal_Overlap_351x206.png)    
 
-**Example: StackedVertical**
+**Приклад: StackedVertical**
 
 ![img](media/CG_StackedVertical.png)    
 
 ![img](media/CG_StackedVertical_Overlap.png)    
 
-**Example: Overlaid**
+**Приклад: Overlaid**
 
 ![img](media/CG_Overlaid1_504x228.png)    
 
 ![img](media/CG_Overlaid2_284x180.png)    
 
-##### More about Alarm Indicators
+##### Докладніше про індикатори тривоги
 
-Alarm indicators may be applied to a  Composite Genie as a group or to an individual Genie within the  composite. Alarm indicators can be applied in one of two ways:
+Індикатори тривоги можуть бути застосовані до Composite Genie як групи або до окремого Genie в композиції. Індикатори тривоги можна застосувати одним із двох способів:
 
-- Using the pre-defined alarm indicators from the <AlarmIndicators> attribute. For more information see, [Alarm Indicators](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_AlarmIndicators.htm).
-- Making a declaration within a composition using the <AlarmIndicator> attribute (see the example below).
+- Використання попередньо означених індикаторів тривоги з атрибута `<AlarmIndicators>`. Для отримання додаткової інформації див. Індикатори тривог.
+- Створення оголошення в композиції за допомогою атрибута `<AlarmIndicator>` (див. приклад нижче).
 
-**Example**
+**Приклад**
 
-In the examples below, we have defined alarm indicators within the composition instead of using the pre-defined indicators. 
+У наведених нижче прикладах замість використання попередньо означених індикаторів ми означили індикатори тривоги в композиції.
 
-In the example below, the  alarm indicator has been defined for the container using the  <AlarmIndicator> attribute. The alarm indicator will be visible  around the Composite Genie with the specified width and padding when the condition is satisfied. 
+У наведеному нижче прикладі індикатор тривоги означено для контейнера за допомогою атрибута `<AlarmIndicator>`. Індикатор тривоги буде видно навколо Composite Genie із заданою шириною та відступом, коли умова буде виконана.
 
 ![img](media/CG_AlarmInd_Container.png)    
 
-You can also define an  alarm indicator for a specific content item (Genie) using the  <AlarmIndicator> attribute. The alarm indicator will be visible  only around the content item with the specified width and padding when  the "VisibleWhen" condition you have specified is satisfied.
+Ви також можете визначити індикатор тривоги для певного елемента вмісту (Genie) за допомогою атрибута `<AlarmIndicator>`. Індикатор тривоги буде видимим лише навколо елемента вмісту з указаною шириною та відступом, коли буде виконано вказану вами умову «VisibleWhen». Якщо умова не означена, індикатор тривоги відображатиметься незалежно від введення користувача.
 
-**Note**: If a condition is not defined, the alarm indicator will be displayed regardless of user input.
+#### Умови
 
-#### Conditions
+Умови можна використовувати для означення залежностей у композиції. Наприклад, якщо потрібно відобразити параметр на основі значення, вибраного для іншого параметра, або потрібно застосувати композицію на основі набору умов. Умови бувають наступних типів:
 
-Conditions can be used for defining  dependencies in a composition. For example, if a parameter needs to be  displayed based on the value selected for another parameter or a  composition needs to be applied based on a set of conditions. Conditions are of the following types:
+- Global Conditions (глобальна)
+- Parameter Conditions (параметрична)
+- Composite Conditions (композитна, складена)
 
-- Global Conditions
-- Parameter Conditions
-- Composite Conditions
+Порядок означення умов важливий, оскільки лише умова, означена пізніше, може використовувати умови, означені до неї. Це робиться для уникнення циклічного посилання. Наприклад, спочатку ви означили глобальну умову «MEO», а потім умову «SmallMeter». Умова «SmallMeter» може використовувати «MEO» як параметричну умову, але умова «MEO» не може використовувати умову «SmallMeter» (показано в прикладі 1 нижче).
 
-The order in which conditions are defined  is important because only a condition defined later can use conditions  defined before it. This is to avoid cyclical reference. For example, you have defined Global condition “MEO” first followed by condition  “SmallMeter”. The “SmallMeter” condition can use “MEO” as a Parameter  condition, but the “MEO” condition cannot use the “SmallMeter” condition (shown in Example 1 below).
+Перш ніж детально описувати типи умов, важливо зрозуміти оператори, які можна використовувати для означення умов. У розділі нижче наведено докладну інформацію про різні типи операторів.
 
-Before going through details about the  types of conditions, it is important to understand operators that can be used to define conditions. The section below provides details of the  different types of operators.
+**Оператори**
 
-**Operators**
+Умови можна означити за допомогою операторів. Оператори бувають двох типів:
 
-Conditions can be defined with the help of operators. Operators are of two types:
+- Logical – включає «AND» та «OR». Ці оператори можна використовувати під час означення складених умов.
+- Comparison – такі оператори порівняння доступні для порівняння рядкових, цілих і логічних значень:
 
-- Logical – This include “AND” and “OR”. These operators can be used when defining Composite conditions.
-- Comparison – The following comparison operators are available to perform comparisons for string, integer and Boolean values:
-
-| Operator               | Used for Comparing Values of Data Types... |
-| ---------------------- | ------------------------------------------ |
-| IsEqualTo              | Boolean, String and Integer                |
-| IsNotEqualTo           | Boolean                                    |
-| IsGreaterThan          | Integer                                    |
-| IsGreaterThanOrEqualTo |                                            |
-| IsLessThan             |                                            |
-| IsLessThanOrEqualTo    |                                            |
-| StartsWith             | String                                     |
-| EndsWith               |                                            |
-| Contains               |                                            |
+| Operator               | Використовується для порівняння значень типів даних... |
+| ---------------------- | ------------------------------------------------------ |
+| IsEqualTo              | Boolean, String and Integer                            |
+| IsNotEqualTo           | Boolean                                                |
+| IsGreaterThan          | Integer                                                |
+| IsGreaterThanOrEqualTo |                                                        |
+| IsLessThan             |                                                        |
+| IsLessThanOrEqualTo    |                                                        |
+| StartsWith             | String                                                 |
+| EndsWith               |                                                        |
+| Contains               |                                                        |
 
 **Global Conditions**
 
-Global conditions are  conditions that  need to be used frequently within an XML template. They are defined once and can be used anywhere within an XML template to  incorporate parameter dependencies or selection of a composition. Global conditions can also be used:
+Глобальні умови — це умови, які потрібно часто використовувати в шаблоні XML. Вони означуються один раз і можуть використовуватися будь-де в шаблоні XML для включення залежностей параметрів або вибору композиції. Також можна використовувати глобальні умови:
 
--  to pre-define the components of the Composite Genie that can be enabled or disabled
-- in determining parameter dependency, and can be used in one or more compositions within the XML template. 
+- для попереднього означення компонентів Composite Genie, які можна ввімкнути або вимкнути
+- для означення залежності параметрів і може використовуватися в одній або кількох композиціях у шаблоні XML.
 
-They may include nested Parameter as well as Composite conditions (shown in Example 2 below).
+Вони можуть містити вкладені параметри, а також складені умови (показані в прикладі 2 нижче).
 
-Global conditions are defined using the GlobalCondition element, which comprises the following attributes:
+Глобальні умови означуються за допомогою елемента GlobalCondition, який містить такі атрибути:
 
-| Attribute | Description                                                  |
+| Attribute | Опис                                                         |
 | --------- | ------------------------------------------------------------ |
-| Name      | User friendly name for the condition, which needs to be unique. |
+| Name      | Зручна для користувача назва умови, яка має бути унікальною. |
 
-Example
+**Приклад**
 
-In this example, the Global condition “Show_LabelPadding” is met when the one of the predefined  Global conditions in the Composite condition is met.
+У цьому прикладі глобальна умова «Show_LabelPadding» виконується, коли виконується одна з попередньо означених глобальних умов у композитній умові.
 
 ![img](media/CG_GlobalCondition.png)    
 
-Example
+**Приклад**
 
-This example shows a nested condition that can be used to evaluate a Global condition.
+У цьому прикладі показано вкладену умову, яку можна використовувати для оцінки глобальної умови.
 
 ![img](media/CG_NestedCondition.png)    
 
 **Parameter Conditions**
 
-Parameter conditions can be used in a composition within the Prerequisite element to determine the  composition that will be selected based on user input and to toggle  visibility of a parameter. Parameter conditions are also used to define  Global conditions. The attributes of a Parameter condition include:
+Параметричні умови можна використовувати в композиції в елементі Prerequisite, щоб означити композицію, яку буде вибрано на основі введення користувачем, і для перемикання видимості параметра. Параметричні умови також використовуються для означення глобальних умов. Атрибути параметричної умови включають:
 
-| Attribute | Description                                                  |
+| Attribute | Опис                                                         |
 | --------- | ------------------------------------------------------------ |
-| Name      | User friendly name for the condition, which needs to be unique. |
-| Value     | Expected value of the parameter against which the condition will be evaluated. |
+| Name      | Зручна для користувача назва умови, яка має бути унікальною. |
+| Value     | Очікуване значення параметра, за яким буде оцінюватися умова. |
 
-Example
+**Приклад**
 
 ![img](media/CG_ParameterCondition.png)    
 
 **Composite Conditions**
 
-Composite conditions are  conditions that are joined together with the AND or OR operator and  function as a group. Composite conditions can be made up of Global or  Parameter conditions.
+Композитні умови – це умови, які об’єднані оператором AND  чи OR та функціонують як група. Композитні умови можуть складатися з глобальних або параметричних умов.
 
-| Attribute | Description                                                  |
+| Attribute | Опис                                                         |
 | --------- | ------------------------------------------------------------ |
-| Operator  | This can be set to “AND” or “OR” and determines how the conditions needs to be evaluated. |
+| Operator  | Для цього можна встановити значення «AND» або «OR», і це означує, як потрібно оцінювати умови. |
 
-Example
+**Приклад**
 
-In the sample code, two parameter conditions are joined together using the AND operator.
+У прикладі коду дві умови параметрів об’єднані разом за допомогою оператора AND .
 
 ![img](media/CG_CompositeCondition.png)    
 
-##### Alarm Indicators and Alarm Flags
+##### Alarm Indicators та Alarm Flags
 
-Alarm indicators and alarm flags are  defined using Global conditions, and are included within a composition  to be made visible to the user via the Presentation Options dialog box.
-
-Given below is the code snippet for the Global condition that defines an alarm indicator.
+Індикатори тривог і прапорці тривог означуються за допомогою глобальних умов і включаються в композицію, яка стає видимою для користувача через діалогове вікно Presentation Options. Нижче наведено фрагмент коду для глобальної умови, яка означує індикатор тривоги.
 
  ![img](media/CG_AlarmBorder.png)
 
-Alarm indicators can be displayed on a Composite Genie and/or the related equipment associated with it (shown below).
+Індикатори тривоги можуть відображатися на Composite Genie та/або пов’язаному з ним обладнанні (показано нижче).
 
 ![img](media/CG_AlarmBorder_Display.png)    
 
-Given below is the code snippet for the Global condition that defines an alarm flag and its positioning. 
+Нижче наведено фрагмент коду для глобальної умови, яка визначає позначку тривоги та її позиціонування.
 
 ![img](media/CG_AlarmFlag_917x459.png)    
 
-Alarm flags need to be included in a composition within the [ element](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/CG_AlarmIndicators.htm) for them to displayed in the Presentation Options dialog box. 
+Щоб відобразити прапорці тривог у діалоговому вікні «Presentation Options», до композиції елемента потрібно включити прапорці тривог.
 
 ![img](media/CG_AI_AFlag_960x249.png)    
 
-The triggers are used to define FlagStyle  conditionally. When none of the When conditions is satisfied, the  FlagStyle is set to the fallback value specified by <AlarmIndicator  FlagStyle=”<fallback_value>”> element.
+Тригери використовуються для умовного означення FlagStyle. Якщо жодна з умов `When` не задовольняється, FlagStyle встановлюється на резервне значення, указане елементом `<AlarmIndicator FlagStyle=”<fallback_value>”>`.
 
-You can also set up the FlagStyle attribute within <AlarmIndicator> without Triggers. The FlagStyle attribute is “Hidden” by default if it is not specified.
+Ви також можете налаштувати атрибут FlagStyle у `<AlarmIndicator>` без тригерів. Атрибут `FlagStyle` за замовчуванням має значення `Hidden`, якщо його не вказано.
 
-An alarm flag can be positioned at one of the following locations: 
+Прапор тривоги можна встановити в одному з таких місць:
 
-- None : Alarm flag is not displayed. This is the default.
+- None :  Прапорець тривоги не відображається. Це значення за умовчанням.
 - Top Left
 - Top Center
 - Top Right
@@ -546,6 +544,6 @@ An alarm flag can be positioned at one of the following locations:
 - Bottom Center
 - Bottom Right
 
-**Note:** If you change  the size of an alarm flag and run the Update Pages command, the  Composite Genie instances are re-sized to accommodate the size of the  alarm flag.
+Якщо ви зміните розмір прапорця тривоги та запустите команду Update Pages, розмір екземплярів Composite Genie буде змінено відповідно до розміру прапорця тривоги.
 
 ​    ![img](media/CG_AlarmFlag_Display.png)
