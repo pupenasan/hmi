@@ -32,7 +32,7 @@ zenon 6.51 SP0: http://download.copadata.com/fileadmin/user_upload/Downloads/ins
 
 zenon 6.22 SP1: http://download.copadata.com/fileadmin/user_upload/Downloads/installation_cd/zenon_622/SP1/zenon_6.22_SP1.iso
 
-[Файл правки ресєтру для продовження терміну використання](http://www.iasu-nuft.pp.ua/disciplini/lmi/reset.reg?attredirects=0&d=1)(для вер.7.2)
+[Файл правки ресєтру для продовження терміну використання](https://drive.google.com/file/d/1M5w_6olgWqwoOlEewe6R7PKCt1O66jXT/view?usp=sharing)(для вер.7.2)
 
 Ці матеріали  познайомлять Вас з базовими можливостями системи керування та навчать  створювати нескладні проекти візуалізації. Тут розглянуті найбільш  важливі етапи проектування, такі як розробка екранів мнемосхем,  елементів керування, ведення архівів, адміністрування користувачів та  багато інших моментів з якими стикається інженер під час створення  систем диспетчеризації.
 
