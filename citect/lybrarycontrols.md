@@ -165,37 +165,35 @@ END
 
 ![image-20211205110042919](media/image-20211205110042919.png)
 
-## Calendar Library Control
+## Елемент керування Calendar Library
 
-The following parameters are available for the Calendar library control:
+Для елемента керування `Calendar` доступні такі параметри:
 
-| Parameter               | Description                                                  |
+| Параметр                | Опис                                                         |
 | ----------------------- | ------------------------------------------------------------ |
-| Calendar Name           | A unique name used to identify the Genie within a page.      |
-| Width                   | The pixel width of the control at runtime.  <br />**Note**: Please do not re-size the Genie at design time, as its width will be automatically calculated at runtime. |
-| Height                  | The pixel height of the control at runtime. 						 <br /> **Note:** Please do not re-size the Genie at design time, as its height will be automatically calculated at runtime. |
-| Header Height           | Pixel height of header row (that shows the week day initials) in calendar display. |
-| Label Height            | Pixel height of the label row (that shows the month).        |
-| Header Padding          | The pixel padding between the bottom of the header text and the bottom of the header row. |
-| Label Padding           | The pixel padding between the bottom of the label text and the bottom of the label row. |
-| Top Padding             | The pixel padding on top of the calendar display.            |
-| Left Padding            | The pixel padding on left of the calendar display.           |
-| Side Padding            | The pixel padding on both sides of the calendar display.     |
-| Header Font             | The pre-configured font for header text.                     |
-| Date                    | The date selected as a timestamp value. Users may wish to convert the result using TimestampToStr to the desired format and locale. |
-| Date Font               | The pre-configured font for the month text.                  |
-| Day Font                | The pre-configured font for the day displays.                |
-| Next Month Font         | The pre-configured font for the next month text.             |
-| Selection Font          | The pre-configured font for the selected day.                |
-| Single selection        | Whether allow single day or multiple days to be selected.    |
-| Refresh Rate            | The minimum (quickest possible) rate that the control will be drawn. The control is only redrawn as required upon changes to the layout or other user initiated events. |
-| Initialize (Optional)   | Callback function that is  called when the control initializes The callback function should return  either TRUE (1) for success or FALSE (0) if unsuccessful. By default, if the user specified function does not initialize, the control Genie will retry the function a few time before giving up. This callback only  supports the #Name keyword which represents the name assigned to the  control Genie.  **Note**: The initialization callback function may be called multiple times whenever the table is re-initialized. |
-| Left Mouse (Optional)   | Callback function that is  called when the user clicks the left mouse button No particular return  value is expected from this function, and it supports the following  keywords in its argument list: #Name = name assigned to the Genie  						 <br />#Date = the date selected as a timestamp value. Users may  wish to convert the result using TimestampToStr to the desired format  and locale. |
-| Right Mouse (Optional)  | Callback function that is  called when the user clicks the right mouse button It uses the same  specification as that of the Left mouse callback . |
-| Double Click (Optional) | Callback function that is  called when the user double-click the left mouse button It uses the same specification as that of the Left mouse callback. |
-| Table Reload (Optional) | Callback function that is  called when the control is redrawn No particular return value is  expected from this function, and it supports the following keywords in  its argument list:  #Name = name assigned to the Genie. |
-
-
+| Calendar Name           | Унікальне ім’я, яке використовується для ідентифікації Genie на сторінці. |
+| Width                   | Ширина елемента керування під час виконання в пікселях. Не змінюйте ширину Genie під час проєктування, оскільки вона автоматично розраховується під час виконання. |
+| Height                  | Висота елемента керування під час виконання в пікселях. Не змінюйте висоту Genie під час проєктування, оскільки вона автоматично розраховується під час виконання. |
+| Header Height           | Висота рядка заголовка календаря, в якому відображаються скорочені назви днів тижня, у пікселях. |
+| Label Height            | Висота рядка мітки, в якому відображається місяць, у пікселях. |
+| Header Padding          | Відступ між нижньою частиною тексту заголовка та нижньою межею рядка заголовка, у пікселях. |
+| Label Padding           | Відступ між нижньою частиною тексту мітки та нижньою межею рядка мітки, у пікселях. |
+| Top Padding             | Верхній відступ календаря в пікселях.                        |
+| Left Padding            | Лівий відступ календаря в пікселях.                          |
+| Side Padding            | Відступ з обох боків календаря в пікселях.                   |
+| Header Font             | Попередньо налаштований шрифт тексту заголовка.              |
+| Date                    | Вибрана дата у вигляді значення timestamp. Для перетворення у потрібний формат і локаль можна використовувати `TimestampToStr`. |
+| Date Font               | Попередньо налаштований шрифт тексту місяця.                 |
+| Day Font                | Попередньо налаштований шрифт для відображення днів.         |
+| Next Month Font         | Попередньо налаштований шрифт тексту наступного місяця.      |
+| Selection Font          | Попередньо налаштований шрифт вибраного дня.                 |
+| Single selection        | Визначає, чи дозволено вибирати лише один день або кілька днів. |
+| Refresh Rate            | Мінімальний інтервал оновлення елемента керування. Перемальовування виконується лише за потреби — при зміні компонування або внаслідок дій користувача. |
+| Initialize (Optional)   | Callback-функція, яка викликається під час ініціалізації елемента керування. Має повертати `TRUE (1)` у разі успіху або `FALSE (0)` у разі помилки. Якщо функція не виконує ініціалізацію успішно, Genie за замовчуванням повторить спробу кілька разів. Підтримує ключове слово `#Name`, яке відповідає імені Genie. Функція може викликатися кілька разів при повторній ініціалізації таблиці. |
+| Left Mouse (Optional)   | Callback-функція, яка викликається при натисканні лівої кнопки миші. Підтримує `#Name` — ім’я Genie та `#Date` — вибрану дату у вигляді timestamp. Для перетворення `#Date` можна використовувати `TimestampToStr`. |
+| Right Mouse (Optional)  | Callback-функція, яка викликається при натисканні правої кнопки миші. Використовує ті самі параметри, що й `Left Mouse`. |
+| Double Click (Optional) | Callback-функція, яка викликається при подвійному натисканні лівої кнопки миші. Використовує ті самі параметри, що й `Left Mouse`. |
+| Table Reload (Optional) | Callback-функція, яка викликається при перемальовуванні елемента керування. Підтримує ключове слово `#Name` — ім’я Genie. |
 
 ![image-20211121165352587](media/image-20211121165352587.png)
 

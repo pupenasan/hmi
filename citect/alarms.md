@@ -1792,61 +1792,110 @@ The following examples show how to open, edit  (add filter criteria), associate,
 	END           
 ```
 
-### Implementing Alarm Filters Using Cicode
+## Реалізація фільтрів тривог за допомогою Cicode
 
-For historical event lists, you can define and  apply a filter (the filter is not shared between lists). The filter is a combination of conditions on the different fields which define the set  of rows to display. These conditions may become  large, with Cicode only permitting a string of 254 characters. The set / append functions  allows you to separate the filter into smaller pieces without  verification of the syntax on the sub parts. The whole filter (e.g.  concatenation of the pieces) is validated and applied later by the  commit function.
+Для списків історичних подій можна створити та застосувати окремий фільтр. Такий фільтр не є спільним для кількох списків.
 
-Multiple Cicode tasks can access the same  filter and modify it, with the filter browsing and modification  part of a session. This follows the principles used in tag browsing.
+Фільтр складається з набору умов для різних полів, які визначають, які рядки потрібно відображати. Оскільки вираз може бути досить довгим, а Cicode дозволяє використовувати рядки довжиною лише до 254 символів, функції `Set` і `Append` дають змогу розбити фільтр на кілька коротших частин.
 
-Filter Syntax
+Окремі частини не перевіряються на правильність синтаксису під час додавання. Повний фільтр, утворений шляхом об’єднання всіх частин, перевіряється та застосовується пізніше за допомогою функції `Commit`.
 
-The filter expression may contain a field,  comparison operator and a value e.g. Tag=A. The field can be any name  listed in the Browse Field Reference, with comparison operators being  < <= > >= = <>, and value being either a String,  Integer, Date Time, and Boolean. Tag Value pairs can be connected by  logical operators AND OR Eqv NOT Xor. 
+Кілька задач Cicode можуть одночасно працювати з одним фільтром і змінювати його. Перегляд і редагування фільтра виконуються в межах окремого сеансу, подібно до механізму перегляду тегів.
 
-A filter may contain multiple expressions separated by a semi colon.
+### Синтаксис фільтра
 
-The syntax of the filter can be verified against the following:
+Вираз фільтра може містити ім’я поля, оператор порівняння та значення. Наприклад:
 
-**Note**:
-•	(1) The ";" between <**filter_expr**> is interpreted as AND
-•	(2) The parenthesis are optional but recommended to obtain the right evaluation order. If they are present they need to match.
-•	(7) The "*" is standard wild card. it can be use only once per <**string_value**>
+```text
+Tag=A
+```
 
-1. <filter> ::=  <filter_expr> { " ;"  <filter_expr> }
-2. < filter_expr > ::= { ["("]<filter_expr>[")"] <logical_binary_op> ["("]<filter_expr>[")"]
-3. | <comparison>
+Полем може бути будь-яке ім’я, зазначене у довіднику полів перегляду (`Browse Field Reference`).
 
-4. | "NOT" "(" <filter_expr>")"}
+Підтримуються такі оператори порівняння:
 
-5. ​	<comparison> ::= <field> <comparison_op> <value>
-6. <comparison_op> ::= "="|">"|"<"|">="|"<="
-7.  <logical_binary_op> ::= "AND" | "OR"
-8. <value> ::= <string_value> | <boolean_value> | <DateTime_value> |<int_value>
-9. <string_value> ::= <singleword> ["*"]
-10. | " ’ " <singleword> { {" <space>"}  <singleword>["*"]  } " ’ "
+```text
+<  <=  >  >=  =  <>
+```
 
-11. <singleword> ::= {any character but space}
-12. < boolean_value > ::= "0" | "1"
-13. ​	< int_value > ::= ["-"]{numeric char}["." numeric char]
-14. ​	< DateTime_value > ::= string of number of sec.
-15. as returned by IntToStr( TimestampToTimeInt(..)) in UTC
+Значення може бути рядком, цілим числом, датою і часом або булевим значенням.
 
-16. ​	<field>::= valid citect field name (case insensitive).
+Окремі умови можна об’єднувати логічними операторами:
 
-**Note:** If a requested  filter is too complex (for example, it contains too many conditions or  too many nested brackets), the filter is cleared (no filter is used). If this occurs, the hardware alarm "Too many alarms in filters" is  generated on the client components, and a tracelog error message is  logged.
+```text
+AND
+OR
+Eqv
+NOT
+Xor
+```
 
-Valid filters examples:
+Кілька виразів фільтра можна розділяти крапкою з комою. Крапка з комою інтерпретується як оператор `AND`.
 
-- Tag=A
-- (Tag=A) OR (TAG=B)
-- (Tag=A) OR (TAG=B) ; Name=C
-- Time > IntToStr(TimestampToTimeInt(yesterday))
-- Tag=Dig*
-- Message=''quoted sentence with blanks''
-- (((Tag=A) OR (TAG=B)) AND (category=1))
+Формальний синтаксис фільтра має такий вигляд:
 
-When using the alarm filter Cicode functions  first open a session (AlmFilterOpen) and then use this session to browse the different parts (AlmFilterFirst/Next/Prev) of the filter and to  update (AlmFilterSet / Append / Commit) the filter. The browse session  will be available until closed (AlmFilterClose).
+```text
+<filter> ::= <filter_expr> { ";" <filter_expr> }
 
-​	Multiple sessions can be used on the same  list. For multiple sessions modify the same filter then the current  applied filter is the result of the last commit.
+<filter_expr> ::=
+      ["("] <filter_expr> [")"] <logical_binary_op> ["("] <filter_expr> [")"]
+    | <comparison>
+    | "NOT" "(" <filter_expr> ")"
+
+<comparison> ::= <field> <comparison_op> <value>
+
+<comparison_op> ::= "=" | ">" | "<" | ">=" | "<="
+
+<logical_binary_op> ::= "AND" | "OR"
+
+<value> ::= <string_value> | <boolean_value> | <DateTime_value> | <int_value>
+
+<string_value> ::= <singleword> ["*"]
+                 | "'" <singleword> { <space> <singleword> ["*"] } "'"
+
+<singleword> ::= будь-які символи, крім пробілу
+
+<boolean_value> ::= "0" | "1"
+
+<int_value> ::= ["-"] {цифра} ["." цифра]
+
+<DateTime_value> ::= рядок із кількістю секунд,
+                     повернутий функцією
+                     IntToStr(TimestampToTimeInt(...))
+                     у форматі UTC
+
+<field> ::= коректне ім’я поля Plant SCADA
+            без урахування регістру
+```
+
+Дужки у виразах необов’язкові, але їх рекомендується використовувати для забезпечення правильного порядку обчислення. Якщо дужки використовуються, вони повинні бути парними.
+
+Символ `*` є стандартним символом підстановки. Його можна використовувати лише один раз у межах одного рядкового значення.
+
+Приклади коректних фільтрів:
+
+```text
+Tag=A
+(Tag=A) OR (TAG=B)
+(Tag=A) OR (TAG=B);Name=C
+Time > IntToStr(TimestampToTimeInt(yesterday))
+Tag=Dig*
+Message='quoted sentence with blanks'
+(((Tag=A) OR (TAG=B)) AND (category=1))
+```
+
+Примітка. Якщо фільтр занадто складний, наприклад містить надто багато умов або вкладених дужок, він буде очищений і не застосовуватиметься. При цьому на клієнті буде згенерована апаратна тривога `Too many alarms in filters`, а в журналі трасування з’явиться повідомлення про помилку.
+
+Під час роботи з функціями фільтрації тривог спочатку потрібно відкрити сеанс за допомогою `AlmFilterOpen`.
+
+Після цього в межах цього сеансу можна:
+
+- переглядати частини фільтра за допомогою `AlmFilterFirst`, `AlmFilterNext` і `AlmFilterPrev`;
+- змінювати фільтр за допомогою `AlmFilterSet`, `AlmFilterAppend` і `AlmFilterCommit`.
+
+Сеанс залишається доступним, доки його не буде закрито функцією `AlmFilterClose`.
+
+Для одного списку можна одночасно відкрити кілька сеансів. Якщо кілька сеансів змінюють один і той самий фільтр, активним буде результат останнього виклику `Commit`.
 
 ### Converting Legacy AlarmSetQuery() Functions
 
