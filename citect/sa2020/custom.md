@@ -283,25 +283,85 @@ Set the parameter [[Workspace\]NumberOfTopPriorities](file:///C:/Program Files (
 
 1.   In Graphics Builder, open the alarm page you would like to modify (in  the appropriate resolution). The default page names are as follows:
 
-2. - Active Alarms - "DefaultAlarm_HD1080" or "DefaultAlarm_UHD4K".
+2.   - Active Alarms - "DefaultAlarm_HD1080" or "DefaultAlarm_UHD4K".
    - Historical Events - "DefaultSoE_HD1080" or "DefaultSoE_UHD4K".
    - Shelved Alarms - "DefaultShelved_HD1080" or "DefaultShelved_UHD4K".
 
-3. On the filter bar, move the separator and "State" button to the right to make room for a fourth priority button. 
+3.   On the filter bar, move the separator and "State" button to the right to make room for a fourth priority button. 
 
-4. ​                            ![img](media/SA_Add_Fourth_Priority_Button1.png)                        
+4.   ​                            ![img](media/SA_Add_Fourth_Priority_Button1.png)                        
 
-5. **Note:** If you are modifying the Historical Events page, a fourth alarm button will  already exist that is used to filter shelved alarms. In this case, you  will need to make room for your fourth alarm priority button between the third and fourth buttons. 
+5.   **Note:** If you are modifying the Historical Events page, a fourth alarm button will  already exist that is used to filter shelved alarms. In this case, you  will need to make room for your fourth alarm priority button between the third and fourth buttons. 
 
-6.  Duplicate one of the existing Item Priority Genies (for priority 1, 2 or 3), and position it in the space you have created. 
+6.   Duplicate one of the existing Item Priority Genies (for priority 1, 2 or 3), and position it in the space you have created. 
 
-7. Double-click on the duplicated Genie to display the Genie Parameters dialog. 
+7.   Double-click on the duplicated Genie to display the Genie Parameters dialog. 
 
-8. Change the **AsmPriority** field to "4", and adjust the **Tooltip** text. 
+8.   Change the **AsmPriority** field to "4", and adjust the **Tooltip** text. 
 
-9. ​                            ![img](media/SA_Add_Fourth_Priority_Button2.png)                        
+9.   ​                            ![img](media/SA_Add_Fourth_Priority_Button2.png)                        
 
-10. Save your changes. 
+10.   Save your changes. 
+
+
+## Форматування списку тривог для певної роздільної здатності екрана
+
+Формат списку тривог на сторінках Situational Awareness можна налаштувати відповідно до роздільної здатності екрана. Наприклад, для UHD 4K можна збільшити ширину стовпців. Для визначення формату списку використовується параметр `[Format]FormatName`.
+
+У Situational Awareness Starter Project для стандартних сторінок використовуються такі формати.
+
+- Для сторінки активних тривог:
+
+```text
+[Format]Alarm={PriorityAndState,25}{OnDate,80}{OnTime,90}{Name,250}{State,40}{Cluster,70}{Equipment,220}{Item,160}{UserName,100}{Comment,250}{Category,60}
+```
+
+- Для сторінки зведення тривог:
+
+```text
+[Format]Summary={PriorityAndState,25}{Name,250}{SumState,40}{OnDate,80}{OnTime,90}{OffDate,80}{OffTime,90}{DeltaTime,90}{Cluster,70}{Equipment,150}{Item,100}{Comment,250}{Category,60}
+```
+
+- Для сторінки послідовності подій (SOE):
+
+```text
+[Format]SOE={PriorityAndState,25}{Date,80}{Time,90}{Message,250}{Name,250}{State,40}{Cluster,70}{Equipment,150}{Item,100}{UserName,100}{UserLocation,100}{Category,60}
+```
+
+На основі цих форматів можна створювати власні. Наприклад, для SOE на моніторі UHD 4K можна визначити формат `SOE_UHD4K`:
+
+```text
+[Format]SOE_UHD4K={PriorityAndState,50}{Date,160}{Time,180}{Message,500}{Name,500}{State,80}{Cluster,140}{Equipment,300}{Item,200}{UserName,200}{UserLocation,200}{Category,120}
+```
+
+Число після імені кожного поля визначає ширину відповідного стовпця в пікселях.
+
+Щоб застосувати створений формат, у Graphics Builder потрібно відкрити потрібну сторінку тривог і перейти до `Page Properties → Events → On Page Entry`.
+
+За замовчуванням сторінки тривог Situational Awareness використовують функцію:
+
+```cicode
+AlarmPage_Init(AlarmPage_GetDefaultParameters(""), "", )
+```
+
+Її аргументи визначають, зокрема, роздільну здатність сторінки та тип списку тривог. Наприклад, тип `0` відповідає активним тривогам, `3` — відкладеним (Shelved), `15` — SOE.
+
+Ім'я створеного формату потрібно передати четвертим аргументом `AlarmPage_Init()`.
+
+Наприклад, для сторінки SOE UHD 4K із форматом `SOE_UHD4K`:
+
+```cicode
+AlarmPage_Init(
+    AlarmPage_GetDefaultParameters("UHD4K"),
+    "UHD4K",
+    15,
+    "SOE_UHD4K"
+)
+```
+
+Після збереження, компіляції та запуску проєкту набір стовпців, їх порядок і ширина на сторінці тривог визначатимуться вказаним форматом.
+
+
 
 ### Format an Alarm List for a Specific Screen Resolution
 
@@ -497,115 +557,94 @@ AN Parameter
 
 **Note:** You can use the **View Genie** parameter to substitute the default Genie with your own. This will  allow you to customize the appearance of the tree and the features it  supports. 
 
-### Add an Alarms List to a Page
 
-You can add an alarms list to a page using the following Genies:
 
-- [Alarm List Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Control_Genie_AlarmList.htm) — creates an alarm list with a header row and scroll bars.
-- [Alarm List Vertical Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Control_Genie_Alarmlist_V.htm) — creates an alarms list with no header row and just a vertical scroll bar.
+### Додавання списку тривог на сторінку
 
-These Genies use the [AlarmListCreate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/CicodeReferenceCitectHTML/Content/AlarmListCreate.html) Cicode function to create a basic alarms list. 
+Для відображення списку тривог на графічній сторінці використовуються два Genie:
 
-​                ![img](media/SA_Add_a_List_runtime1.png)            
+- `Alarm List Genie` (`alarmlist`) — створює список тривог із рядком заголовка та смугами прокручування.
+- `Alarm List Vertical Genie` (`alarmlist_v`) — створює список без заголовка, лише з вертикальною смугою прокручування.
 
-To apply formatting to the list rows and enable on-click commands, you can also add the [List Row Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Control_Genie_List_Row.htm). 
+Обидва Genie використовують функцію Cicode `AlarmListCreate`, яка створює базовий список тривог.
 
-​                ![img](media/SA_Add_a_List_runtime2.png)            
+![img](media/SA_Add_a_List_runtime1.png)
 
-**Add an alarm list Genie**
+Якщо потрібно додати вибір рядків, контекстне меню та зміну кольору рядків, разом зі списком можна використати `List Row Genie`.
 
-To add an alarm list Genie ("alarmlist" or "alarmlist_v") to a page: 
+![img](media/SA_Add_a_List_runtime2.png)
 
-1. Open a page in Graphics Builder. 
+#### Додавання Alarm List Genie
 
-2. Click the **Paste Genie** button in the objects toolbox.
+Щоб додати список тривог, відкрийте потрібну сторінку в Graphics Builder і виберіть команду `Paste Genie` з панелі інструментів або меню `Edit`. У діалоговому вікні `Paste Genie` виберіть бібліотеку `sa_controls`, після чого виберіть один із Genie:
 
-3. ​                            ![img](media/ObjectPastgenieIcon.png)                        
+| Genie         | Призначення                 |
+| ------------- | --------------------------- |
+| `alarmlist`   | Список тривог із заголовком |
+| `alarmlist_v` | Список тривог без заголовка |
 
-4.  Or, select **Paste Genie** from the **Edit** menu. 
+Після вставлення Genie відкриється вікно налаштування параметрів. 
 
-5. In the Paste Genie dialog, select the **Library** "sa_controls".
+- Для `Alarm List Vertical Genie` відображається лише параметр `AN`. Це автоматично згенерований номер, який буде використовуватися для створення списку тривог.
 
-6. Select one of the following from the **Genie** list and click **OK**. 
+![img](media/SA_Add_a_List_alarmlist_v.png)
 
-7. - alarmlist = Alarm List Genie
-   - alarmlist_v = Alarm List - Vertical Genie
+- Для `Alarm List Genie` доступні також додаткові параметри, пов'язані з роботою заголовка. За замовчуванням параметр `OnColumnReorderedFunction` містить значення:
 
-8.  The Genie is pasted onto the graphics page. A dialog box will open, prompting you to configure the parameters for the Genie.
+```cicode
+ArrayView_SetFormat()
+```
 
-9. The **Alarm List Vertical Genie** dialog box will show the **AN** parameter. The number that is displayed is AN value that was automatically applied to the Genie when it was pasted on the page.
+Ця системна функція дозволяє оператору змінювати порядок стовпців під час виконання проєкту. Інші параметри можна залишити порожніми.
 
-10. ​                            ![img](media/SA_Add_a_List_alarmlist_v.png)                        
+![img](media/SA_Add_a_List_alarmlist.png)
 
-11. The **Alarm List Genie** dialog box will include some additional parameters that enable runtime interaction with the header row. By default, the **OnColumnReorderedFunction** will display "ArrayView_SetFormat()". This is a system function that  allows an operator to rearrange the header row columns at runtime. The  other parameters can be left blank.
+Після підтвердження параметрів необхідно створити список тривог під час відкриття сторінки. Для цього у властивостях сторінки (`Page Properties`), на вкладці `Events`, для події `On Page Entry` потрібно викликати функцію `AlarmListCreate`.
 
-12. ​                            ![img](media/SA_Add_a_List_alarmlist.png)                        
+![img](media/SA_Add_a_List_PageProps1.png)
 
-13. Click **OK** to close the parameters dialog box. 
+Параметр `nAN`, переданий у функцію, повинен збігатися зі значенням `AN`, призначеним Genie.
 
-To load alarm data into the list at runtime, you need to call the [AlarmListCreate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/CicodeReferenceCitectHTML/Content/AlarmListCreate.html) Cicode function as an On Page Entry command in the Page Properties dialog. 
+При закритті сторінки список необхідно видалити. Для цього в події `On Page Exit` потрібно викликати функцію `AlarmListDestroy`, наприклад:
 
-1. In Graphics Builder, right-click on the page and select **Page Properties** from the menu that appears.
-2.  Or:
+```cicode
+AlarmListDestroy(56);
+```
 
-3.  From the **File** menu, select **Properties**.
+Після збереження сторінки список тривог буде створюватися автоматично під час відкриття сторінки.
 
-4. The Page Properties dialog box will appear. 
+#### Додавання List Row Genie
 
-5. On the **Events** tab, select the **On page entry** event.
-6. In the **On page entry command** field, configure  the [AlarmListCreate](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/CicodeReferenceCitectHTML/Content/AlarmListCreate.html) Cicode function as required. 
-7. ​                            ![img](media/SA_Add_a_List_PageProps1.png)                        
+Якщо потрібно забезпечити вибір рядків, контекстне меню або індивідуальне оформлення рядків, відкрийте сторінку зі списком тривог і додайте `List Row Genie` з бібліотеки `sa_controls`. Виберіть варіант Genie відповідно до максимальної кількості рядків:
 
-8. The value specified for the *nAN* argument needs to match the AN number applied to the alarm list Genie. 
+| Genie          | Максимальна кількість рядків |
+| -------------- | ---------------------------- |
+| `list_row_x5`  | 5                            |
+| `list_row_x10` | 10                           |
+| `list_row_x40` | 40                           |
+| `list_row_x80` | 80                           |
 
-9. On the **Events** tab, select the **On page exit** event.
-10. In the **On page exit command** field, configure  the [AlarmListDestroy](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/CicodeReferenceCitectHTML/Content/AlarmListDestroy.html) Cicode function. For example, 
-11.  AlarmListDestroy(56);
+Після вставлення відкриється вікно налаштування параметрів.
 
-12. Click **OK**, and **Save** your page. 
+![img](media/SA_Add_a_List_listrow_x10.png)
 
-You can now run your project and view the alarms list. 
+Розмір цього Genie змінювати не потрібно — під час виконання він автоматично займе область, що відповідає розміру пов'язаного списку.
 
-**Add the List Row Genie**
+У полі `ArrayAN` потрібно вказати значення `AN` списку тривог. За потреби його можна отримати за допомогою функції:
 
-1. In Graphics Builder, open the page that includes the list to which you want to add a List Row Genie. 
+```cicode
+DspGetAnFromName("AlarmList")
+```
 
-2. Click the **Paste Genie** button in the objects toolbox.
+Щоб використовувати стандартне контекстне меню сторінки тривог, у параметрі `RightClickCommand` потрібно вказати:
 
-3. ​                            ![img](media/ObjectPastgenieIcon.png)                        
+```cicode
+AlarmPage_AlarmListOnRightClick()
+```
 
-4.  Or, select **Paste Genie** from the **Edit** menu. 
+За потреби замість нього можна викликати власну функцію Cicode.
 
-5. In the Paste Genie dialog, select the **Library** "sa_controls".
-
-6. Select one of the following from the **Genie** list, based on the approximate size of the list you require. 
-
-7. - list_row_x5 – use this to create a list with up to 5 rows.
-   - list_row_x10 – use this to create a list with up to 10 rows.
-   - list_row_x40 – use this to create a list with up to 40 rows.
-   - list_row_x80 – use this to create a list with up to 80 rows.
-
-8.  The Genie is pasted onto the graphics page. A dialog box will open, prompting you to configure the parameters for the Genie.
-
-9. ​                            ![img](media/SA_Add_a_List_listrow_x10.png)                        
-
-10. **Note:**  There is no need  to adjust the size of the List Row Genie on a graphics page to fill an  area. The required space will be determined at runtime by the size of  the list with which it is associated. 
-
-11. In the **ArrayAN** field, enter the AN value for the associated list. 
-
-12. You can use the Cicode function [DspGetAnFromName](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Subsystems/CicodeReferenceCitectHTML/Content/DspGetAnFromName.html) to retrieve the AN. For example:
-
-13. DspGetAnFromName("AlarmList").
-
-14. To enable the default set of right-click commands that are available on the default alarm page, go to the **RightClickCommand** field and enter the following: 
-
-15. AlarmPage_AlarmListOnRightClick()
-
-16. If you want to use a custom set of commands, you can add your own Cicode. 
-
-17. Click **OK**, and **Save** your page. 
-
-You can now run your project and view the alarms list. 
+Після збереження сторінки список тривог буде підтримувати вибір рядків, контекстне меню та інші можливості `List Row Genie`.
 
 ### Add a Generic List to a Page
 
@@ -872,84 +911,56 @@ FUNCTION Test_GenericListRightClick(INT hAn)
 END
 ```
 
-### Add an Alarm Filter Button
 
-You can add your own alarm filter buttons to one of the [Default Alarm Pages](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/Situational_Awareness_Default_AlarmPages.htm) in a Situational Awareness project.  
 
-​                ![img](media/SA_Default_Alarm_Page_FilterButtons.png)            
+## Додавання кнопки фільтрації тривог
 
-The following Alarm Filter Genies allow you to add buttons that provide basic filter functionality to an alarm page:
+У проєкті Situational Awareness можна додавати власні кнопки фільтрації на стандартні сторінки тривог.
 
-- [Item Acknowledged Genie (HD1080)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemAck1080.htm)                
-- [Item Acknowledged Genie (UHD4K)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemAck4K.htm)                
-- [Item Priority Genie (HD1080)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemPriority1080.htm)                
-- [Item Priority Genie (UHD4K)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemPriority4K.htm)                
-- [Item Shelved Genie (HD1080)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemShelved1080.htm)                
-- [Item Shelved Genie (UHD4K)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemShelved4K.htm)                
-- [Item State Genie (HD1080)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemState1080.htm)                
-- [Item State Genie (UHD4K)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemState4K.htm)                
-- [Item Unacknowledged Genie (HD1080)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemUnack1080.htm)                
-- [Item Unacknowledged Genie (UHD4K)](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemUnack4K.htm).
+![img](media/SA_Default_Alarm_Page_FilterButtons.png)
 
-You can also use the [Item Base Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemBase.htm) to create a button that implements a custom filter. 
+Для цього бібліотека `sa_filter` містить готові Genie, які реалізують основні типи фільтрації:
 
-**Note:** The default hardware alarms page does not support filter buttons. 
+| Genie               | Призначення                                     |
+| ------------------- | ----------------------------------------------- |
+| Item Acknowledged   | Фільтрація за підтвердженими тривогами.         |
+| Item Unacknowledged | Фільтрація за непідтвердженими тривогами.       |
+| Item Priority       | Фільтрація за пріоритетом.                      |
+| Item State          | Фільтрація за станом тривоги.                   |
+| Item Shelved        | Фільтрація за відкладеними (Shelved) тривогами. |
 
-**Add an alarm filter button using a Genie**
+Для кожного Genie існують окремі варіанти для роздільних здатностей `HD1080` та `UHD4K`.
 
-To add an alarm filter button to a default alarm page:
+Якщо потрібна власна логіка фільтрації, можна використовувати `Item Base Genie`, який дозволяє створити кнопку з довільним фільтром.
 
-1. In Graphics Builder, open the alarm page to which you want to add a filter button.
+> Примітка. Стандартна сторінка апаратних тривог (Hardware Alarms) не підтримує кнопки фільтрації.
 
-2. The default alarm pages have the following names:
+Додавання стандартної кнопки фільтра. Відкрийте потрібну сторінку тривог у Graphics Builder. Стандартні сторінки мають такі імена:
 
-3. - DefaultAlarm_HD1080 (Active Alarms Page HD1080)
-   - DefaultAlarm_UHD4K (Active Alarms Page UHD4K)
-   - DefaultSOE_HD1080 (Historical Events Page HD1080)
-   - DefaultSOE_UHD4K (Historical Events Page UHD4K)
-   - DefaultShelved_HD1080 (Shelved Alarms Page HD1080)
-   - DefaultShelved_UHD4K (Shelved Alarms Page UHD4K)
+| Сторінка                | Призначення                 |
+| ----------------------- | --------------------------- |
+| `DefaultAlarm_HD1080`   | Активні тривоги (HD1080)    |
+| `DefaultAlarm_UHD4K`    | Активні тривоги (UHD4K)     |
+| `DefaultSOE_HD1080`     | Журнал подій (SOE) HD1080   |
+| `DefaultSOE_UHD4K`      | Журнал подій (SOE) UHD4K    |
+| `DefaultShelved_HD1080` | Відкладені тривоги (HD1080) |
+| `DefaultShelved_UHD4K`  | Відкладені тривоги (UHD4K)  |
 
-4. Locate the filters section at the top of the page. The filters section will  contain any Alarm Filter Genies that already appear on the page. 
+У верхній частині сторінки знаходиться область фільтрів, у якій розміщуються кнопки фільтрації. Виберіть команду `Paste Genie`, відкрийте бібліотеку `sa_filter` і вставте потрібний Alarm Filter Genie. Назва Genie відповідає типу фільтрації, який він реалізує.
 
-5. Click the **Paste Genie** button in the objects toolbox, or select **Paste Genie** from the **Edit** menu. 
+Після вставлення відкриється діалог налаштування параметрів. Заповніть необхідні параметри та натисніть `OK`.
 
-6. In the Paste Genie dialog, select the "sa_filter" library.
+Додавання власної кнопки фільтра. Якщо потрібен спеціальний фільтр, відкрийте одну зі стандартних сторінок тривог, вставте Genie `Item Base` із бібліотеки `sa_filter` та налаштуйте його параметри.
 
-7. Select the required Alarm Filter Genie from those listed above. The name of  the Genie will reflect the type of filtering it supports. 
+Після вставлення відкриється діалогове вікно, у якому потрібно задати параметри роботи Genie.
 
-8. A dialog will  open prompting you to configure the parameters for the Genie. For a  description of each parameters, click on appropriate link in the list of Alarm Filter Genies above.
+Стандартні сторінки тривог уже містять іменований фільтр `TopBar`. Якщо нова кнопка повинна працювати разом зі стандартною системою фільтрації, у параметрі `Filter Name` слід вказати:
 
-9. Enter the required values, and click **OK** to close the dialog. 
+```text
+TopBar
+```
 
-**Add a custom alarm filter button using the Item Base Genie**
-
-To add a custom alarm filter button to a default alarm page:
-
-1. In Graphics Builder, open the alarm page to which you want to add a custom filter button.
-
-2. The default alarm pages have the following names:
-
-3. - DefaultAlarm_HD1080 (Active Alarms Page HD1080)
-   - DefaultAlarm_UHD4K (Active Alarms Page UHD4K)
-   - DefaultSOE_HD1080 (Historical Events Page HD1080)
-   - DefaultSOE_UHD4K (Historical Events Page UHD4K)
-   - DefaultShelved_HD1080 (Shelved Alarms Page HD1080)
-   - DefaultShelved_UHD4K (Shelved Alarms Page UHD4K)
-
-4. Locate the filters section at the top of the page. The filters section will  contain any Alarm Filter Genies that already appear on the page. 
-
-5. Click the **Paste Genie** button in the objects toolbox, or select **Paste Genie** from the **Edit** menu. 
-
-6. In the Paste Genie dialog, select the "sa_filter" library.
-
-7. Select the "Item Base Genie" and click **OK**.
-
-8. A dialog will open prompting you to configure the parameters for the Genie. For a description of each parameters, see [Item Base Genie.](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemBase.htm)
-
-9. Enter the required values, and click **OK** to close the dialog. 
-
-**Note:** The Default Alarm Pages  incorporate an alarm filter named "TopBar". To implement the expected  filtering functionality, you can enter "TopBar" as the **Filter Name** in the Genie parameters. If you need to create your own custom filter, use the [Item Base Genie](file:///C:/Program Files (x86)/AVEVA Plant SCADA/Bin/Help/SCADA Help/Content/SA_Include_Genie_ItemBase.htm). You can then use the **FilterExpr** parameter to enter a Cicode expression that returns the name of a custom filter. 
+Якщо використовується власний механізм фільтрації, за допомогою параметра `FilterExpr` можна задати вираз Cicode, який повертає ім'я потрібного фільтра. Це дозволяє реалізувати довільну логіку фільтрації тривог.
 
 ### Create a Set of Tabs for a Pane
 
